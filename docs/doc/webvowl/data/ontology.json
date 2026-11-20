@@ -16,25 +16,31 @@
       "rdfs" : "http://www.w3.org/2000/01/rdf-schema#"
     },
     "title" : {
-      "de" : "Kontrolliertes Vokabular der Aggregationsoperatoren für Leistungskennzahlen",
-      "en" : "Key Performance Indicator Ontology for Semantic Description of Aggregated Performance Metrics"
+      "de" : "Kennzahlen-Ontologie zur semantischen Beschreibung aggregierter Leistungskennzahlen",
+      "en" : "Controlled Vocabulary of Aggregation Operators for Key Performance Indicators"
     },
     "iri" : "https://semantic.adorsys.com/meta/kpi/1.0",
     "version" : "1.0",
     "author" : [ "Johann Bergh <Johann.Bergh@adorsys.com>" ],
     "description" : {
-      "de" : "\r\n        Kontrolliertes SKOS-Vokabular aller Aggregationsoperatoren, die zur Berechnung von\r\n        Leistungskennzahlen (KPIs) über Instanzdaten verwendet werden können. Umfasst statistische\r\n        Standardoperatoren wie Summe, Durchschnitt, Anzahl, Minimum und Maximum sowie erweiterte\r\n        Operatoren wie Median, Standardabweichung und Varianz.\r\n\r\n        Dieses Vokabular wird von der KPI-Ontologie (kpi:1.0) referenziert und definiert die\r\n        zulässigen Aggregationsfunktionen als SKOS-Konzepte.\r\n    ",
+      "de" : "\r\n        Ontologie zur semantischen Modellierung von Leistungskennzahlen (Key Performance Indicators, KPIs),\r\n        die durch Aggregationsoperationen über Instanzdaten einer beliebigen Referenzontologie berechnet werden.\r\n\r\n        Diese Ontologie definiert das Konzept eines KPI als strukturierte Beschreibung, die folgende Elemente\r\n        zusammenführt: die Referenzontologie, aus deren Instanzdaten die Kennzahl berechnet wird; die zu\r\n        aggregierende Eigenschaft (z.B. Bruttogehalt); den Aggregationsoperator (z.B. Durchschnitt, Summe);\r\n        die Granularitätsdimensionen (z.B. Geschlecht, Standort), nach denen die Aggregation aufgeschlüsselt\r\n        wird; sowie die berechneten Aggregationsergebnisse mit ihren jeweiligen Dimensionswerten.\r\n\r\n        Die Ontologie ist allgemein gehalten und nicht an eine bestimmte Referenzontologie gebunden. Sie kann\r\n        für jede Domäne eingesetzt werden, in der aggregierte Kennzahlen aus RDF-Instanzdaten berechnet werden.\r\n        Die Aggregationsoperatoren werden als separates SKOS-Vokabular (<https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>) gepflegt\r\n        und über owl:imports eingebunden.\r\n\r\n        Die Ontologie folgt den Prinzipien der Aristotelischen Logik mit klarer Genus-Differentia-Definition\r\n        aller Klassen und Eigenschaften.\r\n    ",
       "en" : "\r\n        Ontology for the semantic modeling of Key Performance Indicators (KPIs) computed through aggregation\r\n        operations over instance data of any reference ontology.\r\n\r\n        This ontology defines the concept of a KPI as a structured description that brings together: the\r\n        reference ontology from whose instance data the metric is computed; the property to be aggregated\r\n        (e.g., gross salary); the aggregation operator (e.g., average, sum); the granularity dimensions\r\n        (e.g., gender, location) by which the aggregation is broken down; and the computed aggregation\r\n        results with their respective dimension values.\r\n\r\n        The ontology is designed to be general-purpose and is not bound to any specific reference ontology.\r\n        It can be used in any domain where aggregated metrics are computed from RDF instance data. The\r\n        aggregation operators are maintained as a separate SKOS vocabulary (<https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>)\r\n        and included via owl:imports.\r\n\r\n        The ontology follows the principles of Aristotelian logic with clear genus-differentia definitions\r\n        for all classes and properties.\r\n    "
     },
     "labels" : {
       "de" : "KPI-Ontologie",
-      "en" : "Aggregation Operator Vocabulary"
+      "en" : "KPI Ontology"
     },
     "comments" : {
       "de" : "Diese Ontologie definiert Leistungskennzahlen (KPIs) als semantische Strukturen, die Aggregationsoperationen über Instanzdaten beliebiger Referenzontologien beschreiben. Sie ermöglicht die vollständige Beschreibung einer Kennzahl einschließlich der Referenzontologie, der Aggregationseigenschaft, des Operators, der Granularitätsdimensionen und der berechneten Ergebnisse.\r\n\r\nDie Ontologie folgt den Prinzipien der Aristotelischen Logik mit klarer Genus-Differentia-Definition aller Entitäten.",
       "en" : "This ontology defines Key Performance Indicators (KPIs) as semantic structures that describe aggregation operations over instance data of any reference ontology. It enables the complete description of a metric including the reference ontology, aggregation property, operator, granularity dimensions, and computed results.\r\n\r\nThe ontology follows the principles of Aristotelian logic with clear genus-differentia definitions for all entities."
     },
     "other" : {
+      "identifier" : [ {
+        "identifier" : "identifier",
+        "language" : "undefined",
+        "value" : "10.5281/zenodo.24400357",
+        "type" : "label"
+      } ],
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
@@ -55,13 +61,13 @@
       } ],
       "prefLabel" : [ {
         "identifier" : "prefLabel",
-        "language" : "en",
-        "value" : "Aggregation Operator Vocabulary",
+        "language" : "de",
+        "value" : "Aggregationsoperator-Vokabular",
         "type" : "label"
       }, {
         "identifier" : "prefLabel",
-        "language" : "de",
-        "value" : "Aggregationsoperator-Vokabular",
+        "language" : "en",
+        "value" : "Aggregation Operator Vocabulary",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -78,13 +84,8 @@
       } ],
       "title" : [ {
         "identifier" : "title",
-        "language" : "en",
-        "value" : "Controlled Vocabulary of Aggregation Operators for Key Performance Indicators",
-        "type" : "label"
-      }, {
-        "identifier" : "title",
         "language" : "de",
-        "value" : "Kennzahlen-Ontologie zur semantischen Beschreibung aggregierter Leistungskennzahlen",
+        "value" : "Kontrolliertes Vokabular der Aggregationsoperatoren für Leistungskennzahlen",
         "type" : "label"
       }, {
         "identifier" : "title",
@@ -93,8 +94,13 @@
         "type" : "label"
       }, {
         "identifier" : "title",
+        "language" : "en",
+        "value" : "Controlled Vocabulary of Aggregation Operators for Key Performance Indicators",
+        "type" : "label"
+      }, {
+        "identifier" : "title",
         "language" : "de",
-        "value" : "Kontrolliertes Vokabular der Aggregationsoperatoren für Leistungskennzahlen",
+        "value" : "Kennzahlen-Ontologie zur semantischen Beschreibung aggregierter Leistungskennzahlen",
         "type" : "label"
       } ],
       "license" : [ {
@@ -121,17 +127,73 @@
         "value" : "kpi",
         "type" : "label"
       } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2026-11-20",
+        "type" : "label"
+      } ],
       "publisher" : [ {
         "identifier" : "publisher",
         "language" : "undefined",
         "value" : "adorsys",
         "type" : "label"
       } ],
-      "modified" : [ {
-        "identifier" : "modified",
+      "hasTopConcept" : [ {
+        "identifier" : "hasTopConcept",
         "language" : "undefined",
-        "value" : "2026-11-20",
-        "type" : "label"
+        "value" : "https://semantic.adorsys.com/meta/kpi/CountDistinct",
+        "type" : "iri"
+      }, {
+        "identifier" : "hasTopConcept",
+        "language" : "undefined",
+        "value" : "https://semantic.adorsys.com/meta/kpi/Count",
+        "type" : "iri"
+      }, {
+        "identifier" : "hasTopConcept",
+        "language" : "undefined",
+        "value" : "https://semantic.adorsys.com/meta/kpi/Variance",
+        "type" : "iri"
+      }, {
+        "identifier" : "hasTopConcept",
+        "language" : "undefined",
+        "value" : "https://semantic.adorsys.com/meta/kpi/Min",
+        "type" : "iri"
+      }, {
+        "identifier" : "hasTopConcept",
+        "language" : "undefined",
+        "value" : "https://semantic.adorsys.com/meta/kpi/Sum",
+        "type" : "iri"
+      }, {
+        "identifier" : "hasTopConcept",
+        "language" : "undefined",
+        "value" : "https://semantic.adorsys.com/meta/kpi/Sample",
+        "type" : "iri"
+      }, {
+        "identifier" : "hasTopConcept",
+        "language" : "undefined",
+        "value" : "https://semantic.adorsys.com/meta/kpi/Median",
+        "type" : "iri"
+      }, {
+        "identifier" : "hasTopConcept",
+        "language" : "undefined",
+        "value" : "https://semantic.adorsys.com/meta/kpi/GroupConcat",
+        "type" : "iri"
+      }, {
+        "identifier" : "hasTopConcept",
+        "language" : "undefined",
+        "value" : "https://semantic.adorsys.com/meta/kpi/Max",
+        "type" : "iri"
+      }, {
+        "identifier" : "hasTopConcept",
+        "language" : "undefined",
+        "value" : "https://semantic.adorsys.com/meta/kpi/StandardDeviation",
+        "type" : "iri"
+      }, {
+        "identifier" : "hasTopConcept",
+        "language" : "undefined",
+        "value" : "https://semantic.adorsys.com/meta/kpi/Average",
+        "type" : "iri"
       } ],
       "definition" : [ {
         "identifier" : "definition",
@@ -144,61 +206,11 @@
         "value" : "Kontrolliertes Vokabular aller Aggregationsoperatoren, die zur Berechnung von Leistungskennzahlen über Instanzdaten verwendet werden können. Umfasst statistische Standardoperatoren wie Summe, Durchschnitt, Anzahl, Minimum und Maximum sowie erweiterte Operatoren wie Median, Standardabweichung und Varianz.",
         "type" : "label"
       } ],
-      "hasTopConcept" : [ {
-        "identifier" : "hasTopConcept",
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
         "language" : "undefined",
-        "value" : "https://semantic.adorsys.com/meta/kpi/StandardDeviation",
-        "type" : "iri"
-      }, {
-        "identifier" : "hasTopConcept",
-        "language" : "undefined",
-        "value" : "https://semantic.adorsys.com/meta/kpi/Median",
-        "type" : "iri"
-      }, {
-        "identifier" : "hasTopConcept",
-        "language" : "undefined",
-        "value" : "https://semantic.adorsys.com/meta/kpi/CountDistinct",
-        "type" : "iri"
-      }, {
-        "identifier" : "hasTopConcept",
-        "language" : "undefined",
-        "value" : "https://semantic.adorsys.com/meta/kpi/Average",
-        "type" : "iri"
-      }, {
-        "identifier" : "hasTopConcept",
-        "language" : "undefined",
-        "value" : "https://semantic.adorsys.com/meta/kpi/GroupConcat",
-        "type" : "iri"
-      }, {
-        "identifier" : "hasTopConcept",
-        "language" : "undefined",
-        "value" : "https://semantic.adorsys.com/meta/kpi/Min",
-        "type" : "iri"
-      }, {
-        "identifier" : "hasTopConcept",
-        "language" : "undefined",
-        "value" : "https://semantic.adorsys.com/meta/kpi/Count",
-        "type" : "iri"
-      }, {
-        "identifier" : "hasTopConcept",
-        "language" : "undefined",
-        "value" : "https://semantic.adorsys.com/meta/kpi/Max",
-        "type" : "iri"
-      }, {
-        "identifier" : "hasTopConcept",
-        "language" : "undefined",
-        "value" : "https://semantic.adorsys.com/meta/kpi/Sample",
-        "type" : "iri"
-      }, {
-        "identifier" : "hasTopConcept",
-        "language" : "undefined",
-        "value" : "https://semantic.adorsys.com/meta/kpi/Variance",
-        "type" : "iri"
-      }, {
-        "identifier" : "hasTopConcept",
-        "language" : "undefined",
-        "value" : "https://semantic.adorsys.com/meta/kpi/Sum",
-        "type" : "iri"
+        "value" : "Bergh, Johann. KPI Ontology. Version 1.0.0. https://doi.org/10.5281/zenodo.24400357",
+        "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
         "identifier" : "preferredNamespaceUri",
@@ -243,7 +255,7 @@
     "id" : "7",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "23",
+    "id" : "24",
     "type" : "rdfs:Datatype"
   }, {
     "id" : "25",
@@ -342,12 +354,12 @@
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
-          "language" : "en",
+          "language" : "de",
           "value" : "Minimum",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
-          "language" : "de",
+          "language" : "en",
           "value" : "Minimum",
           "type" : "label"
         } ],
@@ -409,13 +421,13 @@
         } ],
         "definition" : [ {
           "identifier" : "definition",
-          "language" : "de",
-          "value" : "Ermittelt den größten Wert in der aggregierten Menge. Entspricht der SPARQL-Funktion MAX().",
+          "language" : "en",
+          "value" : "Determines the largest value in the aggregated set. Corresponds to the SPARQL function MAX().",
           "type" : "label"
         }, {
           "identifier" : "definition",
-          "language" : "en",
-          "value" : "Determines the largest value in the aggregated set. Corresponds to the SPARQL function MAX().",
+          "language" : "de",
+          "value" : "Ermittelt den größten Wert in der aggregierten Menge. Entspricht der SPARQL-Funktion MAX().",
           "type" : "label"
         } ],
         "topConceptOf" : [ {
@@ -510,13 +522,13 @@
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
-          "language" : "de",
-          "value" : "Gruppenverkettung",
+          "language" : "en",
+          "value" : "Group Concatenation",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Group Concatenation",
+          "language" : "de",
+          "value" : "Gruppenverkettung",
           "type" : "label"
         } ],
         "definition" : [ {
@@ -566,24 +578,24 @@
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
-          "language" : "de",
-          "value" : "Durchschnitt",
+          "language" : "en",
+          "value" : "Average",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Average",
+          "language" : "de",
+          "value" : "Durchschnitt",
           "type" : "label"
         } ],
         "definition" : [ {
           "identifier" : "definition",
-          "language" : "en",
-          "value" : "Computes the arithmetic mean of all values in the aggregated set. Corresponds to the SPARQL function AVG().",
+          "language" : "de",
+          "value" : "Berechnet den arithmetischen Mittelwert aller Werte in der aggregierten Menge. Entspricht der SPARQL-Funktion AVG().",
           "type" : "label"
         }, {
           "identifier" : "definition",
-          "language" : "de",
-          "value" : "Berechnet den arithmetischen Mittelwert aller Werte in der aggregierten Menge. Entspricht der SPARQL-Funktion AVG().",
+          "language" : "en",
+          "value" : "Computes the arithmetic mean of all values in the aggregated set. Corresponds to the SPARQL function AVG().",
           "type" : "label"
         } ],
         "topConceptOf" : [ {
@@ -597,6 +609,62 @@
         "de" : "Durchschnitt",
         "IRI-based" : "Average",
         "en" : "Average"
+      }
+    }, {
+      "iri" : "https://semantic.adorsys.com/meta/kpi/Count",
+      "baseIri" : "https://semantic.adorsys.com/meta/kpi",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
+          "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "COUNT",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "de",
+          "value" : "Anzahl",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Count",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "de",
+          "value" : "Zählt die Gesamtanzahl der Werte in der aggregierten Menge, einschließlich Duplikate. Entspricht der SPARQL-Funktion COUNT().",
+          "type" : "label"
+        }, {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Counts the total number of values in the aggregated set, including duplicates. Corresponds to the SPARQL function COUNT().",
+          "type" : "label"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "de" : "Anzahl",
+        "IRI-based" : "Count",
+        "en" : "Count"
       }
     }, {
       "iri" : "https://semantic.adorsys.com/meta/kpi/Median",
@@ -655,62 +723,6 @@
         "en" : "Median"
       }
     }, {
-      "iri" : "https://semantic.adorsys.com/meta/kpi/Count",
-      "baseIri" : "https://semantic.adorsys.com/meta/kpi",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "COUNT",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Count",
-          "type" : "label"
-        }, {
-          "identifier" : "prefLabel",
-          "language" : "de",
-          "value" : "Anzahl",
-          "type" : "label"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "Counts the total number of values in the aggregated set, including duplicates. Corresponds to the SPARQL function COUNT().",
-          "type" : "label"
-        }, {
-          "identifier" : "definition",
-          "language" : "de",
-          "value" : "Zählt die Gesamtanzahl der Werte in der aggregierten Menge, einschließlich Duplikate. Entspricht der SPARQL-Funktion COUNT().",
-          "type" : "label"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "de" : "Anzahl",
-        "IRI-based" : "Count",
-        "en" : "Count"
-      }
-    }, {
       "iri" : "https://semantic.adorsys.com/meta/kpi/Sum",
       "baseIri" : "https://semantic.adorsys.com/meta/kpi",
       "annotations" : {
@@ -734,13 +746,13 @@
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Sum",
+          "language" : "de",
+          "value" : "Summe",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
-          "language" : "de",
-          "value" : "Summe",
+          "language" : "en",
+          "value" : "Sum",
           "type" : "label"
         } ],
         "definition" : [ {
@@ -765,6 +777,62 @@
         "de" : "Summe",
         "IRI-based" : "Sum",
         "en" : "Sum"
+      }
+    }, {
+      "iri" : "https://semantic.adorsys.com/meta/kpi/StandardDeviation",
+      "baseIri" : "https://semantic.adorsys.com/meta/kpi",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
+          "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "STDEV",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Standard Deviation",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "de",
+          "value" : "Standardabweichung",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "de",
+          "value" : "Berechnet die Standardabweichung der Werte in der aggregierten Menge als Maß für die Streuung um den Mittelwert. Nicht als native SPARQL-Funktion verfügbar, aber in einigen Triplestore-Erweiterungen unterstützt.",
+          "type" : "label"
+        }, {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Computes the standard deviation of values in the aggregated set as a measure of dispersion around the mean. Not available as a native SPARQL function but supported in some triplestore extensions.",
+          "type" : "label"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "de" : "Standardabweichung",
+        "IRI-based" : "StandardDeviation",
+        "en" : "Standard Deviation"
       }
     }, {
       "iri" : "https://semantic.adorsys.com/meta/kpi/CountDistinct",
@@ -801,13 +869,13 @@
         } ],
         "definition" : [ {
           "identifier" : "definition",
-          "language" : "en",
-          "value" : "Counts the number of unique (distinct) values in the aggregated set. Corresponds to the SPARQL function COUNT(DISTINCT ...).",
+          "language" : "de",
+          "value" : "Zählt die Anzahl der eindeutigen (verschiedenen) Werte in der aggregierten Menge. Entspricht der SPARQL-Funktion COUNT(DISTINCT ...).",
           "type" : "label"
         }, {
           "identifier" : "definition",
-          "language" : "de",
-          "value" : "Zählt die Anzahl der eindeutigen (verschiedenen) Werte in der aggregierten Menge. Entspricht der SPARQL-Funktion COUNT(DISTINCT ...).",
+          "language" : "en",
+          "value" : "Counts the number of unique (distinct) values in the aggregated set. Corresponds to the SPARQL function COUNT(DISTINCT ...).",
           "type" : "label"
         } ],
         "topConceptOf" : [ {
@@ -821,62 +889,6 @@
         "de" : "Eindeutige Anzahl",
         "IRI-based" : "CountDistinct",
         "en" : "Count Distinct"
-      }
-    }, {
-      "iri" : "https://semantic.adorsys.com/meta/kpi/StandardDeviation",
-      "baseIri" : "https://semantic.adorsys.com/meta/kpi",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "STDEV",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "de",
-          "value" : "Standardabweichung",
-          "type" : "label"
-        }, {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Standard Deviation",
-          "type" : "label"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "de",
-          "value" : "Berechnet die Standardabweichung der Werte in der aggregierten Menge als Maß für die Streuung um den Mittelwert. Nicht als native SPARQL-Funktion verfügbar, aber in einigen Triplestore-Erweiterungen unterstützt.",
-          "type" : "label"
-        }, {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "Computes the standard deviation of values in the aggregated set as a measure of dispersion around the mean. Not available as a native SPARQL function but supported in some triplestore extensions.",
-          "type" : "label"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "de" : "Standardabweichung",
-        "IRI-based" : "StandardDeviation",
-        "en" : "Standard Deviation"
       }
     }, {
       "iri" : "https://semantic.adorsys.com/meta/kpi/Variance",
@@ -913,13 +925,13 @@
         } ],
         "definition" : [ {
           "identifier" : "definition",
-          "language" : "en",
-          "value" : "Computes the variance of values in the aggregated set as the square of the standard deviation. Not available as a native SPARQL function but supported in some triplestore extensions.",
+          "language" : "de",
+          "value" : "Berechnet die Varianz der Werte in der aggregierten Menge als Quadrat der Standardabweichung. Nicht als native SPARQL-Funktion verfügbar, aber in einigen Triplestore-Erweiterungen unterstützt.",
           "type" : "label"
         }, {
           "identifier" : "definition",
-          "language" : "de",
-          "value" : "Berechnet die Varianz der Werte in der aggregierten Menge als Quadrat der Standardabweichung. Nicht als native SPARQL-Funktion verfügbar, aber in einigen Triplestore-Erweiterungen unterstützt.",
+          "language" : "en",
+          "value" : "Computes the variance of values in the aggregated set as the square of the standard deviation. Not available as a native SPARQL function but supported in some triplestore extensions.",
           "type" : "label"
         } ],
         "topConceptOf" : [ {
@@ -1013,12 +1025,12 @@
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
-          "language" : "en",
+          "language" : "de",
           "value" : "Minimum",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
-          "language" : "de",
+          "language" : "en",
           "value" : "Minimum",
           "type" : "label"
         } ],
@@ -1080,13 +1092,13 @@
         } ],
         "definition" : [ {
           "identifier" : "definition",
-          "language" : "de",
-          "value" : "Ermittelt den größten Wert in der aggregierten Menge. Entspricht der SPARQL-Funktion MAX().",
+          "language" : "en",
+          "value" : "Determines the largest value in the aggregated set. Corresponds to the SPARQL function MAX().",
           "type" : "label"
         }, {
           "identifier" : "definition",
-          "language" : "en",
-          "value" : "Determines the largest value in the aggregated set. Corresponds to the SPARQL function MAX().",
+          "language" : "de",
+          "value" : "Ermittelt den größten Wert in der aggregierten Menge. Entspricht der SPARQL-Funktion MAX().",
           "type" : "label"
         } ],
         "topConceptOf" : [ {
@@ -1181,13 +1193,13 @@
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
-          "language" : "de",
-          "value" : "Gruppenverkettung",
+          "language" : "en",
+          "value" : "Group Concatenation",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Group Concatenation",
+          "language" : "de",
+          "value" : "Gruppenverkettung",
           "type" : "label"
         } ],
         "definition" : [ {
@@ -1237,24 +1249,24 @@
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
-          "language" : "de",
-          "value" : "Durchschnitt",
+          "language" : "en",
+          "value" : "Average",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Average",
+          "language" : "de",
+          "value" : "Durchschnitt",
           "type" : "label"
         } ],
         "definition" : [ {
           "identifier" : "definition",
-          "language" : "en",
-          "value" : "Computes the arithmetic mean of all values in the aggregated set. Corresponds to the SPARQL function AVG().",
+          "language" : "de",
+          "value" : "Berechnet den arithmetischen Mittelwert aller Werte in der aggregierten Menge. Entspricht der SPARQL-Funktion AVG().",
           "type" : "label"
         }, {
           "identifier" : "definition",
-          "language" : "de",
-          "value" : "Berechnet den arithmetischen Mittelwert aller Werte in der aggregierten Menge. Entspricht der SPARQL-Funktion AVG().",
+          "language" : "en",
+          "value" : "Computes the arithmetic mean of all values in the aggregated set. Corresponds to the SPARQL function AVG().",
           "type" : "label"
         } ],
         "topConceptOf" : [ {
@@ -1349,24 +1361,24 @@
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Count",
+          "language" : "de",
+          "value" : "Anzahl",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
-          "language" : "de",
-          "value" : "Anzahl",
+          "language" : "en",
+          "value" : "Count",
           "type" : "label"
         } ],
         "definition" : [ {
           "identifier" : "definition",
-          "language" : "en",
-          "value" : "Counts the total number of values in the aggregated set, including duplicates. Corresponds to the SPARQL function COUNT().",
+          "language" : "de",
+          "value" : "Zählt die Gesamtanzahl der Werte in der aggregierten Menge, einschließlich Duplikate. Entspricht der SPARQL-Funktion COUNT().",
           "type" : "label"
         }, {
           "identifier" : "definition",
-          "language" : "de",
-          "value" : "Zählt die Gesamtanzahl der Werte in der aggregierten Menge, einschließlich Duplikate. Entspricht der SPARQL-Funktion COUNT().",
+          "language" : "en",
+          "value" : "Counts the total number of values in the aggregated set, including duplicates. Corresponds to the SPARQL function COUNT().",
           "type" : "label"
         } ],
         "topConceptOf" : [ {
@@ -1405,13 +1417,13 @@
         } ],
         "prefLabel" : [ {
           "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Sum",
+          "language" : "de",
+          "value" : "Summe",
           "type" : "label"
         }, {
           "identifier" : "prefLabel",
-          "language" : "de",
-          "value" : "Summe",
+          "language" : "en",
+          "value" : "Sum",
           "type" : "label"
         } ],
         "definition" : [ {
@@ -1436,62 +1448,6 @@
         "de" : "Summe",
         "IRI-based" : "Sum",
         "en" : "Sum"
-      }
-    }, {
-      "iri" : "https://semantic.adorsys.com/meta/kpi/StandardDeviation",
-      "baseIri" : "https://semantic.adorsys.com/meta/kpi",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
-          "type" : "iri"
-        } ],
-        "inScheme" : [ {
-          "identifier" : "inScheme",
-          "language" : "undefined",
-          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
-          "type" : "iri"
-        } ],
-        "notation" : [ {
-          "identifier" : "notation",
-          "language" : "undefined",
-          "value" : "STDEV",
-          "type" : "label"
-        } ],
-        "prefLabel" : [ {
-          "identifier" : "prefLabel",
-          "language" : "de",
-          "value" : "Standardabweichung",
-          "type" : "label"
-        }, {
-          "identifier" : "prefLabel",
-          "language" : "en",
-          "value" : "Standard Deviation",
-          "type" : "label"
-        } ],
-        "definition" : [ {
-          "identifier" : "definition",
-          "language" : "de",
-          "value" : "Berechnet die Standardabweichung der Werte in der aggregierten Menge als Maß für die Streuung um den Mittelwert. Nicht als native SPARQL-Funktion verfügbar, aber in einigen Triplestore-Erweiterungen unterstützt.",
-          "type" : "label"
-        }, {
-          "identifier" : "definition",
-          "language" : "en",
-          "value" : "Computes the standard deviation of values in the aggregated set as a measure of dispersion around the mean. Not available as a native SPARQL function but supported in some triplestore extensions.",
-          "type" : "label"
-        } ],
-        "topConceptOf" : [ {
-          "identifier" : "topConceptOf",
-          "language" : "undefined",
-          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
-          "type" : "iri"
-        } ]
-      },
-      "labels" : {
-        "de" : "Standardabweichung",
-        "IRI-based" : "StandardDeviation",
-        "en" : "Standard Deviation"
       }
     }, {
       "iri" : "https://semantic.adorsys.com/meta/kpi/CountDistinct",
@@ -1528,13 +1484,13 @@
         } ],
         "definition" : [ {
           "identifier" : "definition",
-          "language" : "en",
-          "value" : "Counts the number of unique (distinct) values in the aggregated set. Corresponds to the SPARQL function COUNT(DISTINCT ...).",
+          "language" : "de",
+          "value" : "Zählt die Anzahl der eindeutigen (verschiedenen) Werte in der aggregierten Menge. Entspricht der SPARQL-Funktion COUNT(DISTINCT ...).",
           "type" : "label"
         }, {
           "identifier" : "definition",
-          "language" : "de",
-          "value" : "Zählt die Anzahl der eindeutigen (verschiedenen) Werte in der aggregierten Menge. Entspricht der SPARQL-Funktion COUNT(DISTINCT ...).",
+          "language" : "en",
+          "value" : "Counts the number of unique (distinct) values in the aggregated set. Corresponds to the SPARQL function COUNT(DISTINCT ...).",
           "type" : "label"
         } ],
         "topConceptOf" : [ {
@@ -1548,6 +1504,62 @@
         "de" : "Eindeutige Anzahl",
         "IRI-based" : "CountDistinct",
         "en" : "Count Distinct"
+      }
+    }, {
+      "iri" : "https://semantic.adorsys.com/meta/kpi/StandardDeviation",
+      "baseIri" : "https://semantic.adorsys.com/meta/kpi",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
+          "type" : "iri"
+        } ],
+        "inScheme" : [ {
+          "identifier" : "inScheme",
+          "language" : "undefined",
+          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
+          "type" : "iri"
+        } ],
+        "notation" : [ {
+          "identifier" : "notation",
+          "language" : "undefined",
+          "value" : "STDEV",
+          "type" : "label"
+        } ],
+        "prefLabel" : [ {
+          "identifier" : "prefLabel",
+          "language" : "en",
+          "value" : "Standard Deviation",
+          "type" : "label"
+        }, {
+          "identifier" : "prefLabel",
+          "language" : "de",
+          "value" : "Standardabweichung",
+          "type" : "label"
+        } ],
+        "definition" : [ {
+          "identifier" : "definition",
+          "language" : "de",
+          "value" : "Berechnet die Standardabweichung der Werte in der aggregierten Menge als Maß für die Streuung um den Mittelwert. Nicht als native SPARQL-Funktion verfügbar, aber in einigen Triplestore-Erweiterungen unterstützt.",
+          "type" : "label"
+        }, {
+          "identifier" : "definition",
+          "language" : "en",
+          "value" : "Computes the standard deviation of values in the aggregated set as a measure of dispersion around the mean. Not available as a native SPARQL function but supported in some triplestore extensions.",
+          "type" : "label"
+        } ],
+        "topConceptOf" : [ {
+          "identifier" : "topConceptOf",
+          "language" : "undefined",
+          "value" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0",
+          "type" : "iri"
+        } ]
+      },
+      "labels" : {
+        "de" : "Standardabweichung",
+        "IRI-based" : "StandardDeviation",
+        "en" : "Standard Deviation"
       }
     }, {
       "iri" : "https://semantic.adorsys.com/meta/kpi/Variance",
@@ -1584,13 +1596,13 @@
         } ],
         "definition" : [ {
           "identifier" : "definition",
-          "language" : "en",
-          "value" : "Computes the variance of values in the aggregated set as the square of the standard deviation. Not available as a native SPARQL function but supported in some triplestore extensions.",
+          "language" : "de",
+          "value" : "Berechnet die Varianz der Werte in der aggregierten Menge als Quadrat der Standardabweichung. Nicht als native SPARQL-Funktion verfügbar, aber in einigen Triplestore-Erweiterungen unterstützt.",
           "type" : "label"
         }, {
           "identifier" : "definition",
-          "language" : "de",
-          "value" : "Berechnet die Varianz der Werte in der aggregierten Menge als Quadrat der Standardabweichung. Nicht als native SPARQL-Funktion verfügbar, aber in einigen Triplestore-Erweiterungen unterstützt.",
+          "language" : "en",
+          "value" : "Computes the variance of values in the aggregated set as the square of the standard deviation. Not available as a native SPARQL function but supported in some triplestore extensions.",
           "type" : "label"
         } ],
         "topConceptOf" : [ {
@@ -1657,7 +1669,7 @@
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#anyURI",
     "baseIri" : "http://www.w3.org/2001/XMLSchema",
-    "id" : "23",
+    "id" : "24",
     "label" : {
       "IRI-based" : "anyURI"
     }
@@ -1787,17 +1799,17 @@
         "property" : [ {
           "identifier" : "property",
           "language" : "undefined",
-          "value" : "_:genid2147483650",
+          "value" : "_:genid2147483664",
           "type" : "label"
         }, {
           "identifier" : "property",
           "language" : "undefined",
-          "value" : "_:genid2147483649",
+          "value" : "_:genid2147483662",
           "type" : "label"
         }, {
           "identifier" : "property",
           "language" : "undefined",
-          "value" : "_:genid2147483648",
+          "value" : "_:genid2147483663",
           "type" : "label"
         } ]
       },
@@ -1825,12 +1837,12 @@
         "property" : [ {
           "identifier" : "property",
           "language" : "undefined",
-          "value" : "_:genid2147483655",
+          "value" : "_:genid2147483658",
           "type" : "label"
         }, {
           "identifier" : "property",
           "language" : "undefined",
-          "value" : "_:genid2147483656",
+          "value" : "_:genid2147483657",
           "type" : "label"
         } ]
       },
@@ -1838,39 +1850,6 @@
         "de" : "Dimensionswert-Shape",
         "IRI-based" : "DimensionValueShape",
         "en" : "Dimension Value Shape"
-      }
-    }, {
-      "iri" : "https://semantic.adorsys.com/meta/kpi/GranularityDimensionShape",
-      "baseIri" : "https://semantic.adorsys.com/meta/kpi",
-      "annotations" : {
-        "isDefinedBy" : [ {
-          "identifier" : "isDefinedBy",
-          "language" : "undefined",
-          "value" : "https://semantic.adorsys.com/meta/kpi/",
-          "type" : "iri"
-        } ],
-        "targetClass" : [ {
-          "identifier" : "targetClass",
-          "language" : "undefined",
-          "value" : "https://semantic.adorsys.com/meta/kpi/GranularityDimension",
-          "type" : "iri"
-        } ],
-        "property" : [ {
-          "identifier" : "property",
-          "language" : "undefined",
-          "value" : "_:genid2147483660",
-          "type" : "label"
-        }, {
-          "identifier" : "property",
-          "language" : "undefined",
-          "value" : "_:genid2147483659",
-          "type" : "label"
-        } ]
-      },
-      "labels" : {
-        "de" : "Granularitätsdimension-Shape",
-        "IRI-based" : "GranularityDimensionShape",
-        "en" : "Granularity Dimension Shape"
       }
     }, {
       "iri" : "https://semantic.adorsys.com/meta/kpi/AggregationResultShape",
@@ -1891,12 +1870,12 @@
         "property" : [ {
           "identifier" : "property",
           "language" : "undefined",
-          "value" : "_:genid2147483657",
+          "value" : "_:genid2147483660",
           "type" : "label"
         }, {
           "identifier" : "property",
           "language" : "undefined",
-          "value" : "_:genid2147483658",
+          "value" : "_:genid2147483659",
           "type" : "label"
         } ]
       },
@@ -1904,6 +1883,39 @@
         "de" : "Aggregationsergebnis-Shape",
         "IRI-based" : "AggregationResultShape",
         "en" : "Aggregation Result Shape"
+      }
+    }, {
+      "iri" : "https://semantic.adorsys.com/meta/kpi/GranularityDimensionShape",
+      "baseIri" : "https://semantic.adorsys.com/meta/kpi",
+      "annotations" : {
+        "isDefinedBy" : [ {
+          "identifier" : "isDefinedBy",
+          "language" : "undefined",
+          "value" : "https://semantic.adorsys.com/meta/kpi/",
+          "type" : "iri"
+        } ],
+        "targetClass" : [ {
+          "identifier" : "targetClass",
+          "language" : "undefined",
+          "value" : "https://semantic.adorsys.com/meta/kpi/GranularityDimension",
+          "type" : "iri"
+        } ],
+        "property" : [ {
+          "identifier" : "property",
+          "language" : "undefined",
+          "value" : "_:genid2147483661",
+          "type" : "label"
+        }, {
+          "identifier" : "property",
+          "language" : "undefined",
+          "value" : "_:genid2147483650",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "de" : "Granularitätsdimension-Shape",
+        "IRI-based" : "GranularityDimensionShape",
+        "en" : "Granularity Dimension Shape"
       }
     }, {
       "iri" : "https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape",
@@ -1924,22 +1936,12 @@
         "property" : [ {
           "identifier" : "property",
           "language" : "undefined",
-          "value" : "_:genid2147483653",
-          "type" : "label"
-        }, {
-          "identifier" : "property",
-          "language" : "undefined",
-          "value" : "_:genid2147483663",
-          "type" : "label"
-        }, {
-          "identifier" : "property",
-          "language" : "undefined",
           "value" : "_:genid2147483651",
           "type" : "label"
         }, {
           "identifier" : "property",
           "language" : "undefined",
-          "value" : "_:genid2147483664",
+          "value" : "_:genid2147483652",
           "type" : "label"
         }, {
           "identifier" : "property",
@@ -1949,17 +1951,27 @@
         }, {
           "identifier" : "property",
           "language" : "undefined",
-          "value" : "_:genid2147483662",
+          "value" : "_:genid2147483649",
           "type" : "label"
         }, {
           "identifier" : "property",
           "language" : "undefined",
-          "value" : "_:genid2147483661",
+          "value" : "_:genid2147483648",
           "type" : "label"
         }, {
           "identifier" : "property",
           "language" : "undefined",
-          "value" : "_:genid2147483652",
+          "value" : "_:genid2147483653",
+          "type" : "label"
+        }, {
+          "identifier" : "property",
+          "language" : "undefined",
+          "value" : "_:genid2147483655",
+          "type" : "label"
+        }, {
+          "identifier" : "property",
+          "language" : "undefined",
+          "value" : "_:genid2147483656",
           "type" : "label"
         } ]
       },
@@ -2014,8 +2026,8 @@
     "id" : "22",
     "type" : "owl:objectProperty"
   }, {
-    "id" : "24",
-    "type" : "owl:datatypeProperty"
+    "id" : "23",
+    "type" : "owl:objectProperty"
   }, {
     "id" : "26",
     "type" : "owl:allValuesFrom"
@@ -2030,7 +2042,7 @@
     "type" : "owl:datatypeProperty"
   }, {
     "id" : "32",
-    "type" : "owl:objectProperty"
+    "type" : "owl:datatypeProperty"
   }, {
     "id" : "34",
     "type" : "owl:datatypeProperty"
@@ -2113,7 +2125,7 @@
     "comment" : {
       "en" : "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the computed numerical value resulting from the application of the aggregation operator to the instance data of a specific group (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively AggregationResult\r\n2. Range is xsd:decimal\r\n3. Functional property (a result has exactly one aggregation value)\r\n4. Contains the physical numerical value after application of the aggregation operator\r\n\r\nExamples:\r\n- aggregationValue = \"3456.78\"^^xsd:decimal (average salary for males)\r\n- aggregationValue = \"2890.12\"^^xsd:decimal (average salary for females)\r\n- aggregationValue = \"871\"^^xsd:decimal (employee count in Berlin)\r\n\r\nCardinality: 1..1"
     },
-    "attributes" : [ "external", "datatype", "functional" ],
+    "attributes" : [ "datatype", "external", "functional" ],
     "id" : "0"
   }, {
     "iri" : "https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI",
@@ -2142,7 +2154,7 @@
     "comment" : {
       "en" : "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the URI of the property from the reference ontology over which the aggregation is performed (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is xsd:anyURI\r\n3. Non-functional property (a KPI can aggregate over multiple properties)\r\n4. The URI points to a Data Property or Object Property of the reference ontology\r\n5. The aggregation operator is applied to the values of this property in the instance data\r\n\r\nExamples:\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/grossSalary\"^^xsd:anyURI (gross salary)\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/totalCompensation\"^^xsd:anyURI (total compensation)\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/location\"^^xsd:anyURI (location, for COUNT)\r\n\r\nCardinality: 1..n"
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "5"
   }, {
     "iri" : "https://semantic.adorsys.com/meta/kpi/granularityPropertyURI",
@@ -2171,7 +2183,7 @@
     "comment" : {
       "en" : "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the URI of the property from the reference ontology used as a breakdown dimension for the aggregation (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively GranularityDimension\r\n2. Range is xsd:anyURI\r\n3. Functional property (a dimension references exactly one property)\r\n4. The URI identifies the property by whose values the instance data is grouped (GROUP BY)\r\n\r\nExamples:\r\n- granularityPropertyURI = \"http://example.org/hr/ontology/gender\"^^xsd:anyURI (gender)\r\n- granularityPropertyURI = \"http://example.org/hr/ontology/location\"^^xsd:anyURI (location)\r\n- granularityPropertyURI = \"http://example.org/hr/ontology/educationLevel\"^^xsd:anyURI (education level)\r\n\r\nCardinality: 1..1"
     },
-    "attributes" : [ "external", "datatype", "functional" ],
+    "attributes" : [ "datatype", "external", "functional" ],
     "id" : "10"
   }, {
     "iri" : "https://semantic.adorsys.com/meta/kpi/forDimension",
@@ -2229,7 +2241,7 @@
     "comment" : {
       "en" : "This property is a type of data property (Genus: owl:DatatypeProperty) that contains a human-readable label for a key performance indicator (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is xsd:string\r\n3. Optional property for improving readability\r\n4. Describes the purpose of the metric in natural language\r\n\r\nExamples:\r\n- kpiLabel = \"Durchschnittsgehalt nach Geschlecht\"@de / \"Average Salary by Gender\"@en\r\n- kpiLabel = \"Durchschnittsgehalt nach Standort\"@de / \"Average Salary by Location\"@en\r\n\r\nCardinality: 0..n"
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "14"
   }, {
     "iri" : "https://semantic.adorsys.com/meta/kpi/dimensionLabel",
@@ -2258,7 +2270,7 @@
     "comment" : {
       "en" : "This property is a type of data property (Genus: owl:DatatypeProperty) that contains a human-readable label for a granularity dimension (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively GranularityDimension\r\n2. Range is xsd:string\r\n3. Optional property for improving readability\r\n4. Can be multilingual (via language tags)\r\n\r\nExamples:\r\n- dimensionLabel = \"Geschlecht\"@de / \"Gender\"@en\r\n- dimensionLabel = \"Standort\"@de / \"Location\"@en\r\n\r\nCardinality: 0..n"
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "16"
   }, {
     "iri" : "https://semantic.adorsys.com/meta/kpi/filterExpression",
@@ -2287,7 +2299,7 @@
     "comment" : {
       "en" : "This property is a type of data property (Genus: owl:DatatypeProperty) that contains an optional filter expression restricting the instance data before aggregation (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is xsd:string\r\n3. Optional property for documenting filter criteria\r\n4. Contains the filter expression in SPARQL syntax or natural language\r\n5. Enables reproducibility of the computation\r\n\r\nExamples:\r\n- filterExpression = \"FILTER(?brutto_monthly > 0)\" (only positive gross salaries)\r\n- filterExpression = \"FILTER(?age >= 18 && ?age <= 65)\" (working age)\r\n\r\nCardinality: 0..n"
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "18"
   }, {
     "iri" : "https://semantic.adorsys.com/meta/kpi/dimensionValueLiteral",
@@ -2316,7 +2328,7 @@
     "comment" : {
       "en" : "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the concrete literal value of a dimension value as a string (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively DimensionValue\r\n2. Range is xsd:string\r\n3. Functional property (a dimension value has exactly one literal)\r\n4. Contains the string representation of the concrete dimension value\r\n5. Corresponds to the value returned by the GROUP BY operation\r\n\r\nExamples:\r\n- dimensionValueLiteral = \"M\" (male gender)\r\n- dimensionValueLiteral = \"Frankfurt am Main\" (location)\r\n- dimensionValueLiteral = \"Completed recognized vocational training\" (professional training)\r\n\r\nCardinality: 1..1"
     },
-    "attributes" : [ "external", "datatype", "functional" ],
+    "attributes" : [ "datatype", "external", "functional" ],
     "id" : "19"
   }, {
     "iri" : "https://semantic.adorsys.com/meta/kpi/hasGranularityDimension",
@@ -2348,9 +2360,9 @@
     "attributes" : [ "object", "external" ],
     "id" : "22"
   }, {
-    "iri" : "https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI",
+    "iri" : "https://semantic.adorsys.com/meta/kpi/hasAggregationOperator",
     "baseIri" : "https://semantic.adorsys.com/meta/kpi",
-    "range" : "23",
+    "range" : "9",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -2361,22 +2373,22 @@
       "definition" : [ {
         "identifier" : "definition",
         "language" : "de",
-        "value" : "Diese Eigenschaft ist eine Art von Dateneigenschaft (Genus: owl:DatatypeProperty), die die URI der Eigenschaft aus der Referenzontologie enthält, über die die Aggregation durchgeführt wird (Differentia specifica).\r\n\r\nGenus: Dateneigenschaft (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich KeyPerformanceIndicator\r\n2. Wertebereich ist xsd:anyURI\r\n3. Nicht-funktionale Eigenschaft (ein KPI kann über mehrere Eigenschaften aggregieren)\r\n4. Die URI verweist auf eine Data Property oder Object Property der Referenzontologie\r\n5. Der Aggregationsoperator wird auf die Werte dieser Eigenschaft in den Instanzdaten angewendet\r\n\r\nSemantik:\r\nDie aggregationPropertyURI identifiziert die Eigenschaft der Referenzontologie, deren Werte durch den Aggregationsoperator zusammengefasst werden. Dies ist typischerweise eine numerische Dateneigenschaft.\r\n\r\nBeispiele:\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/grossSalary\"^^xsd:anyURI (Bruttogehalt)\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/totalCompensation\"^^xsd:anyURI (Gesamtvergütung)\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/location\"^^xsd:anyURI (Standort, für COUNT)\r\n\r\nKardinalität: 1..n",
+        "value" : "Diese Eigenschaft ist eine Art von Beziehung (Genus: owl:ObjectProperty), die einer Leistungskennzahl genau einen Aggregationsoperator aus dem kontrollierten SKOS-Vokabular zuordnet (Differentia specifica).\r\n\r\nGenus: Beziehungs-Eigenschaft (owl:ObjectProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich KeyPerformanceIndicator\r\n2. Wertebereich ist AggregationOperator (skos:Concept aus <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>)\r\n3. Funktionale Eigenschaft (ein KPI hat genau einen Operator)\r\n4. Bestimmt die mathematische Aggregationsfunktion (SUM, AVG, COUNT, etc.)\r\n\r\nSemantik:\r\n- Subject: Die Leistungskennzahl\r\n- Predicate: \"hat Aggregationsoperator\"\r\n- Object: Der verwendete Aggregationsoperator\r\n\r\nBeispiele:\r\n- KPI \"Durchschnittsgehalt\" hasAggregationOperator kpi:Average\r\n- KPI \"Mitarbeiteranzahl\" hasAggregationOperator kpi:Count\r\n- KPI \"Gesamtgehaltssumme\" hasAggregationOperator kpi:Sum\r\n\r\nKardinalität: 1..1 (genau ein Operator pro KPI)",
         "type" : "label"
       } ]
     },
     "label" : {
-      "de" : "Aggregationseigenschaft-URI",
-      "IRI-based" : "aggregationPropertyURI",
-      "en" : "aggregation property URI"
+      "de" : "hat Aggregationsoperator",
+      "IRI-based" : "hasAggregationOperator",
+      "en" : "has aggregation operator"
     },
-    "minCardinality" : "1",
+    "cardinality" : "1",
     "domain" : "6",
     "comment" : {
-      "en" : "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the URI of the property from the reference ontology over which the aggregation is performed (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is xsd:anyURI\r\n3. Non-functional property (a KPI can aggregate over multiple properties)\r\n4. The URI points to a Data Property or Object Property of the reference ontology\r\n5. The aggregation operator is applied to the values of this property in the instance data\r\n\r\nExamples:\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/grossSalary\"^^xsd:anyURI (gross salary)\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/totalCompensation\"^^xsd:anyURI (total compensation)\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/location\"^^xsd:anyURI (location, for COUNT)\r\n\r\nCardinality: 1..n"
+      "en" : "This property is a type of relationship (Genus: owl:ObjectProperty) that assigns exactly one aggregation operator from the controlled SKOS vocabulary to a key performance indicator (Differentia specifica).\r\n\r\nGenus: Relationship Property (owl:ObjectProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is AggregationOperator (skos:Concept from <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>)\r\n3. Functional property (a KPI has exactly one operator)\r\n4. Determines the mathematical aggregation function (SUM, AVG, COUNT, etc.)\r\n\r\nExamples:\r\n- KPI \"Average Salary\" hasAggregationOperator kpi:Average\r\n- KPI \"Employee Count\" hasAggregationOperator kpi:Count\r\n- KPI \"Total Salary Sum\" hasAggregationOperator kpi:Sum\r\n\r\nCardinality: 1..1 (exactly one operator per KPI)"
     },
-    "attributes" : [ "external", "datatype" ],
-    "id" : "24"
+    "attributes" : [ "object", "external", "functional" ],
+    "id" : "23"
   }, {
     "iri" : "https://semantic.adorsys.com/meta/kpi/hasAggregationResult",
     "baseIri" : "https://semantic.adorsys.com/meta/kpi",
@@ -2404,7 +2416,7 @@
     "comment" : {
       "en" : "This property is a type of relationship (Genus: owl:ObjectProperty) that assigns computed aggregation results to a key performance indicator (Differentia specifica).\r\n\r\nGenus: Relationship Property (owl:ObjectProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is AggregationResult\r\n3. Non-functional property (a KPI has 1..n results)\r\n4. Each result represents one row of the aggregated result table\r\n\r\nExamples:\r\n- KPI \"Average Salary by Gender\" hasAggregationResult [result for Male], hasAggregationResult [result for Female]\r\n- KPI \"Average Salary by Location\" hasAggregationResult [result for Frankfurt], hasAggregationResult [result for Munich], ...\r\n\r\nCardinality: 1..n (at least one result per KPI)"
     },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "object", "allValues", "external" ],
     "id" : "26"
   }, {
     "iri" : "https://semantic.adorsys.com/meta/kpi/hasDimensionValue",
@@ -2465,9 +2477,39 @@
     "attributes" : [ "object", "external", "functional" ],
     "id" : "29"
   }, {
-    "iri" : "https://semantic.adorsys.com/meta/kpi/referenceOntologyURI",
+    "iri" : "https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI",
     "baseIri" : "https://semantic.adorsys.com/meta/kpi",
     "range" : "30",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://semantic.adorsys.com/meta/kpi/",
+        "type" : "iri"
+      } ],
+      "definition" : [ {
+        "identifier" : "definition",
+        "language" : "de",
+        "value" : "Diese Eigenschaft ist eine Art von Dateneigenschaft (Genus: owl:DatatypeProperty), die die URI der Eigenschaft aus der Referenzontologie enthält, über die die Aggregation durchgeführt wird (Differentia specifica).\r\n\r\nGenus: Dateneigenschaft (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich KeyPerformanceIndicator\r\n2. Wertebereich ist xsd:anyURI\r\n3. Nicht-funktionale Eigenschaft (ein KPI kann über mehrere Eigenschaften aggregieren)\r\n4. Die URI verweist auf eine Data Property oder Object Property der Referenzontologie\r\n5. Der Aggregationsoperator wird auf die Werte dieser Eigenschaft in den Instanzdaten angewendet\r\n\r\nSemantik:\r\nDie aggregationPropertyURI identifiziert die Eigenschaft der Referenzontologie, deren Werte durch den Aggregationsoperator zusammengefasst werden. Dies ist typischerweise eine numerische Dateneigenschaft.\r\n\r\nBeispiele:\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/grossSalary\"^^xsd:anyURI (Bruttogehalt)\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/totalCompensation\"^^xsd:anyURI (Gesamtvergütung)\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/location\"^^xsd:anyURI (Standort, für COUNT)\r\n\r\nKardinalität: 1..n",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "de" : "Aggregationseigenschaft-URI",
+      "IRI-based" : "aggregationPropertyURI",
+      "en" : "aggregation property URI"
+    },
+    "minCardinality" : "1",
+    "domain" : "6",
+    "comment" : {
+      "en" : "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the URI of the property from the reference ontology over which the aggregation is performed (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is xsd:anyURI\r\n3. Non-functional property (a KPI can aggregate over multiple properties)\r\n4. The URI points to a Data Property or Object Property of the reference ontology\r\n5. The aggregation operator is applied to the values of this property in the instance data\r\n\r\nExamples:\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/grossSalary\"^^xsd:anyURI (gross salary)\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/totalCompensation\"^^xsd:anyURI (total compensation)\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/location\"^^xsd:anyURI (location, for COUNT)\r\n\r\nCardinality: 1..n"
+    },
+    "attributes" : [ "datatype", "external" ],
+    "id" : "31"
+  }, {
+    "iri" : "https://semantic.adorsys.com/meta/kpi/referenceOntologyURI",
+    "baseIri" : "https://semantic.adorsys.com/meta/kpi",
+    "range" : "24",
     "annotations" : {
       "isDefinedBy" : [ {
         "identifier" : "isDefinedBy",
@@ -2492,37 +2534,7 @@
     "comment" : {
       "en" : "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the URI of the reference ontology from whose instance data the key performance indicator is computed (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is xsd:anyURI\r\n3. Functional property (a KPI references exactly one ontology)\r\n4. The URI identifies the ontology whose vocabulary and instance data form the basis of the computation\r\n5. Enables provenance traceability\r\n\r\nExamples:\r\n- referenceOntologyURI = \"http://example.org/ontology/hr/1.0\"^^xsd:anyURI\r\n- referenceOntologyURI = \"http://example.org/ontology/inventory/1.0\"^^xsd:anyURI\r\n\r\nCardinality: 1..1"
     },
-    "attributes" : [ "external", "datatype", "functional" ],
-    "id" : "31"
-  }, {
-    "iri" : "https://semantic.adorsys.com/meta/kpi/hasAggregationOperator",
-    "baseIri" : "https://semantic.adorsys.com/meta/kpi",
-    "range" : "9",
-    "annotations" : {
-      "isDefinedBy" : [ {
-        "identifier" : "isDefinedBy",
-        "language" : "undefined",
-        "value" : "https://semantic.adorsys.com/meta/kpi/",
-        "type" : "iri"
-      } ],
-      "definition" : [ {
-        "identifier" : "definition",
-        "language" : "de",
-        "value" : "Diese Eigenschaft ist eine Art von Beziehung (Genus: owl:ObjectProperty), die einer Leistungskennzahl genau einen Aggregationsoperator aus dem kontrollierten SKOS-Vokabular zuordnet (Differentia specifica).\r\n\r\nGenus: Beziehungs-Eigenschaft (owl:ObjectProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich KeyPerformanceIndicator\r\n2. Wertebereich ist AggregationOperator (skos:Concept aus <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>)\r\n3. Funktionale Eigenschaft (ein KPI hat genau einen Operator)\r\n4. Bestimmt die mathematische Aggregationsfunktion (SUM, AVG, COUNT, etc.)\r\n\r\nSemantik:\r\n- Subject: Die Leistungskennzahl\r\n- Predicate: \"hat Aggregationsoperator\"\r\n- Object: Der verwendete Aggregationsoperator\r\n\r\nBeispiele:\r\n- KPI \"Durchschnittsgehalt\" hasAggregationOperator kpi:Average\r\n- KPI \"Mitarbeiteranzahl\" hasAggregationOperator kpi:Count\r\n- KPI \"Gesamtgehaltssumme\" hasAggregationOperator kpi:Sum\r\n\r\nKardinalität: 1..1 (genau ein Operator pro KPI)",
-        "type" : "label"
-      } ]
-    },
-    "label" : {
-      "de" : "hat Aggregationsoperator",
-      "IRI-based" : "hasAggregationOperator",
-      "en" : "has aggregation operator"
-    },
-    "cardinality" : "1",
-    "domain" : "6",
-    "comment" : {
-      "en" : "This property is a type of relationship (Genus: owl:ObjectProperty) that assigns exactly one aggregation operator from the controlled SKOS vocabulary to a key performance indicator (Differentia specifica).\r\n\r\nGenus: Relationship Property (owl:ObjectProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is AggregationOperator (skos:Concept from <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>)\r\n3. Functional property (a KPI has exactly one operator)\r\n4. Determines the mathematical aggregation function (SUM, AVG, COUNT, etc.)\r\n\r\nExamples:\r\n- KPI \"Average Salary\" hasAggregationOperator kpi:Average\r\n- KPI \"Employee Count\" hasAggregationOperator kpi:Count\r\n- KPI \"Total Salary Sum\" hasAggregationOperator kpi:Sum\r\n\r\nCardinality: 1..1 (exactly one operator per KPI)"
-    },
-    "attributes" : [ "object", "external", "functional" ],
+    "attributes" : [ "datatype", "external", "functional" ],
     "id" : "32"
   }, {
     "iri" : "https://semantic.adorsys.com/meta/kpi/granularityPropertyURI",
@@ -2552,7 +2564,7 @@
     "comment" : {
       "en" : "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the URI of the property from the reference ontology used as a breakdown dimension for the aggregation (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively GranularityDimension\r\n2. Range is xsd:anyURI\r\n3. Functional property (a dimension references exactly one property)\r\n4. The URI identifies the property by whose values the instance data is grouped (GROUP BY)\r\n\r\nExamples:\r\n- granularityPropertyURI = \"http://example.org/hr/ontology/gender\"^^xsd:anyURI (gender)\r\n- granularityPropertyURI = \"http://example.org/hr/ontology/location\"^^xsd:anyURI (location)\r\n- granularityPropertyURI = \"http://example.org/hr/ontology/educationLevel\"^^xsd:anyURI (education level)\r\n\r\nCardinality: 1..1"
     },
-    "attributes" : [ "external", "datatype", "functional" ],
+    "attributes" : [ "datatype", "external", "functional" ],
     "id" : "34"
   }, {
     "iri" : "https://semantic.adorsys.com/meta/kpi/hasAggregationResult",
@@ -2611,7 +2623,7 @@
     "comment" : {
       "en" : "This property is a type of relationship (Genus: owl:ObjectProperty) that assigns one or more granularity dimensions to a key performance indicator, by which the aggregation results are broken down (Differentia specifica).\r\n\r\nGenus: Relationship Property (owl:ObjectProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is GranularityDimension\r\n3. Non-functional property (a KPI can have 0..n dimensions)\r\n4. Defines the GROUP BY dimensions of the aggregation computation\r\n\r\nExamples:\r\n- KPI \"Average Salary by Gender\" hasGranularityDimension [gender]\r\n- KPI \"Average Salary by Gender and Education\" hasGranularityDimension [gender], hasGranularityDimension [education]\r\n- KPI \"Overall Average Salary\" (no dimensions)\r\n\r\nCardinality: 0..n (zero or more dimensions per KPI)"
     },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "object", "allValues", "external" ],
     "id" : "36"
   }, {
     "iri" : "https://semantic.adorsys.com/meta/kpi/forDimension",
@@ -2640,7 +2652,7 @@
     "comment" : {
       "en" : "This property is a type of relationship (Genus: owl:ObjectProperty) that assigns a dimension value to its associated granularity dimension, indicating which dimension is specified by this value (Differentia specifica).\r\n\r\nGenus: Relationship Property (owl:ObjectProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively DimensionValue\r\n2. Range is GranularityDimension\r\n3. Functional property (a dimension value belongs to exactly one dimension)\r\n4. Establishes the connection between a concrete value and its semantic dimension\r\n\r\nExamples:\r\n- DimensionValue [\"M\"] forDimension [gender]\r\n- DimensionValue [\"Frankfurt am Main\"] forDimension [location]\r\n\r\nCardinality: 1..1 (exactly one dimension per dimension value)"
     },
-    "attributes" : [ "object", "external", "allValues", "functional" ],
+    "attributes" : [ "object", "allValues", "external", "functional" ],
     "id" : "37"
   }, {
     "iri" : "https://semantic.adorsys.com/meta/kpi/dimensionValueLiteral",
@@ -2670,7 +2682,7 @@
     "comment" : {
       "en" : "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the concrete literal value of a dimension value as a string (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively DimensionValue\r\n2. Range is xsd:string\r\n3. Functional property (a dimension value has exactly one literal)\r\n4. Contains the string representation of the concrete dimension value\r\n5. Corresponds to the value returned by the GROUP BY operation\r\n\r\nExamples:\r\n- dimensionValueLiteral = \"M\" (male gender)\r\n- dimensionValueLiteral = \"Frankfurt am Main\" (location)\r\n- dimensionValueLiteral = \"Completed recognized vocational training\" (professional training)\r\n\r\nCardinality: 1..1"
     },
-    "attributes" : [ "external", "datatype", "functional" ],
+    "attributes" : [ "datatype", "external", "functional" ],
     "id" : "39"
   }, {
     "range" : "6",
@@ -2720,7 +2732,7 @@
     "comment" : {
       "en" : "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the computed numerical value resulting from the application of the aggregation operator to the instance data of a specific group (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively AggregationResult\r\n2. Range is xsd:decimal\r\n3. Functional property (a result has exactly one aggregation value)\r\n4. Contains the physical numerical value after application of the aggregation operator\r\n\r\nExamples:\r\n- aggregationValue = \"3456.78\"^^xsd:decimal (average salary for males)\r\n- aggregationValue = \"2890.12\"^^xsd:decimal (average salary for females)\r\n- aggregationValue = \"871\"^^xsd:decimal (employee count in Berlin)\r\n\r\nCardinality: 1..1"
     },
-    "attributes" : [ "external", "datatype", "functional" ],
+    "attributes" : [ "datatype", "external", "functional" ],
     "id" : "45"
   }, {
     "iri" : "https://semantic.adorsys.com/meta/kpi/hasDimensionValue",
@@ -2749,7 +2761,7 @@
     "comment" : {
       "en" : "This property is a type of relationship (Genus: owl:ObjectProperty) that assigns concrete dimension values to an aggregation result, identifying the result row (Differentia specifica).\r\n\r\nGenus: Relationship Property (owl:ObjectProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively AggregationResult\r\n2. Range is DimensionValue\r\n3. Non-functional property (a result can have 0..n dimension values)\r\n4. The dimension values identify the group to which the result belongs\r\n\r\nExamples:\r\n- AggregationResult [avg=3456.78] hasDimensionValue [gender=\"M\"]\r\n- AggregationResult [avg=2890.12] hasDimensionValue [gender=\"W\"], hasDimensionValue [education=\"Abitur\"]\r\n\r\nCardinality: 0..n (count matches the number of granularity dimensions of the KPI)"
     },
-    "attributes" : [ "object", "external", "allValues" ],
+    "attributes" : [ "object", "allValues", "external" ],
     "id" : "47"
   }, {
     "iri" : "https://semantic.adorsys.com/meta/kpi/dataSourceURI",
@@ -2778,7 +2790,7 @@
     "comment" : {
       "en" : "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the URI of the data source from which the instance data for the aggregation computation originates (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is xsd:anyURI\r\n3. Optional property for specifying the data source\r\n4. Can identify a named graph, a SPARQL endpoint, or another data source\r\n\r\nExamples:\r\n- dataSourceURI = \"http://localhost:8080/graph/bulk1\"^^xsd:anyURI (named graph)\r\n- dataSourceURI = \"http://example.org/sparql\"^^xsd:anyURI (SPARQL endpoint)\r\n\r\nCardinality: 0..n"
     },
-    "attributes" : [ "external", "datatype" ],
+    "attributes" : [ "datatype", "external" ],
     "id" : "48"
   }, {
     "iri" : "https://semantic.adorsys.com/meta/kpi/forDimension",
@@ -2866,7 +2878,7 @@
     "comment" : {
       "en" : "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the URI of the reference ontology from whose instance data the key performance indicator is computed (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is xsd:anyURI\r\n3. Functional property (a KPI references exactly one ontology)\r\n4. The URI identifies the ontology whose vocabulary and instance data form the basis of the computation\r\n5. Enables provenance traceability\r\n\r\nExamples:\r\n- referenceOntologyURI = \"http://example.org/ontology/hr/1.0\"^^xsd:anyURI\r\n- referenceOntologyURI = \"http://example.org/ontology/inventory/1.0\"^^xsd:anyURI\r\n\r\nCardinality: 1..1"
     },
-    "attributes" : [ "external", "datatype", "functional" ],
+    "attributes" : [ "datatype", "external", "functional" ],
     "id" : "51"
   }, {
     "range" : "13",

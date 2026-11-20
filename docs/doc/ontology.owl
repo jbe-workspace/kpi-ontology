@@ -13,6 +13,7 @@
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://semantic.adorsys.com/meta/kpi/1.0">
         <owl:imports rdf:resource="https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0"/>
+        <terms:bibliographicCitation>Bergh, Johann. KPI Ontology. Version 1.0.0. https://doi.org/10.5281/zenodo.24400357</terms:bibliographicCitation>
         <terms:contributor>Johann Bergh &lt;Johann.Bergh@adorsys.com&gt;</terms:contributor>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-04-08</terms:created>
         <terms:creator>Johann Bergh &lt;Johann.Bergh@adorsys.com&gt;</terms:creator>
@@ -70,6 +71,7 @@
         The ontology follows the principles of Aristotelian logic with clear genus-differentia definitions
         for all classes and properties.
     </terms:description>
+        <terms:identifier>10.5281/zenodo.24400357</terms:identifier>
         <terms:license rdf:resource="https://spdx.org/licenses/MIT.html"/>
         <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-11-20</terms:modified>
         <terms:publisher>adorsys</terms:publisher>
@@ -124,6 +126,13 @@ The ontology follows the principles of Aristotelian logic with clear genus-diffe
     
 
 
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
     <!-- http://purl.org/dc/terms/contributor -->
 
 
@@ -149,6 +158,13 @@ The ontology follows the principles of Aristotelian logic with clear genus-diffe
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/identifier -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/identifier"/>
     
 
 
@@ -1469,12 +1485,6 @@ Invarianten:
         <shacl:targetClass rdf:resource="https://semantic.adorsys.com/meta/kpi/AggregationOperator"/>
     </owl:NamedIndividual>
     <rdf:Description rdf:nodeID="genid13">
-        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
-        <shacl:name xml:lang="de">bevorzugte Bezeichnung</shacl:name>
-        <shacl:name xml:lang="en">preferred label</shacl:name>
-        <shacl:path rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="genid14">
         <shacl:hasValue rdf:resource="https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0"/>
         <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
         <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
@@ -1482,12 +1492,18 @@ Invarianten:
         <shacl:name xml:lang="en">in scheme</shacl:name>
         <shacl:path rdf:resource="http://www.w3.org/2004/02/skos/core#inScheme"/>
     </rdf:Description>
-    <rdf:Description rdf:nodeID="genid15">
+    <rdf:Description rdf:nodeID="genid14">
         <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
         <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
         <shacl:name xml:lang="de">Notation</shacl:name>
         <shacl:name xml:lang="en">notation</shacl:name>
         <shacl:path rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid15">
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:name xml:lang="de">bevorzugte Bezeichnung</shacl:name>
+        <shacl:name xml:lang="en">preferred label</shacl:name>
+        <shacl:path rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>
     </rdf:Description>
     
 
@@ -1681,32 +1697,29 @@ Invarianten:
     </owl:NamedIndividual>
     <rdf:Description rdf:nodeID="genid22">
         <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
-        <shacl:name xml:lang="de">Aggregationseigenschaft-URI</shacl:name>
-        <shacl:name xml:lang="en">aggregation property URI</shacl:name>
-        <shacl:path rdf:resource="https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI"/>
+        <shacl:name xml:lang="de">Datenquellen-URI</shacl:name>
+        <shacl:name xml:lang="en">data source URI</shacl:name>
+        <shacl:path rdf:resource="https://semantic.adorsys.com/meta/kpi/dataSourceURI"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid23">
-        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
-        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
-        <shacl:name xml:lang="de">Referenzontologie-URI</shacl:name>
-        <shacl:name xml:lang="en">reference ontology URI</shacl:name>
-        <shacl:path rdf:resource="https://semantic.adorsys.com/meta/kpi/referenceOntologyURI"/>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <shacl:name xml:lang="de">Filterausdruck</shacl:name>
+        <shacl:name xml:lang="en">filter expression</shacl:name>
+        <shacl:path rdf:resource="https://semantic.adorsys.com/meta/kpi/filterExpression"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid24">
-        <shacl:class rdf:resource="https://semantic.adorsys.com/meta/kpi/GranularityDimension"/>
-        <shacl:name xml:lang="en">has granularity dimension</shacl:name>
-        <shacl:name xml:lang="de">hat Granularitätsdimension</shacl:name>
-        <shacl:path rdf:resource="https://semantic.adorsys.com/meta/kpi/hasGranularityDimension"/>
-    </rdf:Description>
-    <rdf:Description rdf:nodeID="genid25">
         <shacl:class rdf:resource="https://semantic.adorsys.com/meta/kpi/AggregationOperator"/>
         <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
         <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
         <shacl:name xml:lang="en">has aggregation operator</shacl:name>
         <shacl:name xml:lang="de">hat Aggregationsoperator</shacl:name>
         <shacl:path rdf:resource="https://semantic.adorsys.com/meta/kpi/hasAggregationOperator"/>
+    </rdf:Description>
+    <rdf:Description rdf:nodeID="genid25">
+        <shacl:class rdf:resource="https://semantic.adorsys.com/meta/kpi/GranularityDimension"/>
+        <shacl:name xml:lang="en">has granularity dimension</shacl:name>
+        <shacl:name xml:lang="de">hat Granularitätsdimension</shacl:name>
+        <shacl:path rdf:resource="https://semantic.adorsys.com/meta/kpi/hasGranularityDimension"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid26">
         <shacl:class rdf:resource="https://semantic.adorsys.com/meta/kpi/AggregationResult"/>
@@ -1723,15 +1736,18 @@ Invarianten:
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid28">
         <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <shacl:name xml:lang="de">Datenquellen-URI</shacl:name>
-        <shacl:name xml:lang="en">data source URI</shacl:name>
-        <shacl:path rdf:resource="https://semantic.adorsys.com/meta/kpi/dataSourceURI"/>
+        <shacl:maxCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:maxCount>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:name xml:lang="de">Referenzontologie-URI</shacl:name>
+        <shacl:name xml:lang="en">reference ontology URI</shacl:name>
+        <shacl:path rdf:resource="https://semantic.adorsys.com/meta/kpi/referenceOntologyURI"/>
     </rdf:Description>
     <rdf:Description rdf:nodeID="genid29">
-        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <shacl:name xml:lang="de">Filterausdruck</shacl:name>
-        <shacl:name xml:lang="en">filter expression</shacl:name>
-        <shacl:path rdf:resource="https://semantic.adorsys.com/meta/kpi/filterExpression"/>
+        <shacl:datatype rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <shacl:minCount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shacl:minCount>
+        <shacl:name xml:lang="de">Aggregationseigenschaft-URI</shacl:name>
+        <shacl:name xml:lang="en">aggregation property URI</shacl:name>
+        <shacl:path rdf:resource="https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI"/>
     </rdf:Description>
     
 

@@ -48,22 +48,6 @@
   } ]
 }, {
   "@id" : "_:genid13",
-  "http://www.w3.org/ns/shacl#minCount" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/ns/shacl#name" : [ {
-    "@language" : "en",
-    "@value" : "preferred label"
-  }, {
-    "@language" : "de",
-    "@value" : "bevorzugte Bezeichnung"
-  } ],
-  "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
-  } ]
-}, {
-  "@id" : "_:genid14",
   "http://www.w3.org/ns/shacl#hasValue" : [ {
     "@id" : "https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0"
   } ],
@@ -86,7 +70,7 @@
     "@id" : "http://www.w3.org/2004/02/skos/core#inScheme"
   } ]
 }, {
-  "@id" : "_:genid15",
+  "@id" : "_:genid14",
   "http://www.w3.org/ns/shacl#maxCount" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#integer",
     "@value" : "1"
@@ -104,6 +88,22 @@
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
     "@id" : "http://www.w3.org/2004/02/skos/core#notation"
+  } ]
+}, {
+  "@id" : "_:genid15",
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@language" : "en",
+    "@value" : "preferred label"
+  }, {
+    "@language" : "de",
+    "@value" : "bevorzugte Bezeichnung"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#prefLabel"
   } ]
 }, {
   "@id" : "_:genid16",
@@ -245,60 +245,33 @@
   "http://www.w3.org/ns/shacl#datatype" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ],
-  "http://www.w3.org/ns/shacl#minCount" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
-  } ],
   "http://www.w3.org/ns/shacl#name" : [ {
     "@language" : "en",
-    "@value" : "aggregation property URI"
+    "@value" : "data source URI"
   }, {
     "@language" : "de",
-    "@value" : "Aggregationseigenschaft-URI"
+    "@value" : "Datenquellen-URI"
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI"
+    "@id" : "https://semantic.adorsys.com/meta/kpi/dataSourceURI"
   } ]
 }, {
   "@id" : "_:genid23",
   "http://www.w3.org/ns/shacl#datatype" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
-  } ],
-  "http://www.w3.org/ns/shacl#maxCount" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/ns/shacl#minCount" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
-    "@value" : "1"
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ],
   "http://www.w3.org/ns/shacl#name" : [ {
     "@language" : "en",
-    "@value" : "reference ontology URI"
+    "@value" : "filter expression"
   }, {
     "@language" : "de",
-    "@value" : "Referenzontologie-URI"
+    "@value" : "Filterausdruck"
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "https://semantic.adorsys.com/meta/kpi/referenceOntologyURI"
+    "@id" : "https://semantic.adorsys.com/meta/kpi/filterExpression"
   } ]
 }, {
   "@id" : "_:genid24",
-  "http://www.w3.org/ns/shacl#class" : [ {
-    "@id" : "https://semantic.adorsys.com/meta/kpi/GranularityDimension"
-  } ],
-  "http://www.w3.org/ns/shacl#name" : [ {
-    "@language" : "de",
-    "@value" : "hat Granularitätsdimension"
-  }, {
-    "@language" : "en",
-    "@value" : "has granularity dimension"
-  } ],
-  "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "https://semantic.adorsys.com/meta/kpi/hasGranularityDimension"
-  } ]
-}, {
-  "@id" : "_:genid25",
   "http://www.w3.org/ns/shacl#class" : [ {
     "@id" : "https://semantic.adorsys.com/meta/kpi/AggregationOperator"
   } ],
@@ -319,6 +292,21 @@
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
     "@id" : "https://semantic.adorsys.com/meta/kpi/hasAggregationOperator"
+  } ]
+}, {
+  "@id" : "_:genid25",
+  "http://www.w3.org/ns/shacl#class" : [ {
+    "@id" : "https://semantic.adorsys.com/meta/kpi/GranularityDimension"
+  } ],
+  "http://www.w3.org/ns/shacl#name" : [ {
+    "@language" : "de",
+    "@value" : "hat Granularitätsdimension"
+  }, {
+    "@language" : "en",
+    "@value" : "has granularity dimension"
+  } ],
+  "http://www.w3.org/ns/shacl#path" : [ {
+    "@id" : "https://semantic.adorsys.com/meta/kpi/hasGranularityDimension"
   } ]
 }, {
   "@id" : "_:genid26",
@@ -359,30 +347,42 @@
   "http://www.w3.org/ns/shacl#datatype" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ],
+  "http://www.w3.org/ns/shacl#maxCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
+  } ],
   "http://www.w3.org/ns/shacl#name" : [ {
     "@language" : "en",
-    "@value" : "data source URI"
+    "@value" : "reference ontology URI"
   }, {
     "@language" : "de",
-    "@value" : "Datenquellen-URI"
+    "@value" : "Referenzontologie-URI"
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "https://semantic.adorsys.com/meta/kpi/dataSourceURI"
+    "@id" : "https://semantic.adorsys.com/meta/kpi/referenceOntologyURI"
   } ]
 }, {
   "@id" : "_:genid29",
   "http://www.w3.org/ns/shacl#datatype" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
+  } ],
+  "http://www.w3.org/ns/shacl#minCount" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#integer",
+    "@value" : "1"
   } ],
   "http://www.w3.org/ns/shacl#name" : [ {
     "@language" : "en",
-    "@value" : "filter expression"
+    "@value" : "aggregation property URI"
   }, {
     "@language" : "de",
-    "@value" : "Filterausdruck"
+    "@value" : "Aggregationseigenschaft-URI"
   } ],
   "http://www.w3.org/ns/shacl#path" : [ {
-    "@id" : "https://semantic.adorsys.com/meta/kpi/filterExpression"
+    "@id" : "https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -478,6 +478,9 @@
     "@id" : "https://semantic.adorsys.com/meta/kpi/hasAggregationResult"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/terms/bibliographicCitation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
   "@id" : "http://purl.org/dc/terms/contributor",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
@@ -488,6 +491,9 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/identifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "http://purl.org/dc/terms/license",
@@ -573,6 +579,9 @@
 }, {
   "@id" : "https://semantic.adorsys.com/meta/kpi/1.0",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/bibliographicCitation" : [ {
+    "@value" : "Bergh, Johann. KPI Ontology. Version 1.0.0. https://doi.org/10.5281/zenodo.24400357"
+  } ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Johann Bergh <Johann.Bergh@adorsys.com>"
   } ],
@@ -595,6 +604,9 @@
   }, {
     "@language" : "en",
     "@value" : "\r\n        Ontology for the semantic modeling of Key Performance Indicators (KPIs) computed through aggregation\r\n        operations over instance data of any reference ontology.\r\n\r\n        This ontology defines the concept of a KPI as a structured description that brings together: the\r\n        reference ontology from whose instance data the metric is computed; the property to be aggregated\r\n        (e.g., gross salary); the aggregation operator (e.g., average, sum); the granularity dimensions\r\n        (e.g., gender, location) by which the aggregation is broken down; and the computed aggregation\r\n        results with their respective dimension values.\r\n\r\n        The ontology is designed to be general-purpose and is not bound to any specific reference ontology.\r\n        It can be used in any domain where aggregated metrics are computed from RDF instance data. The\r\n        aggregation operators are maintained as a separate SKOS vocabulary (<https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>)\r\n        and included via owl:imports.\r\n\r\n        The ontology follows the principles of Aristotelian logic with clear genus-differentia definitions\r\n        for all classes and properties.\r\n    "
+  } ],
+  "http://purl.org/dc/terms/identifier" : [ {
+    "@value" : "10.5281/zenodo.24400357"
   } ],
   "http://purl.org/dc/terms/license" : [ {
     "@id" : "https://spdx.org/licenses/MIT.html"

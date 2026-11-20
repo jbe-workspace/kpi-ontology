@@ -8,6 +8,7 @@
 
 <https://semantic.adorsys.com/meta/kpi/1.0> rdf:type owl:Ontology ;
                                              owl:imports <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> ;
+                                             <http://purl.org/dc/terms/bibliographicCitation> "Bergh, Johann. KPI Ontology. Version 1.0.0. https://doi.org/10.5281/zenodo.24400357" ;
                                              <http://purl.org/dc/terms/contributor> "Johann Bergh <Johann.Bergh@adorsys.com>" ;
                                              <http://purl.org/dc/terms/created> "2026-04-08"^^xsd:date ;
                                              <http://purl.org/dc/terms/creator> "Johann Bergh <Johann.Bergh@adorsys.com>" ;
@@ -65,6 +66,7 @@
         The ontology follows the principles of Aristotelian logic with clear genus-differentia definitions
         for all classes and properties.
     """@en ;
+                                             <http://purl.org/dc/terms/identifier> "10.5281/zenodo.24400357" ;
                                              <http://purl.org/dc/terms/license> <https://spdx.org/licenses/MIT.html> ;
                                              <http://purl.org/dc/terms/modified> "2026-11-20"^^xsd:date ;
                                              <http://purl.org/dc/terms/publisher> "adorsys" ;
@@ -108,6 +110,10 @@ The ontology follows the principles of Aristotelian logic with clear genus-diffe
 #    Annotation properties
 #################################################################
 
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/contributor
 <http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
 
@@ -122,6 +128,10 @@ The ontology follows the principles of Aristotelian logic with clear genus-diffe
 
 ###  http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/license
@@ -1217,23 +1227,23 @@ Invarianten:
                                                                                                        _:genid15 ;
                                                                  <http://www.w3.org/ns/shacl#targetClass> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
 
-_:genid13 <http://www.w3.org/ns/shacl#minCount> 1 ;
-           <http://www.w3.org/ns/shacl#name> "bevorzugte Bezeichnung"@de ,
-                                             "preferred label"@en ;
-           <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#prefLabel> .
-
-_:genid14 <http://www.w3.org/ns/shacl#hasValue> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> ;
+_:genid13 <http://www.w3.org/ns/shacl#hasValue> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> ;
            <http://www.w3.org/ns/shacl#maxCount> 1 ;
            <http://www.w3.org/ns/shacl#minCount> 1 ;
            <http://www.w3.org/ns/shacl#name> "im Vokabular"@de ,
                                              "in scheme"@en ;
            <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
 
-_:genid15 <http://www.w3.org/ns/shacl#maxCount> 1 ;
+_:genid14 <http://www.w3.org/ns/shacl#maxCount> 1 ;
            <http://www.w3.org/ns/shacl#minCount> 1 ;
            <http://www.w3.org/ns/shacl#name> "Notation"@de ,
                                              "notation"@en ;
            <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#notation> .
+
+_:genid15 <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#name> "bevorzugte Bezeichnung"@de ,
+                                             "preferred label"@en ;
+           <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#prefLabel> .
 
 
 ###  https://semantic.adorsys.com/meta/kpi/AggregationResultShape
@@ -1388,29 +1398,26 @@ _:genid21 <http://www.w3.org/ns/shacl#datatype> xsd:string ;
                                                                      <http://www.w3.org/ns/shacl#targetClass> <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> .
 
 _:genid22 <http://www.w3.org/ns/shacl#datatype> xsd:anyURI ;
-           <http://www.w3.org/ns/shacl#minCount> 1 ;
-           <http://www.w3.org/ns/shacl#name> "Aggregationseigenschaft-URI"@de ,
-                                             "aggregation property URI"@en ;
-           <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI> .
+           <http://www.w3.org/ns/shacl#name> "Datenquellen-URI"@de ,
+                                             "data source URI"@en ;
+           <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/dataSourceURI> .
 
-_:genid23 <http://www.w3.org/ns/shacl#datatype> xsd:anyURI ;
-           <http://www.w3.org/ns/shacl#maxCount> 1 ;
-           <http://www.w3.org/ns/shacl#minCount> 1 ;
-           <http://www.w3.org/ns/shacl#name> "Referenzontologie-URI"@de ,
-                                             "reference ontology URI"@en ;
-           <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/referenceOntologyURI> .
+_:genid23 <http://www.w3.org/ns/shacl#datatype> xsd:string ;
+           <http://www.w3.org/ns/shacl#name> "Filterausdruck"@de ,
+                                             "filter expression"@en ;
+           <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/filterExpression> .
 
-_:genid24 <http://www.w3.org/ns/shacl#class> <https://semantic.adorsys.com/meta/kpi/GranularityDimension> ;
-           <http://www.w3.org/ns/shacl#name> "has granularity dimension"@en ,
-                                             "hat Granularitätsdimension"@de ;
-           <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/hasGranularityDimension> .
-
-_:genid25 <http://www.w3.org/ns/shacl#class> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> ;
+_:genid24 <http://www.w3.org/ns/shacl#class> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> ;
            <http://www.w3.org/ns/shacl#maxCount> 1 ;
            <http://www.w3.org/ns/shacl#minCount> 1 ;
            <http://www.w3.org/ns/shacl#name> "has aggregation operator"@en ,
                                              "hat Aggregationsoperator"@de ;
            <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/hasAggregationOperator> .
+
+_:genid25 <http://www.w3.org/ns/shacl#class> <https://semantic.adorsys.com/meta/kpi/GranularityDimension> ;
+           <http://www.w3.org/ns/shacl#name> "has granularity dimension"@en ,
+                                             "hat Granularitätsdimension"@de ;
+           <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/hasGranularityDimension> .
 
 _:genid26 <http://www.w3.org/ns/shacl#class> <https://semantic.adorsys.com/meta/kpi/AggregationResult> ;
            <http://www.w3.org/ns/shacl#minCount> 1 ;
@@ -1424,14 +1431,17 @@ _:genid27 <http://www.w3.org/ns/shacl#datatype> xsd:string ;
            <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/kpiLabel> .
 
 _:genid28 <http://www.w3.org/ns/shacl#datatype> xsd:anyURI ;
-           <http://www.w3.org/ns/shacl#name> "Datenquellen-URI"@de ,
-                                             "data source URI"@en ;
-           <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/dataSourceURI> .
+           <http://www.w3.org/ns/shacl#maxCount> 1 ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#name> "Referenzontologie-URI"@de ,
+                                             "reference ontology URI"@en ;
+           <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/referenceOntologyURI> .
 
-_:genid29 <http://www.w3.org/ns/shacl#datatype> xsd:string ;
-           <http://www.w3.org/ns/shacl#name> "Filterausdruck"@de ,
-                                             "filter expression"@en ;
-           <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/filterExpression> .
+_:genid29 <http://www.w3.org/ns/shacl#datatype> xsd:anyURI ;
+           <http://www.w3.org/ns/shacl#minCount> 1 ;
+           <http://www.w3.org/ns/shacl#name> "Aggregationseigenschaft-URI"@de ,
+                                             "aggregation property URI"@en ;
+           <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI> .
 
 
 ###  https://semantic.adorsys.com/meta/kpi/Max

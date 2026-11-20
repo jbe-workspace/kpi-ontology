@@ -8,8 +8,10 @@ authors:
     email: "Johann.Bergh@adorsys.com"
 version: "1.0.0"
 date-released: "2026-11-20"
+doi: "10.5281/zenodo.24400357"
 license: "MIT"
 repository-code: "https://github.com/jbe-workspace/kpi-ontology"
+url: "https://jbe-workspace.github.io/kpi-ontology/"
 keywords:
   - "ontology"
   - "RDF"

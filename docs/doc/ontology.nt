@@ -1,5 +1,6 @@
 <https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2002/07/owl#imports> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/bibliographicCitation> "Bergh, Johann. KPI Ontology. Version 1.0.0. https://doi.org/10.5281/zenodo.24400357" .
 <https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/contributor> "Johann Bergh <Johann.Bergh@adorsys.com>" .
 <https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/created> "2026-04-08"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/creator> "Johann Bergh <Johann.Bergh@adorsys.com>" .
@@ -7,6 +8,7 @@
 <https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/description> "\r\n        Kontrolliertes SKOS-Vokabular aller Aggregationsoperatoren, die zur Berechnung von\r\n        Leistungskennzahlen (KPIs) über Instanzdaten verwendet werden können. Umfasst statistische\r\n        Standardoperatoren wie Summe, Durchschnitt, Anzahl, Minimum und Maximum sowie erweiterte\r\n        Operatoren wie Median, Standardabweichung und Varianz.\r\n\r\n        Dieses Vokabular wird von der KPI-Ontologie (kpi:1.0) referenziert und definiert die\r\n        zulässigen Aggregationsfunktionen als SKOS-Konzepte.\r\n    "@de .
 <https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/description> "\r\n        Ontologie zur semantischen Modellierung von Leistungskennzahlen (Key Performance Indicators, KPIs),\r\n        die durch Aggregationsoperationen über Instanzdaten einer beliebigen Referenzontologie berechnet werden.\r\n\r\n        Diese Ontologie definiert das Konzept eines KPI als strukturierte Beschreibung, die folgende Elemente\r\n        zusammenführt: die Referenzontologie, aus deren Instanzdaten die Kennzahl berechnet wird; die zu\r\n        aggregierende Eigenschaft (z.B. Bruttogehalt); den Aggregationsoperator (z.B. Durchschnitt, Summe);\r\n        die Granularitätsdimensionen (z.B. Geschlecht, Standort), nach denen die Aggregation aufgeschlüsselt\r\n        wird; sowie die berechneten Aggregationsergebnisse mit ihren jeweiligen Dimensionswerten.\r\n\r\n        Die Ontologie ist allgemein gehalten und nicht an eine bestimmte Referenzontologie gebunden. Sie kann\r\n        für jede Domäne eingesetzt werden, in der aggregierte Kennzahlen aus RDF-Instanzdaten berechnet werden.\r\n        Die Aggregationsoperatoren werden als separates SKOS-Vokabular (<https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>) gepflegt\r\n        und über owl:imports eingebunden.\r\n\r\n        Die Ontologie folgt den Prinzipien der Aristotelischen Logik mit klarer Genus-Differentia-Definition\r\n        aller Klassen und Eigenschaften.\r\n    "@de .
 <https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/description> "\r\n        Ontology for the semantic modeling of Key Performance Indicators (KPIs) computed through aggregation\r\n        operations over instance data of any reference ontology.\r\n\r\n        This ontology defines the concept of a KPI as a structured description that brings together: the\r\n        reference ontology from whose instance data the metric is computed; the property to be aggregated\r\n        (e.g., gross salary); the aggregation operator (e.g., average, sum); the granularity dimensions\r\n        (e.g., gender, location) by which the aggregation is broken down; and the computed aggregation\r\n        results with their respective dimension values.\r\n\r\n        The ontology is designed to be general-purpose and is not bound to any specific reference ontology.\r\n        It can be used in any domain where aggregated metrics are computed from RDF instance data. The\r\n        aggregation operators are maintained as a separate SKOS vocabulary (<https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>)\r\n        and included via owl:imports.\r\n\r\n        The ontology follows the principles of Aristotelian logic with clear genus-differentia definitions\r\n        for all classes and properties.\r\n    "@en .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/identifier> "10.5281/zenodo.24400357" .
 <https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/license> <https://spdx.org/licenses/MIT.html> .
 <https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/modified> "2026-11-20"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/publisher> "adorsys" .
@@ -50,6 +52,9 @@
 # #################################################################
 # 
 # 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
 # http://purl.org/dc/terms/contributor
 <http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
@@ -61,6 +66,9 @@
 # 
 # http://purl.org/dc/terms/description
 <http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 # 
 # http://purl.org/dc/terms/license
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
@@ -438,23 +446,23 @@ _:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://semantic.adorsys.com/meta/kpi/AggregationOperatorShape> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregation Operator Shape"@en .
 <https://semantic.adorsys.com/meta/kpi/AggregationOperatorShape> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregationsoperator-Shape"@de .
 <https://semantic.adorsys.com/meta/kpi/AggregationOperatorShape> <http://www.w3.org/ns/shacl#property> _:genid13 .
-_:genid13 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#prefLabel> .
-_:genid13 <http://www.w3.org/ns/shacl#name> "preferred label"@en .
-_:genid13 <http://www.w3.org/ns/shacl#name> "bevorzugte Bezeichnung"@de .
+_:genid13 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid13 <http://www.w3.org/ns/shacl#name> "in scheme"@en .
+_:genid13 <http://www.w3.org/ns/shacl#name> "im Vokabular"@de .
 _:genid13 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid13 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid13 <http://www.w3.org/ns/shacl#hasValue> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
 <https://semantic.adorsys.com/meta/kpi/AggregationOperatorShape> <http://www.w3.org/ns/shacl#property> _:genid14 .
-_:genid14 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
-_:genid14 <http://www.w3.org/ns/shacl#name> "in scheme"@en .
-_:genid14 <http://www.w3.org/ns/shacl#name> "im Vokabular"@de .
+_:genid14 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#notation> .
+_:genid14 <http://www.w3.org/ns/shacl#name> "notation"@en .
+_:genid14 <http://www.w3.org/ns/shacl#name> "Notation"@de .
 _:genid14 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:genid14 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid14 <http://www.w3.org/ns/shacl#hasValue> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
 <https://semantic.adorsys.com/meta/kpi/AggregationOperatorShape> <http://www.w3.org/ns/shacl#property> _:genid15 .
-_:genid15 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#notation> .
-_:genid15 <http://www.w3.org/ns/shacl#name> "notation"@en .
-_:genid15 <http://www.w3.org/ns/shacl#name> "Notation"@de .
+_:genid15 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#prefLabel> .
+_:genid15 <http://www.w3.org/ns/shacl#name> "preferred label"@en .
+_:genid15 <http://www.w3.org/ns/shacl#name> "bevorzugte Bezeichnung"@de .
 _:genid15 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid15 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 <https://semantic.adorsys.com/meta/kpi/AggregationOperatorShape> <http://www.w3.org/ns/shacl#targetClass> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
 # 
 # https://semantic.adorsys.com/meta/kpi/AggregationResultShape
@@ -586,30 +594,27 @@ _:genid21 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchem
 <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/2000/01/rdf-schema#label> "KPI Shape"@en .
 <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/2000/01/rdf-schema#label> "KPI-Shape"@de .
 <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/ns/shacl#property> _:genid22 .
-_:genid22 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI> .
-_:genid22 <http://www.w3.org/ns/shacl#name> "aggregation property URI"@en .
-_:genid22 <http://www.w3.org/ns/shacl#name> "Aggregationseigenschaft-URI"@de .
-_:genid22 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid22 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/dataSourceURI> .
+_:genid22 <http://www.w3.org/ns/shacl#name> "data source URI"@en .
+_:genid22 <http://www.w3.org/ns/shacl#name> "Datenquellen-URI"@de .
 _:genid22 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/ns/shacl#property> _:genid23 .
-_:genid23 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/referenceOntologyURI> .
-_:genid23 <http://www.w3.org/ns/shacl#name> "reference ontology URI"@en .
-_:genid23 <http://www.w3.org/ns/shacl#name> "Referenzontologie-URI"@de .
-_:genid23 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid23 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid23 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid23 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/filterExpression> .
+_:genid23 <http://www.w3.org/ns/shacl#name> "filter expression"@en .
+_:genid23 <http://www.w3.org/ns/shacl#name> "Filterausdruck"@de .
+_:genid23 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
 <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/ns/shacl#property> _:genid24 .
-_:genid24 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/hasGranularityDimension> .
-_:genid24 <http://www.w3.org/ns/shacl#name> "hat Granularitätsdimension"@de .
-_:genid24 <http://www.w3.org/ns/shacl#name> "has granularity dimension"@en .
-_:genid24 <http://www.w3.org/ns/shacl#class> <https://semantic.adorsys.com/meta/kpi/GranularityDimension> .
+_:genid24 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/hasAggregationOperator> .
+_:genid24 <http://www.w3.org/ns/shacl#name> "hat Aggregationsoperator"@de .
+_:genid24 <http://www.w3.org/ns/shacl#name> "has aggregation operator"@en .
+_:genid24 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid24 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid24 <http://www.w3.org/ns/shacl#class> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
 <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/ns/shacl#property> _:genid25 .
-_:genid25 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/hasAggregationOperator> .
-_:genid25 <http://www.w3.org/ns/shacl#name> "hat Aggregationsoperator"@de .
-_:genid25 <http://www.w3.org/ns/shacl#name> "has aggregation operator"@en .
-_:genid25 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid25 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
-_:genid25 <http://www.w3.org/ns/shacl#class> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
+_:genid25 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/hasGranularityDimension> .
+_:genid25 <http://www.w3.org/ns/shacl#name> "hat Granularitätsdimension"@de .
+_:genid25 <http://www.w3.org/ns/shacl#name> "has granularity dimension"@en .
+_:genid25 <http://www.w3.org/ns/shacl#class> <https://semantic.adorsys.com/meta/kpi/GranularityDimension> .
 <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/ns/shacl#property> _:genid26 .
 _:genid26 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/hasAggregationResult> .
 _:genid26 <http://www.w3.org/ns/shacl#name> "hat Aggregationsergebnis"@de .
@@ -622,15 +627,18 @@ _:genid27 <http://www.w3.org/ns/shacl#name> "KPI-Bezeichnung"@de .
 _:genid27 <http://www.w3.org/ns/shacl#name> "KPI label"@en .
 _:genid27 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
 <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/ns/shacl#property> _:genid28 .
-_:genid28 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/dataSourceURI> .
-_:genid28 <http://www.w3.org/ns/shacl#name> "data source URI"@en .
-_:genid28 <http://www.w3.org/ns/shacl#name> "Datenquellen-URI"@de .
+_:genid28 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/referenceOntologyURI> .
+_:genid28 <http://www.w3.org/ns/shacl#name> "reference ontology URI"@en .
+_:genid28 <http://www.w3.org/ns/shacl#name> "Referenzontologie-URI"@de .
+_:genid28 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid28 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
 _:genid28 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/ns/shacl#property> _:genid29 .
-_:genid29 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/filterExpression> .
-_:genid29 <http://www.w3.org/ns/shacl#name> "filter expression"@en .
-_:genid29 <http://www.w3.org/ns/shacl#name> "Filterausdruck"@de .
-_:genid29 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid29 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI> .
+_:genid29 <http://www.w3.org/ns/shacl#name> "aggregation property URI"@en .
+_:genid29 <http://www.w3.org/ns/shacl#name> "Aggregationseigenschaft-URI"@de .
+_:genid29 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid29 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/ns/shacl#targetClass> <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> .
 # 
 # https://semantic.adorsys.com/meta/kpi/Max

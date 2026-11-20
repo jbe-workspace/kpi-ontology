@@ -45,6 +45,14 @@ Generated ontology documentation is available from the GitHub Pages site:
 https://jbe-workspace.github.io/kpi-ontology/
 ```
 
+## DOI
+
+The ontology release is archived on Zenodo:
+
+```text
+https://doi.org/10.5281/zenodo.24400357
+```
+
 ## License
 
 This repository is licensed under the MIT License. See [LICENSE](LICENSE).

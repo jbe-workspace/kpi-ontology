@@ -43,6 +43,8 @@
   dcterms:publisher "adorsys";
   dcterms:license <https://spdx.org/licenses/MIT.html>;
   dcterms:source <https://github.com/jbe-workspace/kpi-ontology>;
+  dcterms:identifier "10.5281/zenodo.24400357";
+  dcterms:bibliographicCitation "Bergh, Johann. KPI Ontology. Version 1.0.0. https://doi.org/10.5281/zenodo.24400357";
   dcterms:created "2026-04-08"^^xsd:date ;
   dcterms:modified "2026-11-20"^^xsd:date ;
   vann:preferredNamespacePrefix "kpi";
