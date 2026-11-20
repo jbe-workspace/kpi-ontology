@@ -37,6 +37,14 @@ Use `kpi_ontology.ttl` together with `kpi_vocabulary.ttl` when loading the ontol
 
 Example resources in `kpi_results.ttl` demonstrate an average current gross payment KPI grouped by gender and education level.
 
+## Documentation
+
+Generated ontology documentation is available from the GitHub Pages site:
+
+```text
+https://jbe-workspace.github.io/kpi-ontology/
+```
+
 ## License
 
 This repository is licensed under the MIT License. See [LICENSE](LICENSE).

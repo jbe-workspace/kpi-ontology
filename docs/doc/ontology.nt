@@ -1,0 +1,769 @@
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2002/07/owl#imports> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/contributor> "Johann Bergh <Johann.Bergh@adorsys.com>" .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/created> "2026-04-08"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/creator> "Johann Bergh <Johann.Bergh@adorsys.com>" .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/description> "\r\n        Controlled SKOS vocabulary of all aggregation operators that can be used to compute\r\n        Key Performance Indicators (KPIs) over instance data. Includes standard statistical\r\n        operators such as sum, average, count, minimum and maximum, as well as extended\r\n        operators such as median, standard deviation and variance.\r\n\r\n        This vocabulary is referenced by the KPI Ontology (kpi:1.0) and defines the\r\n        permissible aggregation functions as SKOS concepts.\r\n    "@en .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/description> "\r\n        Kontrolliertes SKOS-Vokabular aller Aggregationsoperatoren, die zur Berechnung von\r\n        Leistungskennzahlen (KPIs) über Instanzdaten verwendet werden können. Umfasst statistische\r\n        Standardoperatoren wie Summe, Durchschnitt, Anzahl, Minimum und Maximum sowie erweiterte\r\n        Operatoren wie Median, Standardabweichung und Varianz.\r\n\r\n        Dieses Vokabular wird von der KPI-Ontologie (kpi:1.0) referenziert und definiert die\r\n        zulässigen Aggregationsfunktionen als SKOS-Konzepte.\r\n    "@de .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/description> "\r\n        Ontologie zur semantischen Modellierung von Leistungskennzahlen (Key Performance Indicators, KPIs),\r\n        die durch Aggregationsoperationen über Instanzdaten einer beliebigen Referenzontologie berechnet werden.\r\n\r\n        Diese Ontologie definiert das Konzept eines KPI als strukturierte Beschreibung, die folgende Elemente\r\n        zusammenführt: die Referenzontologie, aus deren Instanzdaten die Kennzahl berechnet wird; die zu\r\n        aggregierende Eigenschaft (z.B. Bruttogehalt); den Aggregationsoperator (z.B. Durchschnitt, Summe);\r\n        die Granularitätsdimensionen (z.B. Geschlecht, Standort), nach denen die Aggregation aufgeschlüsselt\r\n        wird; sowie die berechneten Aggregationsergebnisse mit ihren jeweiligen Dimensionswerten.\r\n\r\n        Die Ontologie ist allgemein gehalten und nicht an eine bestimmte Referenzontologie gebunden. Sie kann\r\n        für jede Domäne eingesetzt werden, in der aggregierte Kennzahlen aus RDF-Instanzdaten berechnet werden.\r\n        Die Aggregationsoperatoren werden als separates SKOS-Vokabular (<https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>) gepflegt\r\n        und über owl:imports eingebunden.\r\n\r\n        Die Ontologie folgt den Prinzipien der Aristotelischen Logik mit klarer Genus-Differentia-Definition\r\n        aller Klassen und Eigenschaften.\r\n    "@de .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/description> "\r\n        Ontology for the semantic modeling of Key Performance Indicators (KPIs) computed through aggregation\r\n        operations over instance data of any reference ontology.\r\n\r\n        This ontology defines the concept of a KPI as a structured description that brings together: the\r\n        reference ontology from whose instance data the metric is computed; the property to be aggregated\r\n        (e.g., gross salary); the aggregation operator (e.g., average, sum); the granularity dimensions\r\n        (e.g., gender, location) by which the aggregation is broken down; and the computed aggregation\r\n        results with their respective dimension values.\r\n\r\n        The ontology is designed to be general-purpose and is not bound to any specific reference ontology.\r\n        It can be used in any domain where aggregated metrics are computed from RDF instance data. The\r\n        aggregation operators are maintained as a separate SKOS vocabulary (<https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>)\r\n        and included via owl:imports.\r\n\r\n        The ontology follows the principles of Aristotelian logic with clear genus-differentia definitions\r\n        for all classes and properties.\r\n    "@en .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/license> <https://spdx.org/licenses/MIT.html> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/modified> "2026-11-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/publisher> "adorsys" .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/source> <https://github.com/jbe-workspace/kpi-ontology> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/title> "Controlled Vocabulary of Aggregation Operators for Key Performance Indicators"@en .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/title> "Kennzahlen-Ontologie zur semantischen Beschreibung aggregierter Leistungskennzahlen"@de .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/title> "Key Performance Indicator Ontology for Semantic Description of Aggregated Performance Metrics"@en .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/dc/terms/title> "Kontrolliertes Vokabular der Aggregationsoperatoren für Leistungskennzahlen"@de .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/spar/pso/hasStatus> <http://purl.org/spar/pso/draft> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/vocab/vann/preferredNamespacePrefix> "kpi" .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://semantic.adorsys.com/meta/kpi/" .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2000/01/rdf-schema#comment> "Diese Ontologie definiert Leistungskennzahlen (KPIs) als semantische Strukturen, die Aggregationsoperationen über Instanzdaten beliebiger Referenzontologien beschreiben. Sie ermöglicht die vollständige Beschreibung einer Kennzahl einschließlich der Referenzontologie, der Aggregationseigenschaft, des Operators, der Granularitätsdimensionen und der berechneten Ergebnisse.\r\n\r\nDie Ontologie folgt den Prinzipien der Aristotelischen Logik mit klarer Genus-Differentia-Definition aller Entitäten."@de .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology defines Key Performance Indicators (KPIs) as semantic structures that describe aggregation operations over instance data of any reference ontology. It enables the complete description of a metric including the reference ontology, aggregation property, operator, granularity dimensions, and computed results.\r\n\r\nThe ontology follows the principles of Aristotelian logic with clear genus-differentia definitions for all entities."@en .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregation Operator Vocabulary"@en .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregationsoperator-Vokabular"@de .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2000/01/rdf-schema#label> "KPI Ontology"@en .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2000/01/rdf-schema#label> "KPI-Ontologie"@de .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2002/07/owl#versionInfo> "1.0" .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2004/02/skos/core#definition> "Controlled vocabulary of all aggregation operators that can be used to compute key performance indicators over instance data. Includes standard statistical operators such as sum, average, count, minimum and maximum, as well as extended operators such as median, standard deviation and variance."@en .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2004/02/skos/core#definition> "Kontrolliertes Vokabular aller Aggregationsoperatoren, die zur Berechnung von Leistungskennzahlen über Instanzdaten verwendet werden können. Umfasst statistische Standardoperatoren wie Summe, Durchschnitt, Anzahl, Minimum und Maximum sowie erweiterte Operatoren wie Median, Standardabweichung und Varianz."@de .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://semantic.adorsys.com/meta/kpi/Average> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://semantic.adorsys.com/meta/kpi/Count> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://semantic.adorsys.com/meta/kpi/CountDistinct> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://semantic.adorsys.com/meta/kpi/GroupConcat> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://semantic.adorsys.com/meta/kpi/Max> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://semantic.adorsys.com/meta/kpi/Median> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://semantic.adorsys.com/meta/kpi/Min> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://semantic.adorsys.com/meta/kpi/Sample> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://semantic.adorsys.com/meta/kpi/StandardDeviation> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://semantic.adorsys.com/meta/kpi/Sum> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <https://semantic.adorsys.com/meta/kpi/Variance> .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2004/02/skos/core#prefLabel> "Aggregation Operator Vocabulary"@en .
+<https://semantic.adorsys.com/meta/kpi/1.0> <http://www.w3.org/2004/02/skos/core#prefLabel> "Aggregationsoperator-Vokabular"@de .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/spar/pso/hasStatus
+<http://purl.org/spar/pso/hasStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#hasTopConcept
+<http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#notation
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#topConceptOf
+<http://www.w3.org/2004/02/skos/core#topConceptOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#class
+<http://www.w3.org/ns/shacl#class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#datatype
+<http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#hasValue
+<http://www.w3.org/ns/shacl#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#maxCount
+<http://www.w3.org/ns/shacl#maxCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#minCount
+<http://www.w3.org/ns/shacl#minCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#name
+<http://www.w3.org/ns/shacl#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#path
+<http://www.w3.org/ns/shacl#path> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#property
+<http://www.w3.org/ns/shacl#property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/ns/shacl#targetClass
+<http://www.w3.org/ns/shacl#targetClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://semantic.adorsys.com/meta/kpi/forDimension
+<https://semantic.adorsys.com/meta/kpi/forDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://semantic.adorsys.com/meta/kpi/forDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://semantic.adorsys.com/meta/kpi/forDimension> <http://www.w3.org/2000/01/rdf-schema#domain> <https://semantic.adorsys.com/meta/kpi/DimensionValue> .
+<https://semantic.adorsys.com/meta/kpi/forDimension> <http://www.w3.org/2000/01/rdf-schema#range> <https://semantic.adorsys.com/meta/kpi/GranularityDimension> .
+<https://semantic.adorsys.com/meta/kpi/forDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is a type of relationship (Genus: owl:ObjectProperty) that assigns a dimension value to its associated granularity dimension, indicating which dimension is specified by this value (Differentia specifica).\r\n\r\nGenus: Relationship Property (owl:ObjectProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively DimensionValue\r\n2. Range is GranularityDimension\r\n3. Functional property (a dimension value belongs to exactly one dimension)\r\n4. Establishes the connection between a concrete value and its semantic dimension\r\n\r\nExamples:\r\n- DimensionValue [\"M\"] forDimension [gender]\r\n- DimensionValue [\"Frankfurt am Main\"] forDimension [location]\r\n\r\nCardinality: 1..1 (exactly one dimension per dimension value)"@en .
+<https://semantic.adorsys.com/meta/kpi/forDimension> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/forDimension> <http://www.w3.org/2000/01/rdf-schema#label> "for dimension"@en .
+<https://semantic.adorsys.com/meta/kpi/forDimension> <http://www.w3.org/2000/01/rdf-schema#label> "für Dimension"@de .
+<https://semantic.adorsys.com/meta/kpi/forDimension> <http://www.w3.org/2004/02/skos/core#definition> "Diese Eigenschaft ist eine Art von Beziehung (Genus: owl:ObjectProperty), die einen Dimensionswert seiner zugehörigen Granularitätsdimension zuordnet und damit angibt, welche Dimension durch diesen Wert spezifiziert wird (Differentia specifica).\r\n\r\nGenus: Beziehungs-Eigenschaft (owl:ObjectProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich DimensionValue\r\n2. Wertebereich ist GranularityDimension\r\n3. Funktionale Eigenschaft (ein Dimensionswert gehört zu genau einer Dimension)\r\n4. Stellt die Verbindung zwischen konkretem Wert und seiner semantischen Dimension her\r\n\r\nSemantik:\r\n- Subject: Der Dimensionswert\r\n- Predicate: \"für Dimension\"\r\n- Object: Die Granularitätsdimension, zu der dieser Wert gehört\r\n\r\nBeispiele:\r\n- DimensionValue [\"M\"] forDimension [geschlecht]\r\n- DimensionValue [\"Frankfurt am Main\"] forDimension [ort]\r\n\r\nKardinalität: 1..1 (genau eine Dimension pro Dimensionswert)"@de .
+# 
+# https://semantic.adorsys.com/meta/kpi/hasAggregationOperator
+<https://semantic.adorsys.com/meta/kpi/hasAggregationOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://semantic.adorsys.com/meta/kpi/hasAggregationOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://semantic.adorsys.com/meta/kpi/hasAggregationOperator> <http://www.w3.org/2000/01/rdf-schema#domain> <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> .
+<https://semantic.adorsys.com/meta/kpi/hasAggregationOperator> <http://www.w3.org/2000/01/rdf-schema#range> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
+<https://semantic.adorsys.com/meta/kpi/hasAggregationOperator> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is a type of relationship (Genus: owl:ObjectProperty) that assigns exactly one aggregation operator from the controlled SKOS vocabulary to a key performance indicator (Differentia specifica).\r\n\r\nGenus: Relationship Property (owl:ObjectProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is AggregationOperator (skos:Concept from <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>)\r\n3. Functional property (a KPI has exactly one operator)\r\n4. Determines the mathematical aggregation function (SUM, AVG, COUNT, etc.)\r\n\r\nExamples:\r\n- KPI \"Average Salary\" hasAggregationOperator kpi:Average\r\n- KPI \"Employee Count\" hasAggregationOperator kpi:Count\r\n- KPI \"Total Salary Sum\" hasAggregationOperator kpi:Sum\r\n\r\nCardinality: 1..1 (exactly one operator per KPI)"@en .
+<https://semantic.adorsys.com/meta/kpi/hasAggregationOperator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/hasAggregationOperator> <http://www.w3.org/2000/01/rdf-schema#label> "has aggregation operator"@en .
+<https://semantic.adorsys.com/meta/kpi/hasAggregationOperator> <http://www.w3.org/2000/01/rdf-schema#label> "hat Aggregationsoperator"@de .
+<https://semantic.adorsys.com/meta/kpi/hasAggregationOperator> <http://www.w3.org/2004/02/skos/core#definition> "Diese Eigenschaft ist eine Art von Beziehung (Genus: owl:ObjectProperty), die einer Leistungskennzahl genau einen Aggregationsoperator aus dem kontrollierten SKOS-Vokabular zuordnet (Differentia specifica).\r\n\r\nGenus: Beziehungs-Eigenschaft (owl:ObjectProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich KeyPerformanceIndicator\r\n2. Wertebereich ist AggregationOperator (skos:Concept aus <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>)\r\n3. Funktionale Eigenschaft (ein KPI hat genau einen Operator)\r\n4. Bestimmt die mathematische Aggregationsfunktion (SUM, AVG, COUNT, etc.)\r\n\r\nSemantik:\r\n- Subject: Die Leistungskennzahl\r\n- Predicate: \"hat Aggregationsoperator\"\r\n- Object: Der verwendete Aggregationsoperator\r\n\r\nBeispiele:\r\n- KPI \"Durchschnittsgehalt\" hasAggregationOperator kpi:Average\r\n- KPI \"Mitarbeiteranzahl\" hasAggregationOperator kpi:Count\r\n- KPI \"Gesamtgehaltssumme\" hasAggregationOperator kpi:Sum\r\n\r\nKardinalität: 1..1 (genau ein Operator pro KPI)"@de .
+# 
+# https://semantic.adorsys.com/meta/kpi/hasAggregationResult
+<https://semantic.adorsys.com/meta/kpi/hasAggregationResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://semantic.adorsys.com/meta/kpi/hasAggregationResult> <http://www.w3.org/2000/01/rdf-schema#domain> <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> .
+<https://semantic.adorsys.com/meta/kpi/hasAggregationResult> <http://www.w3.org/2000/01/rdf-schema#range> <https://semantic.adorsys.com/meta/kpi/AggregationResult> .
+<https://semantic.adorsys.com/meta/kpi/hasAggregationResult> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is a type of relationship (Genus: owl:ObjectProperty) that assigns computed aggregation results to a key performance indicator (Differentia specifica).\r\n\r\nGenus: Relationship Property (owl:ObjectProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is AggregationResult\r\n3. Non-functional property (a KPI has 1..n results)\r\n4. Each result represents one row of the aggregated result table\r\n\r\nExamples:\r\n- KPI \"Average Salary by Gender\" hasAggregationResult [result for Male], hasAggregationResult [result for Female]\r\n- KPI \"Average Salary by Location\" hasAggregationResult [result for Frankfurt], hasAggregationResult [result for Munich], ...\r\n\r\nCardinality: 1..n (at least one result per KPI)"@en .
+<https://semantic.adorsys.com/meta/kpi/hasAggregationResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/hasAggregationResult> <http://www.w3.org/2000/01/rdf-schema#label> "has aggregation result"@en .
+<https://semantic.adorsys.com/meta/kpi/hasAggregationResult> <http://www.w3.org/2000/01/rdf-schema#label> "hat Aggregationsergebnis"@de .
+<https://semantic.adorsys.com/meta/kpi/hasAggregationResult> <http://www.w3.org/2004/02/skos/core#definition> "Diese Eigenschaft ist eine Art von Beziehung (Genus: owl:ObjectProperty), die einer Leistungskennzahl ihre berechneten Aggregationsergebnisse zuordnet (Differentia specifica).\r\n\r\nGenus: Beziehungs-Eigenschaft (owl:ObjectProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich KeyPerformanceIndicator\r\n2. Wertebereich ist AggregationResult\r\n3. Nicht-funktionale Eigenschaft (ein KPI hat 1..n Ergebnisse)\r\n4. Jedes Ergebnis repräsentiert eine Zeile der aggregierten Ergebnistabelle\r\n\r\nSemantik:\r\n- Subject: Die Leistungskennzahl\r\n- Predicate: \"hat Aggregationsergebnis\"\r\n- Object: Ein berechnetes Aggregationsergebnis\r\n\r\nBeispiele:\r\n- KPI \"Durchschnittsgehalt nach Geschlecht\" hasAggregationResult [Ergebnis für Männlich], hasAggregationResult [Ergebnis für Weiblich]\r\n- KPI \"Durchschnittsgehalt nach Standort\" hasAggregationResult [Ergebnis für Frankfurt], hasAggregationResult [Ergebnis für München], ...\r\n\r\nKardinalität: 1..n (mindestens ein Ergebnis pro KPI)"@de .
+# 
+# https://semantic.adorsys.com/meta/kpi/hasDimensionValue
+<https://semantic.adorsys.com/meta/kpi/hasDimensionValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://semantic.adorsys.com/meta/kpi/hasDimensionValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://semantic.adorsys.com/meta/kpi/AggregationResult> .
+<https://semantic.adorsys.com/meta/kpi/hasDimensionValue> <http://www.w3.org/2000/01/rdf-schema#range> <https://semantic.adorsys.com/meta/kpi/DimensionValue> .
+<https://semantic.adorsys.com/meta/kpi/hasDimensionValue> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is a type of relationship (Genus: owl:ObjectProperty) that assigns concrete dimension values to an aggregation result, identifying the result row (Differentia specifica).\r\n\r\nGenus: Relationship Property (owl:ObjectProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively AggregationResult\r\n2. Range is DimensionValue\r\n3. Non-functional property (a result can have 0..n dimension values)\r\n4. The dimension values identify the group to which the result belongs\r\n\r\nExamples:\r\n- AggregationResult [avg=3456.78] hasDimensionValue [gender=\"M\"]\r\n- AggregationResult [avg=2890.12] hasDimensionValue [gender=\"W\"], hasDimensionValue [education=\"Abitur\"]\r\n\r\nCardinality: 0..n (count matches the number of granularity dimensions of the KPI)"@en .
+<https://semantic.adorsys.com/meta/kpi/hasDimensionValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/hasDimensionValue> <http://www.w3.org/2000/01/rdf-schema#label> "has dimension value"@en .
+<https://semantic.adorsys.com/meta/kpi/hasDimensionValue> <http://www.w3.org/2000/01/rdf-schema#label> "hat Dimensionswert"@de .
+<https://semantic.adorsys.com/meta/kpi/hasDimensionValue> <http://www.w3.org/2004/02/skos/core#definition> "Diese Eigenschaft ist eine Art von Beziehung (Genus: owl:ObjectProperty), die einem Aggregationsergebnis die konkreten Dimensionswerte zuordnet, die diese Ergebniszeile identifizieren (Differentia specifica).\r\n\r\nGenus: Beziehungs-Eigenschaft (owl:ObjectProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich AggregationResult\r\n2. Wertebereich ist DimensionValue\r\n3. Nicht-funktionale Eigenschaft (ein Ergebnis kann 0..n Dimensionswerte haben)\r\n4. Die Dimensionswerte identifizieren die Gruppe, zu der das Ergebnis gehört\r\n\r\nSemantik:\r\n- Subject: Das Aggregationsergebnis\r\n- Predicate: \"hat Dimensionswert\"\r\n- Object: Ein konkreter Dimensionswert\r\n\r\nBeispiele:\r\n- AggregationResult [avg=3456.78] hasDimensionValue [geschlecht=\"M\"]\r\n- AggregationResult [avg=2890.12] hasDimensionValue [geschlecht=\"W\"], hasDimensionValue [bildungsniveau=\"Abitur\"]\r\n\r\nKardinalität: 0..n (die Anzahl entspricht der Anzahl der Granularitätsdimensionen des KPI)"@de .
+# 
+# https://semantic.adorsys.com/meta/kpi/hasGranularityDimension
+<https://semantic.adorsys.com/meta/kpi/hasGranularityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://semantic.adorsys.com/meta/kpi/hasGranularityDimension> <http://www.w3.org/2000/01/rdf-schema#domain> <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> .
+<https://semantic.adorsys.com/meta/kpi/hasGranularityDimension> <http://www.w3.org/2000/01/rdf-schema#range> <https://semantic.adorsys.com/meta/kpi/GranularityDimension> .
+<https://semantic.adorsys.com/meta/kpi/hasGranularityDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is a type of relationship (Genus: owl:ObjectProperty) that assigns one or more granularity dimensions to a key performance indicator, by which the aggregation results are broken down (Differentia specifica).\r\n\r\nGenus: Relationship Property (owl:ObjectProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is GranularityDimension\r\n3. Non-functional property (a KPI can have 0..n dimensions)\r\n4. Defines the GROUP BY dimensions of the aggregation computation\r\n\r\nExamples:\r\n- KPI \"Average Salary by Gender\" hasGranularityDimension [gender]\r\n- KPI \"Average Salary by Gender and Education\" hasGranularityDimension [gender], hasGranularityDimension [education]\r\n- KPI \"Overall Average Salary\" (no dimensions)\r\n\r\nCardinality: 0..n (zero or more dimensions per KPI)"@en .
+<https://semantic.adorsys.com/meta/kpi/hasGranularityDimension> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/hasGranularityDimension> <http://www.w3.org/2000/01/rdf-schema#label> "has granularity dimension"@en .
+<https://semantic.adorsys.com/meta/kpi/hasGranularityDimension> <http://www.w3.org/2000/01/rdf-schema#label> "hat Granularitätsdimension"@de .
+<https://semantic.adorsys.com/meta/kpi/hasGranularityDimension> <http://www.w3.org/2004/02/skos/core#definition> "Diese Eigenschaft ist eine Art von Beziehung (Genus: owl:ObjectProperty), die einer Leistungskennzahl eine oder mehrere Granularitätsdimensionen zuordnet, nach denen die Aggregationsergebnisse aufgeschlüsselt werden (Differentia specifica).\r\n\r\nGenus: Beziehungs-Eigenschaft (owl:ObjectProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich KeyPerformanceIndicator\r\n2. Wertebereich ist GranularityDimension\r\n3. Nicht-funktionale Eigenschaft (ein KPI kann 0..n Dimensionen haben)\r\n4. Definiert die GROUP-BY-Dimensionen der Aggregationsberechnung\r\n\r\nSemantik:\r\n- Subject: Die Leistungskennzahl\r\n- Predicate: \"hat Granularitätsdimension\"\r\n- Object: Eine Granularitätsdimension\r\n\r\nBeispiele:\r\n- KPI \"Durchschnittsgehalt nach Geschlecht\" hasGranularityDimension [geschlecht]\r\n- KPI \"Durchschnittsgehalt nach Geschlecht und Bildungsniveau\" hasGranularityDimension [geschlecht], hasGranularityDimension [bildungsniveau]\r\n- KPI \"Gesamtdurchschnittsgehalt\" (ohne Dimensionen)\r\n\r\nKardinalität: 0..n (null oder mehr Dimensionen pro KPI)"@de .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI
+<https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI> <http://www.w3.org/2000/01/rdf-schema#domain> <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> .
+<https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the URI of the property from the reference ontology over which the aggregation is performed (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is xsd:anyURI\r\n3. Non-functional property (a KPI can aggregate over multiple properties)\r\n4. The URI points to a Data Property or Object Property of the reference ontology\r\n5. The aggregation operator is applied to the values of this property in the instance data\r\n\r\nExamples:\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/grossSalary\"^^xsd:anyURI (gross salary)\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/totalCompensation\"^^xsd:anyURI (total compensation)\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/location\"^^xsd:anyURI (location, for COUNT)\r\n\r\nCardinality: 1..n"@en .
+<https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregationseigenschaft-URI"@de .
+<https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI> <http://www.w3.org/2000/01/rdf-schema#label> "aggregation property URI"@en .
+<https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI> <http://www.w3.org/2004/02/skos/core#definition> "Diese Eigenschaft ist eine Art von Dateneigenschaft (Genus: owl:DatatypeProperty), die die URI der Eigenschaft aus der Referenzontologie enthält, über die die Aggregation durchgeführt wird (Differentia specifica).\r\n\r\nGenus: Dateneigenschaft (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich KeyPerformanceIndicator\r\n2. Wertebereich ist xsd:anyURI\r\n3. Nicht-funktionale Eigenschaft (ein KPI kann über mehrere Eigenschaften aggregieren)\r\n4. Die URI verweist auf eine Data Property oder Object Property der Referenzontologie\r\n5. Der Aggregationsoperator wird auf die Werte dieser Eigenschaft in den Instanzdaten angewendet\r\n\r\nSemantik:\r\nDie aggregationPropertyURI identifiziert die Eigenschaft der Referenzontologie, deren Werte durch den Aggregationsoperator zusammengefasst werden. Dies ist typischerweise eine numerische Dateneigenschaft.\r\n\r\nBeispiele:\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/grossSalary\"^^xsd:anyURI (Bruttogehalt)\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/totalCompensation\"^^xsd:anyURI (Gesamtvergütung)\r\n- aggregationPropertyURI = \"http://example.org/hr/ontology/location\"^^xsd:anyURI (Standort, für COUNT)\r\n\r\nKardinalität: 1..n"@de .
+# 
+# https://semantic.adorsys.com/meta/kpi/aggregationValue
+<https://semantic.adorsys.com/meta/kpi/aggregationValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://semantic.adorsys.com/meta/kpi/aggregationValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://semantic.adorsys.com/meta/kpi/aggregationValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://semantic.adorsys.com/meta/kpi/AggregationResult> .
+<https://semantic.adorsys.com/meta/kpi/aggregationValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://semantic.adorsys.com/meta/kpi/aggregationValue> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the computed numerical value resulting from the application of the aggregation operator to the instance data of a specific group (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively AggregationResult\r\n2. Range is xsd:decimal\r\n3. Functional property (a result has exactly one aggregation value)\r\n4. Contains the physical numerical value after application of the aggregation operator\r\n\r\nExamples:\r\n- aggregationValue = \"3456.78\"^^xsd:decimal (average salary for males)\r\n- aggregationValue = \"2890.12\"^^xsd:decimal (average salary for females)\r\n- aggregationValue = \"871\"^^xsd:decimal (employee count in Berlin)\r\n\r\nCardinality: 1..1"@en .
+<https://semantic.adorsys.com/meta/kpi/aggregationValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/aggregationValue> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregationswert"@de .
+<https://semantic.adorsys.com/meta/kpi/aggregationValue> <http://www.w3.org/2000/01/rdf-schema#label> "aggregation value"@en .
+<https://semantic.adorsys.com/meta/kpi/aggregationValue> <http://www.w3.org/2004/02/skos/core#definition> "Diese Eigenschaft ist eine Art von Dateneigenschaft (Genus: owl:DatatypeProperty), die den berechneten numerischen Wert enthält, der sich aus der Anwendung des Aggregationsoperators auf die Instanzdaten einer bestimmten Gruppe ergibt (Differentia specifica).\r\n\r\nGenus: Dateneigenschaft (owl:DatatypeProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich AggregationResult\r\n2. Wertebereich ist xsd:decimal\r\n3. Funktionale Eigenschaft (ein Ergebnis hat genau einen Aggregationswert)\r\n4. Enthält den physischen numerischen Wert nach Anwendung des Aggregationsoperators\r\n\r\nSemantik:\r\nDer aggregationValue ist das konkrete Ergebnis der Berechnung: der Durchschnittswert bei AVG, die Summe bei SUM, die Anzahl bei COUNT usw.\r\n\r\nBeispiele:\r\n- aggregationValue = \"3456.78\"^^xsd:decimal (Durchschnittsgehalt für Männer)\r\n- aggregationValue = \"2890.12\"^^xsd:decimal (Durchschnittsgehalt für Frauen)\r\n- aggregationValue = \"871\"^^xsd:decimal (Anzahl Mitarbeiter in Berlin)\r\n\r\nKardinalität: 1..1"@de .
+# 
+# https://semantic.adorsys.com/meta/kpi/dataSourceURI
+<https://semantic.adorsys.com/meta/kpi/dataSourceURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://semantic.adorsys.com/meta/kpi/dataSourceURI> <http://www.w3.org/2000/01/rdf-schema#domain> <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> .
+<https://semantic.adorsys.com/meta/kpi/dataSourceURI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://semantic.adorsys.com/meta/kpi/dataSourceURI> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the URI of the data source from which the instance data for the aggregation computation originates (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is xsd:anyURI\r\n3. Optional property for specifying the data source\r\n4. Can identify a named graph, a SPARQL endpoint, or another data source\r\n\r\nExamples:\r\n- dataSourceURI = \"http://localhost:8080/graph/bulk1\"^^xsd:anyURI (named graph)\r\n- dataSourceURI = \"http://example.org/sparql\"^^xsd:anyURI (SPARQL endpoint)\r\n\r\nCardinality: 0..n"@en .
+<https://semantic.adorsys.com/meta/kpi/dataSourceURI> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/dataSourceURI> <http://www.w3.org/2000/01/rdf-schema#label> "Datenquellen-URI"@de .
+<https://semantic.adorsys.com/meta/kpi/dataSourceURI> <http://www.w3.org/2000/01/rdf-schema#label> "data source URI"@en .
+<https://semantic.adorsys.com/meta/kpi/dataSourceURI> <http://www.w3.org/2004/02/skos/core#definition> "Diese Eigenschaft ist eine Art von Dateneigenschaft (Genus: owl:DatatypeProperty), die die URI der Datenquelle enthält, aus der die Instanzdaten für die Aggregationsberechnung stammen (Differentia specifica).\r\n\r\nGenus: Dateneigenschaft (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich KeyPerformanceIndicator\r\n2. Wertebereich ist xsd:anyURI\r\n3. Optionale Eigenschaft zur Spezifikation der Datenquelle\r\n4. Kann einen Named Graph, einen SPARQL-Endpunkt oder eine andere Datenquelle identifizieren\r\n\r\nSemantik:\r\nDie dataSourceURI identifiziert die konkrete Datenquelle, aus der die Instanzdaten abgerufen werden. In SPARQL-Abfragen entspricht dies typischerweise der FROM-Klausel (Named Graph URI).\r\n\r\nBeispiele:\r\n- dataSourceURI = \"http://localhost:8080/graph/bulk1\"^^xsd:anyURI (Named Graph)\r\n- dataSourceURI = \"http://example.org/sparql\"^^xsd:anyURI (SPARQL-Endpunkt)\r\n\r\nKardinalität: 0..n"@de .
+# 
+# https://semantic.adorsys.com/meta/kpi/dimensionLabel
+<https://semantic.adorsys.com/meta/kpi/dimensionLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://semantic.adorsys.com/meta/kpi/dimensionLabel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://semantic.adorsys.com/meta/kpi/GranularityDimension> .
+<https://semantic.adorsys.com/meta/kpi/dimensionLabel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://semantic.adorsys.com/meta/kpi/dimensionLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is a type of data property (Genus: owl:DatatypeProperty) that contains a human-readable label for a granularity dimension (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively GranularityDimension\r\n2. Range is xsd:string\r\n3. Optional property for improving readability\r\n4. Can be multilingual (via language tags)\r\n\r\nExamples:\r\n- dimensionLabel = \"Geschlecht\"@de / \"Gender\"@en\r\n- dimensionLabel = \"Standort\"@de / \"Location\"@en\r\n\r\nCardinality: 0..n"@en .
+<https://semantic.adorsys.com/meta/kpi/dimensionLabel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/dimensionLabel> <http://www.w3.org/2000/01/rdf-schema#label> "Dimensionsbezeichnung"@de .
+<https://semantic.adorsys.com/meta/kpi/dimensionLabel> <http://www.w3.org/2000/01/rdf-schema#label> "dimension label"@en .
+<https://semantic.adorsys.com/meta/kpi/dimensionLabel> <http://www.w3.org/2004/02/skos/core#definition> "Diese Eigenschaft ist eine Art von Dateneigenschaft (Genus: owl:DatatypeProperty), die einen menschenlesbaren Bezeichner für eine Granularitätsdimension enthält (Differentia specifica).\r\n\r\nGenus: Dateneigenschaft (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich GranularityDimension\r\n2. Wertebereich ist xsd:string\r\n3. Optionale Eigenschaft zur Verbesserung der Lesbarkeit\r\n4. Kann mehrsprachig sein (über Sprachkennzeichnungen)\r\n\r\nBeispiele:\r\n- dimensionLabel = \"Geschlecht\"@de / \"Gender\"@en\r\n- dimensionLabel = \"Standort\"@de / \"Location\"@en\r\n- dimensionLabel = \"Berufsausbildung\"@de / \"Professional Training\"@en\r\n\r\nKardinalität: 0..n"@de .
+# 
+# https://semantic.adorsys.com/meta/kpi/dimensionValueLiteral
+<https://semantic.adorsys.com/meta/kpi/dimensionValueLiteral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://semantic.adorsys.com/meta/kpi/dimensionValueLiteral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://semantic.adorsys.com/meta/kpi/dimensionValueLiteral> <http://www.w3.org/2000/01/rdf-schema#domain> <https://semantic.adorsys.com/meta/kpi/DimensionValue> .
+<https://semantic.adorsys.com/meta/kpi/dimensionValueLiteral> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://semantic.adorsys.com/meta/kpi/dimensionValueLiteral> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the concrete literal value of a dimension value as a string (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively DimensionValue\r\n2. Range is xsd:string\r\n3. Functional property (a dimension value has exactly one literal)\r\n4. Contains the string representation of the concrete dimension value\r\n5. Corresponds to the value returned by the GROUP BY operation\r\n\r\nExamples:\r\n- dimensionValueLiteral = \"M\" (male gender)\r\n- dimensionValueLiteral = \"Frankfurt am Main\" (location)\r\n- dimensionValueLiteral = \"Completed recognized vocational training\" (professional training)\r\n\r\nCardinality: 1..1"@en .
+<https://semantic.adorsys.com/meta/kpi/dimensionValueLiteral> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/dimensionValueLiteral> <http://www.w3.org/2000/01/rdf-schema#label> "Dimensionswertliteral"@de .
+<https://semantic.adorsys.com/meta/kpi/dimensionValueLiteral> <http://www.w3.org/2000/01/rdf-schema#label> "dimension value literal"@en .
+<https://semantic.adorsys.com/meta/kpi/dimensionValueLiteral> <http://www.w3.org/2004/02/skos/core#definition> "Diese Eigenschaft ist eine Art von Dateneigenschaft (Genus: owl:DatatypeProperty), die den konkreten Literalwert eines Dimensionswerts als Zeichenkette enthält (Differentia specifica).\r\n\r\nGenus: Dateneigenschaft (owl:DatatypeProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich DimensionValue\r\n2. Wertebereich ist xsd:string\r\n3. Funktionale Eigenschaft (ein Dimensionswert hat genau ein Literal)\r\n4. Enthält die Zeichenkettenrepräsentation des konkreten Dimensionswerts\r\n5. Entspricht dem Wert, der bei der GROUP-BY-Operation zurückgegeben wird\r\n\r\nSemantik:\r\nDer dimensionValueLiteral enthält den tatsächlichen Wert, den die Eigenschaft der Referenzontologie für eine bestimmte Gruppe von Instanzen hat. Er wird als Zeichenkette gespeichert, unabhängig vom ursprünglichen Datentyp der Referenzontologie.\r\n\r\nBeispiele:\r\n- dimensionValueLiteral = \"M\" (Geschlecht männlich)\r\n- dimensionValueLiteral = \"Frankfurt am Main\" (Standort)\r\n- dimensionValueLiteral = \"Abschluss einer anerkannten Berufsausbildung\" (Berufsausbildung)\r\n\r\nKardinalität: 1..1"@de .
+# 
+# https://semantic.adorsys.com/meta/kpi/filterExpression
+<https://semantic.adorsys.com/meta/kpi/filterExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://semantic.adorsys.com/meta/kpi/filterExpression> <http://www.w3.org/2000/01/rdf-schema#domain> <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> .
+<https://semantic.adorsys.com/meta/kpi/filterExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://semantic.adorsys.com/meta/kpi/filterExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is a type of data property (Genus: owl:DatatypeProperty) that contains an optional filter expression restricting the instance data before aggregation (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is xsd:string\r\n3. Optional property for documenting filter criteria\r\n4. Contains the filter expression in SPARQL syntax or natural language\r\n5. Enables reproducibility of the computation\r\n\r\nExamples:\r\n- filterExpression = \"FILTER(?brutto_monthly > 0)\" (only positive gross salaries)\r\n- filterExpression = \"FILTER(?age >= 18 && ?age <= 65)\" (working age)\r\n\r\nCardinality: 0..n"@en .
+<https://semantic.adorsys.com/meta/kpi/filterExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/filterExpression> <http://www.w3.org/2000/01/rdf-schema#label> "Filterausdruck"@de .
+<https://semantic.adorsys.com/meta/kpi/filterExpression> <http://www.w3.org/2000/01/rdf-schema#label> "filter expression"@en .
+<https://semantic.adorsys.com/meta/kpi/filterExpression> <http://www.w3.org/2004/02/skos/core#definition> "Diese Eigenschaft ist eine Art von Dateneigenschaft (Genus: owl:DatatypeProperty), die einen optionalen Filterausdruck enthält, der die Instanzdaten vor der Aggregation einschränkt (Differentia specifica).\r\n\r\nGenus: Dateneigenschaft (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich KeyPerformanceIndicator\r\n2. Wertebereich ist xsd:string\r\n3. Optionale Eigenschaft zur Dokumentation von Filterkriterien\r\n4. Enthält den Filterausdruck in SPARQL-Syntax oder natürlicher Sprache\r\n5. Ermöglicht die Reproduzierbarkeit der Berechnung\r\n\r\nSemantik:\r\nDer filterExpression dokumentiert Einschränkungen, die auf die Instanzdaten angewendet werden, bevor die Aggregation durchgeführt wird. Dies entspricht der FILTER-Klausel in SPARQL-Abfragen.\r\n\r\nBeispiele:\r\n- filterExpression = \"FILTER(?brutto_monthly > 0)\" (nur positive Bruttogehälter)\r\n- filterExpression = \"FILTER(?alter >= 18 && ?alter <= 65)\" (Erwerbstätige)\r\n\r\nKardinalität: 0..n"@de .
+# 
+# https://semantic.adorsys.com/meta/kpi/granularityPropertyURI
+<https://semantic.adorsys.com/meta/kpi/granularityPropertyURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://semantic.adorsys.com/meta/kpi/granularityPropertyURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://semantic.adorsys.com/meta/kpi/granularityPropertyURI> <http://www.w3.org/2000/01/rdf-schema#domain> <https://semantic.adorsys.com/meta/kpi/GranularityDimension> .
+<https://semantic.adorsys.com/meta/kpi/granularityPropertyURI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://semantic.adorsys.com/meta/kpi/granularityPropertyURI> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the URI of the property from the reference ontology used as a breakdown dimension for the aggregation (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively GranularityDimension\r\n2. Range is xsd:anyURI\r\n3. Functional property (a dimension references exactly one property)\r\n4. The URI identifies the property by whose values the instance data is grouped (GROUP BY)\r\n\r\nExamples:\r\n- granularityPropertyURI = \"http://example.org/hr/ontology/gender\"^^xsd:anyURI (gender)\r\n- granularityPropertyURI = \"http://example.org/hr/ontology/location\"^^xsd:anyURI (location)\r\n- granularityPropertyURI = \"http://example.org/hr/ontology/educationLevel\"^^xsd:anyURI (education level)\r\n\r\nCardinality: 1..1"@en .
+<https://semantic.adorsys.com/meta/kpi/granularityPropertyURI> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/granularityPropertyURI> <http://www.w3.org/2000/01/rdf-schema#label> "Granularitätseigenschaft-URI"@de .
+<https://semantic.adorsys.com/meta/kpi/granularityPropertyURI> <http://www.w3.org/2000/01/rdf-schema#label> "granularity property URI"@en .
+<https://semantic.adorsys.com/meta/kpi/granularityPropertyURI> <http://www.w3.org/2004/02/skos/core#definition> "Diese Eigenschaft ist eine Art von Dateneigenschaft (Genus: owl:DatatypeProperty), die die URI der Eigenschaft aus der Referenzontologie enthält, die als Aufschlüsselungsdimension für die Aggregation verwendet wird (Differentia specifica).\r\n\r\nGenus: Dateneigenschaft (owl:DatatypeProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich GranularityDimension\r\n2. Wertebereich ist xsd:anyURI\r\n3. Funktionale Eigenschaft (eine Dimension verweist auf genau eine Eigenschaft)\r\n4. Die URI identifiziert die Eigenschaft, nach deren Werten die Instanzdaten gruppiert werden (GROUP BY)\r\n\r\nSemantik:\r\nDie granularityPropertyURI verweist auf eine Eigenschaft der Referenzontologie, deren verschiedene Werte die Zeilen der Ergebnistabelle definieren. Die eindeutigen Kombinationen aller Dimensionswerte bilden die Gruppen.\r\n\r\nBeispiele:\r\n- granularityPropertyURI = \"http://example.org/hr/ontology/gender\"^^xsd:anyURI (Geschlecht)\r\n- granularityPropertyURI = \"http://example.org/hr/ontology/location\"^^xsd:anyURI (Standort)\r\n- granularityPropertyURI = \"http://example.org/hr/ontology/educationLevel\"^^xsd:anyURI (Bildungsniveau)\r\n\r\nKardinalität: 1..1"@de .
+# 
+# https://semantic.adorsys.com/meta/kpi/kpiLabel
+<https://semantic.adorsys.com/meta/kpi/kpiLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://semantic.adorsys.com/meta/kpi/kpiLabel> <http://www.w3.org/2000/01/rdf-schema#domain> <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> .
+<https://semantic.adorsys.com/meta/kpi/kpiLabel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://semantic.adorsys.com/meta/kpi/kpiLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is a type of data property (Genus: owl:DatatypeProperty) that contains a human-readable label for a key performance indicator (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is xsd:string\r\n3. Optional property for improving readability\r\n4. Describes the purpose of the metric in natural language\r\n\r\nExamples:\r\n- kpiLabel = \"Durchschnittsgehalt nach Geschlecht\"@de / \"Average Salary by Gender\"@en\r\n- kpiLabel = \"Durchschnittsgehalt nach Standort\"@de / \"Average Salary by Location\"@en\r\n\r\nCardinality: 0..n"@en .
+<https://semantic.adorsys.com/meta/kpi/kpiLabel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/kpiLabel> <http://www.w3.org/2000/01/rdf-schema#label> "KPI label"@en .
+<https://semantic.adorsys.com/meta/kpi/kpiLabel> <http://www.w3.org/2000/01/rdf-schema#label> "KPI-Bezeichnung"@de .
+<https://semantic.adorsys.com/meta/kpi/kpiLabel> <http://www.w3.org/2004/02/skos/core#definition> "Diese Eigenschaft ist eine Art von Dateneigenschaft (Genus: owl:DatatypeProperty), die einen menschenlesbaren Bezeichner für eine Leistungskennzahl enthält (Differentia specifica).\r\n\r\nGenus: Dateneigenschaft (owl:DatatypeProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich KeyPerformanceIndicator\r\n2. Wertebereich ist xsd:string\r\n3. Optionale Eigenschaft zur Verbesserung der Lesbarkeit\r\n4. Beschreibt den Zweck der Kennzahl in natürlicher Sprache\r\n\r\nBeispiele:\r\n- kpiLabel = \"Durchschnittsgehalt nach Geschlecht\"@de / \"Average Salary by Gender\"@en\r\n- kpiLabel = \"Durchschnittsgehalt nach Standort\"@de / \"Average Salary by Location\"@en\r\n- kpiLabel = \"Anzahl Mitarbeiter nach Standort\"@de / \"Employee Count by Location\"@en\r\n\r\nKardinalität: 0..n"@de .
+# 
+# https://semantic.adorsys.com/meta/kpi/referenceOntologyURI
+<https://semantic.adorsys.com/meta/kpi/referenceOntologyURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://semantic.adorsys.com/meta/kpi/referenceOntologyURI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://semantic.adorsys.com/meta/kpi/referenceOntologyURI> <http://www.w3.org/2000/01/rdf-schema#domain> <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> .
+<https://semantic.adorsys.com/meta/kpi/referenceOntologyURI> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://semantic.adorsys.com/meta/kpi/referenceOntologyURI> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is a type of data property (Genus: owl:DatatypeProperty) that contains the URI of the reference ontology from whose instance data the key performance indicator is computed (Differentia specifica).\r\n\r\nGenus: Data Property (owl:DatatypeProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domain is exclusively KeyPerformanceIndicator\r\n2. Range is xsd:anyURI\r\n3. Functional property (a KPI references exactly one ontology)\r\n4. The URI identifies the ontology whose vocabulary and instance data form the basis of the computation\r\n5. Enables provenance traceability\r\n\r\nExamples:\r\n- referenceOntologyURI = \"http://example.org/ontology/hr/1.0\"^^xsd:anyURI\r\n- referenceOntologyURI = \"http://example.org/ontology/inventory/1.0\"^^xsd:anyURI\r\n\r\nCardinality: 1..1"@en .
+<https://semantic.adorsys.com/meta/kpi/referenceOntologyURI> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/referenceOntologyURI> <http://www.w3.org/2000/01/rdf-schema#label> "Referenzontologie-URI"@de .
+<https://semantic.adorsys.com/meta/kpi/referenceOntologyURI> <http://www.w3.org/2000/01/rdf-schema#label> "reference ontology URI"@en .
+<https://semantic.adorsys.com/meta/kpi/referenceOntologyURI> <http://www.w3.org/2004/02/skos/core#definition> "Diese Eigenschaft ist eine Art von Dateneigenschaft (Genus: owl:DatatypeProperty), die die URI der Referenzontologie enthält, aus deren Instanzdaten die Leistungskennzahl berechnet wird (Differentia specifica).\r\n\r\nGenus: Dateneigenschaft (owl:DatatypeProperty, owl:FunctionalProperty)\r\n\r\nDifferentia specifica:\r\n1. Domäne ist ausschließlich KeyPerformanceIndicator\r\n2. Wertebereich ist xsd:anyURI\r\n3. Funktionale Eigenschaft (ein KPI referenziert genau eine Ontologie)\r\n4. Die URI identifiziert die Ontologie, deren Vokabular und Instanzdaten die Grundlage der Berechnung bilden\r\n5. Erlaubt die Rückverfolgung der Datenherkunft\r\n\r\nSemantik:\r\nDie referenceOntologyURI identifiziert die externe Ontologie, deren Konzepte und Instanzdaten als Grundlage für die Aggregationsberechnung dienen. Dies ermöglicht die vollständige Provenienz der Kennzahl.\r\n\r\nBeispiele:\r\n- referenceOntologyURI = \"http://example.org/ontology/hr/1.0\"^^xsd:anyURI\r\n- referenceOntologyURI = \"http://example.org/ontology/inventory/1.0\"^^xsd:anyURI\r\n\r\nKardinalität: 1..1"@de .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/ns/shacl#NodeShape
+<http://www.w3.org/ns/shacl#NodeShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://semantic.adorsys.com/meta/kpi/AggregationOperator
+<https://semantic.adorsys.com/meta/kpi/AggregationOperator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://semantic.adorsys.com/meta/kpi/AggregationOperator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://semantic.adorsys.com/meta/kpi/AggregationOperator> <http://www.w3.org/2000/01/rdf-schema#comment> "An Aggregation Operator is a type of concept (Genus: skos:Concept) that represents a mathematical or statistical function applied to a set of values to produce a single summary value (Differentia specifica).\r\n\r\nGenus: Concept (skos:Concept)\r\n\r\nDifferentia specifica:\r\n1. Represents a mathematical/statistical aggregation function\r\n2. Applied to a set of numerical values from instance data\r\n3. Produces exactly one summary output value\r\n4. Is part of the controlled vocabulary <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>\r\n\r\nExamples:\r\n- kpi:Average - Computes the arithmetic mean\r\n- kpi:Sum - Computes the total sum\r\n- kpi:Count - Counts the number of values\r\n\r\nInvariants:\r\n- Must be assigned to exactly one skos:ConceptScheme (<https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>)\r\n- Must have a skos:notation"@en .
+<https://semantic.adorsys.com/meta/kpi/AggregationOperator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/AggregationOperator> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregation Operator"@en .
+<https://semantic.adorsys.com/meta/kpi/AggregationOperator> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregationsoperator"@de .
+<https://semantic.adorsys.com/meta/kpi/AggregationOperator> <http://www.w3.org/2004/02/skos/core#definition> "Ein Aggregationsoperator ist eine Art von Konzept (Genus: skos:Concept), das eine mathematische oder statistische Funktion repräsentiert, die auf eine Menge von Werten angewendet wird, um einen einzelnen zusammenfassenden Wert zu erzeugen (Differentia specifica).\r\n\r\nGenus: Konzept (skos:Concept)\r\n\r\nDifferentia specifica:\r\n1. Repräsentiert eine mathematische/statistische Aggregationsfunktion\r\n2. Wird auf eine Menge numerischer Werte aus Instanzdaten angewendet\r\n3. Erzeugt genau einen zusammenfassenden Ausgabewert\r\n4. Ist Teil des kontrollierten Vokabulars <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>\r\n\r\nBeispiele:\r\n- kpi:Average (Durchschnitt) - Berechnet den arithmetischen Mittelwert\r\n- kpi:Sum (Summe) - Berechnet die Gesamtsumme\r\n- kpi:Count (Anzahl) - Zählt die Anzahl der Werte\r\n\r\nInvarianten:\r\n- Muss genau einem skos:ConceptScheme zugeordnet sein (<https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>)\r\n- Muss eine skos:notation haben"@de .
+# 
+# https://semantic.adorsys.com/meta/kpi/AggregationResult
+<https://semantic.adorsys.com/meta/kpi/AggregationResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://semantic.adorsys.com/meta/kpi/AggregationResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://semantic.adorsys.com/meta/kpi/DimensionValue> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://semantic.adorsys.com/meta/kpi/hasDimensionValue> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://semantic.adorsys.com/meta/kpi/AggregationResult> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#decimal> .
+_:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://semantic.adorsys.com/meta/kpi/aggregationValue> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://semantic.adorsys.com/meta/kpi/AggregationResult> <http://www.w3.org/2000/01/rdf-schema#comment> "An Aggregation Result is a type of data record (Genus: owl:Class) that represents the computed numerical value of an aggregation operation for a specific combination of dimension values (Differentia specifica).\r\n\r\nGenus: Data Record (owl:Class)\r\n\r\nDifferentia specifica:\r\n1. Contains exactly one numerical aggregation value (aggregationValue)\r\n2. Is assigned to a specific combination of dimension values (0..n DimensionValue)\r\n3. Represents one row in the result of an aggregation query\r\n4. The number of DimensionValue assignments corresponds to the number of GranularityDimension instances of the parent KPI\r\n\r\nSemantics:\r\n- Each aggregation result corresponds to one row in the result table of a SPARQL GROUP BY query\r\n- The aggregationValue is the result of applying the aggregation operator to the grouped instance data\r\n- The DimensionValue instances identify the specific group (row) within the results\r\n\r\nExamples:\r\n- Result: aggregationValue = 3456.78, hasDimensionValue = [gender=\"M\"]\r\n- Result: aggregationValue = 2890.12, hasDimensionValue = [gender=\"W\", educationLevel=\"Abitur\"]\r\n- Result: aggregationValue = 7894.12, hasDimensionValue = [location=\"Berlin\"]\r\n\r\nInvariants:\r\n- Must have exactly one aggregationValue\r\n- The number of DimensionValue instances must match the number of granularity dimensions of the associated KPI"@en .
+<https://semantic.adorsys.com/meta/kpi/AggregationResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/AggregationResult> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregation Result"@en .
+<https://semantic.adorsys.com/meta/kpi/AggregationResult> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregationsergebnis"@de .
+<https://semantic.adorsys.com/meta/kpi/AggregationResult> <http://www.w3.org/2004/02/skos/core#definition> "Ein Aggregationsergebnis ist eine Art von Datensatz (Genus: owl:Class), der den berechneten numerischen Wert einer Aggregationsoperation für eine bestimmte Kombination von Dimensionswerten repräsentiert (Differentia specifica).\r\n\r\nGenus: Datensatz (owl:Class)\r\n\r\nDifferentia specifica:\r\n1. Enthält genau einen numerischen Aggregationswert (aggregationValue)\r\n2. Ist einer bestimmten Kombination von Dimensionswerten zugeordnet (0..n DimensionValue)\r\n3. Repräsentiert eine Zeile im Ergebnis einer Aggregationsabfrage\r\n4. Die Anzahl der DimensionValue-Zuordnungen entspricht der Anzahl der GranularityDimension-Instanzen des übergeordneten KPI\r\n\r\nSemantik:\r\n- Jedes Aggregationsergebnis entspricht einer Zeile in der Ergebnistabelle einer SPARQL-GROUP-BY-Abfrage\r\n- Der aggregationValue ist das Ergebnis der Anwendung des Aggregationsoperators auf die gruppierten Instanzdaten\r\n- Die DimensionValue-Instanzen identifizieren die spezifische Gruppe (Zeile) innerhalb der Ergebnisse\r\n\r\nBeispiele:\r\n- Ergebnis: aggregationValue = 3456.78, hasDimensionValue = [geschlecht=\"M\"]\r\n- Ergebnis: aggregationValue = 2890.12, hasDimensionValue = [geschlecht=\"W\", bildungsniveau=\"Abitur\"]\r\n- Ergebnis: aggregationValue = 7894.12, hasDimensionValue = [ort=\"Berlin\"]\r\n\r\nInvarianten:\r\n- Muss genau einen aggregationValue haben\r\n- Die Anzahl der DimensionValue-Instanzen muss mit der Anzahl der Granularitätsdimensionen des zugehörigen KPI übereinstimmen"@de .
+# 
+# https://semantic.adorsys.com/meta/kpi/DimensionValue
+<https://semantic.adorsys.com/meta/kpi/DimensionValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://semantic.adorsys.com/meta/kpi/DimensionValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://semantic.adorsys.com/meta/kpi/GranularityDimension> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://semantic.adorsys.com/meta/kpi/forDimension> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://semantic.adorsys.com/meta/kpi/DimensionValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/2002/07/owl#onClass> <https://semantic.adorsys.com/meta/kpi/GranularityDimension> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://semantic.adorsys.com/meta/kpi/forDimension> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://semantic.adorsys.com/meta/kpi/DimensionValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid5 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://semantic.adorsys.com/meta/kpi/dimensionValueLiteral> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://semantic.adorsys.com/meta/kpi/DimensionValue> <http://www.w3.org/2000/01/rdf-schema#comment> "A Dimension Value is a type of value assignment (Genus: owl:Class) that represents the concrete value of a granularity dimension within a specific aggregation result (Differentia specifica).\r\n\r\nGenus: Value Assignment (owl:Class)\r\n\r\nDifferentia specifica:\r\n1. References exactly one granularity dimension (forDimension)\r\n2. Contains exactly one concrete literal value (dimensionValueLiteral)\r\n3. Is assigned to exactly one aggregation result (via hasDimensionValue)\r\n4. Together with other DimensionValue instances, forms the key of an aggregation result\r\n\r\nSemantics:\r\n- Each dimension value is a cell in a result row\r\n- It assigns a concrete value to a granularity dimension\r\n- The totality of all dimension values of an aggregation result identifies the group\r\n\r\nExamples:\r\n- DimensionValue: forDimension = [gender], dimensionValueLiteral = \"M\"\r\n- DimensionValue: forDimension = [location], dimensionValueLiteral = \"Frankfurt am Main\"\r\n- DimensionValue: forDimension = [educationLevel], dimensionValueLiteral = \"Abitur\"\r\n\r\nInvariants:\r\n- Must have exactly one forDimension assignment\r\n- Must have exactly one dimensionValueLiteral"@en .
+<https://semantic.adorsys.com/meta/kpi/DimensionValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/DimensionValue> <http://www.w3.org/2000/01/rdf-schema#label> "Dimension Value"@en .
+<https://semantic.adorsys.com/meta/kpi/DimensionValue> <http://www.w3.org/2000/01/rdf-schema#label> "Dimensionswert"@de .
+<https://semantic.adorsys.com/meta/kpi/DimensionValue> <http://www.w3.org/2004/02/skos/core#definition> "Ein Dimensionswert ist eine Art von Wertezuordnung (Genus: owl:Class), die den konkreten Wert einer Granularitätsdimension innerhalb eines bestimmten Aggregationsergebnisses repräsentiert (Differentia specifica).\r\n\r\nGenus: Wertezuordnung (owl:Class)\r\n\r\nDifferentia specifica:\r\n1. Verweist auf genau eine Granularitätsdimension (forDimension)\r\n2. Enthält genau einen konkreten Literalwert (dimensionValueLiteral)\r\n3. Ist genau einem Aggregationsergebnis zugeordnet (über hasDimensionValue)\r\n4. Bildet zusammen mit anderen DimensionValue-Instanzen den Schlüssel eines Aggregationsergebnisses\r\n\r\nSemantik:\r\n- Jeder Dimensionswert ist eine Zelle in einer Ergebniszeile\r\n- Er ordnet einer Granularitätsdimension ihren konkreten Wert zu\r\n- Die Gesamtheit aller Dimensionswerte eines Aggregationsergebnisses identifiziert die Gruppe\r\n\r\nBeispiele:\r\n- DimensionValue: forDimension = [geschlecht], dimensionValueLiteral = \"M\"\r\n- DimensionValue: forDimension = [ort], dimensionValueLiteral = \"Frankfurt am Main\"\r\n- DimensionValue: forDimension = [bildungsniveau], dimensionValueLiteral = \"Abitur\"\r\n\r\nInvarianten:\r\n- Muss genau eine forDimension-Zuordnung haben\r\n- Muss genau einen dimensionValueLiteral haben"@de .
+# 
+# https://semantic.adorsys.com/meta/kpi/GranularityDimension
+<https://semantic.adorsys.com/meta/kpi/GranularityDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://semantic.adorsys.com/meta/kpi/GranularityDimension> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://semantic.adorsys.com/meta/kpi/granularityPropertyURI> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://semantic.adorsys.com/meta/kpi/GranularityDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "A Granularity Dimension is a type of structural element (Genus: owl:Class) that represents a breakdown axis for a key performance indicator and references a property of the reference ontology by which aggregation results are grouped (Differentia specifica).\r\n\r\nGenus: Structural Element (owl:Class)\r\n\r\nDifferentia specifica:\r\n1. References a property (Data Property or Object Property) of the reference ontology\r\n2. Defines a GROUP BY axis for the aggregation computation\r\n3. Determines the criteria by which aggregation results are broken down\r\n4. Can carry a human-readable label (dimensionLabel)\r\n\r\nSemantics:\r\n- Each granularity dimension represents an attribute by which instance data is grouped\r\n- The combination of all dimension values across all granularity dimensions forms the key of an aggregation result\r\n- Without granularity dimensions, a single total aggregation value is computed\r\n\r\nExamples:\r\n- Gender: granularityPropertyURI = \"http://example.org/hr/ontology/gender\"\r\n- Location: granularityPropertyURI = \"http://example.org/hr/ontology/location\"\r\n- Education Level: granularityPropertyURI = \"http://example.org/hr/ontology/educationLevel\"\r\n\r\nInvariants:\r\n- Must have exactly one granularityPropertyURI"@en .
+<https://semantic.adorsys.com/meta/kpi/GranularityDimension> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/GranularityDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Granularity Dimension"@en .
+<https://semantic.adorsys.com/meta/kpi/GranularityDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Granularitätsdimension"@de .
+<https://semantic.adorsys.com/meta/kpi/GranularityDimension> <http://www.w3.org/2004/02/skos/core#definition> "Eine Granularitätsdimension ist eine Art von Strukturelement (Genus: owl:Class), das eine Aufschlüsselungsachse für eine Leistungskennzahl repräsentiert und auf eine Eigenschaft der Referenzontologie verweist, nach der die Aggregationsergebnisse gruppiert werden (Differentia specifica).\r\n\r\nGenus: Strukturelement (owl:Class)\r\n\r\nDifferentia specifica:\r\n1. Referenziert eine Eigenschaft (Data Property oder Object Property) der Referenzontologie\r\n2. Definiert eine GROUP-BY-Achse für die Aggregationsberechnung\r\n3. Bestimmt, nach welchen Kriterien die Aggregationsergebnisse aufgeschlüsselt werden\r\n4. Kann einen menschenlesbaren Bezeichner (dimensionLabel) tragen\r\n\r\nSemantik:\r\n- Jede Granularitätsdimension repräsentiert ein Attribut, nach dem die Instanzdaten gruppiert werden\r\n- Die Kombination aller Dimensionswerte über alle Granularitätsdimensionen bildet den Schlüssel eines Aggregationsergebnisses\r\n- Ohne Granularitätsdimensionen wird ein einziger Gesamtaggregationswert berechnet\r\n\r\nBeispiele:\r\n- Geschlecht: granularityPropertyURI = \"http://example.org/hr/ontology/gender\"\r\n- Standort: granularityPropertyURI = \"http://example.org/hr/ontology/location\"\r\n- Bildungsniveau: granularityPropertyURI = \"http://example.org/hr/ontology/educationLevel\"\r\n\r\nInvarianten:\r\n- Muss genau eine granularityPropertyURI haben"@de .
+# 
+# https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://semantic.adorsys.com/meta/kpi/AggregationResult> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://semantic.adorsys.com/meta/kpi/hasAggregationResult> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://semantic.adorsys.com/meta/kpi/GranularityDimension> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://semantic.adorsys.com/meta/kpi/hasGranularityDimension> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#onClass> <https://semantic.adorsys.com/meta/kpi/AggregationResult> .
+_:genid9 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://semantic.adorsys.com/meta/kpi/hasAggregationResult> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/2002/07/owl#onClass> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
+_:genid10 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://semantic.adorsys.com/meta/kpi/hasAggregationOperator> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid11 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid12 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://semantic.adorsys.com/meta/kpi/referenceOntologyURI> .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#comment> "A Key Performance Indicator (KPI) is a type of semantic description (Genus: owl:Class) that represents a fully specified aggregation computation over instance data of a reference ontology (Differentia specifica).\r\n\r\nGenus: Semantic Description (owl:Class)\r\n\r\nDifferentia specifica:\r\n1. References an external ontology whose instance data serves as the data foundation\r\n2. Specifies a property of the reference ontology over which aggregation is performed\r\n3. Uses exactly one aggregation operator from the controlled vocabulary (e.g., AVG, SUM, COUNT)\r\n4. Can be broken down by 0..n granularity dimensions (GROUP BY)\r\n5. Contains 1..n computed aggregation results, each with their dimension values\r\n\r\nEssential Properties:\r\n- referenceOntologyURI: URI of the reference ontology from which data originates\r\n- aggregationPropertyURI: URI of the property being aggregated\r\n- hasAggregationOperator: The aggregation operator used (exactly one)\r\n- hasGranularityDimension: The dimensions by which results are broken down (0..n)\r\n- hasAggregationResult: The computed result rows (1..n)\r\n- dataSourceURI: Optional URI of the data source (e.g., named graph)\r\n- filterExpression: Optional filter expression to restrict instance data\r\n\r\nRelationships:\r\n- To Aggregation Operator: uses exactly one AggregationOperator\r\n- To Granularity Dimension: has 0..n GranularityDimension instances\r\n- To Aggregation Result: has 1..n AggregationResult instances\r\n\r\nExamples:\r\n- KPI \"Average Salary by Gender\": referenceOntologyURI = HROntology, aggregationPropertyURI = grossSalary, hasAggregationOperator = Average, hasGranularityDimension = [gender]\r\n- KPI \"Average Salary by Location\": referenceOntologyURI = HROntology, aggregationPropertyURI = grossSalary, hasAggregationOperator = Average, hasGranularityDimension = [location]\r\n- KPI \"Employee Count by Location\": referenceOntologyURI = HROntology, aggregationPropertyURI = location, hasAggregationOperator = Count, hasGranularityDimension = [location]\r\n\r\nInvariants:\r\n- Must have exactly one referenceOntologyURI\r\n- Must have at least one aggregationPropertyURI\r\n- Must have exactly one hasAggregationOperator\r\n- Must have at least one hasAggregationResult"@en .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "Key Performance Indicator"@en .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> <http://www.w3.org/2000/01/rdf-schema#label> "Leistungskennzahl"@de .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> <http://www.w3.org/2004/02/skos/core#definition> "Eine Leistungskennzahl (KPI) ist eine Art von semantischer Beschreibung (Genus: owl:Class), die eine vollständig spezifizierte Aggregationsberechnung über Instanzdaten einer Referenzontologie repräsentiert (Differentia specifica).\r\n\r\nGenus: Semantische Beschreibung (owl:Class)\r\n\r\nDifferentia specifica:\r\n1. Referenziert eine externe Ontologie, deren Instanzdaten als Datengrundlage dienen\r\n2. Spezifiziert eine Eigenschaft der Referenzontologie, über die aggregiert wird\r\n3. Verwendet genau einen Aggregationsoperator aus dem kontrollierten Vokabular (z.B. AVG, SUM, COUNT)\r\n4. Kann durch 0..n Granularitätsdimensionen aufgeschlüsselt werden (GROUP BY)\r\n5. Enthält 1..n berechnete Aggregationsergebnisse, jeweils mit ihren Dimensionswerten\r\n\r\nWesentliche Eigenschaften:\r\n- referenceOntologyURI: URI der Referenzontologie, aus der die Daten stammen\r\n- aggregationPropertyURI: URI der Eigenschaft, über die aggregiert wird\r\n- hasAggregationOperator: Der verwendete Aggregationsoperator (genau einer)\r\n- hasGranularityDimension: Die Dimensionen, nach denen aufgeschlüsselt wird (0..n)\r\n- hasAggregationResult: Die berechneten Ergebniszeilen (1..n)\r\n- dataSourceURI: Optionale URI der Datenquelle (z.B. Named Graph)\r\n- filterExpression: Optionaler Filterausdruck zur Einschränkung der Instanzdaten\r\n\r\nBeziehungen:\r\n- Zu Aggregationsoperator: verwendet genau einen AggregationOperator\r\n- Zu Granularitätsdimension: hat 0..n GranularityDimension-Instanzen\r\n- Zu Aggregationsergebnis: hat 1..n AggregationResult-Instanzen\r\n\r\nBeispiele:\r\n- KPI \"Durchschnittsgehalt nach Geschlecht\": referenceOntologyURI = HROntology, aggregationPropertyURI = grossSalary, hasAggregationOperator = Average, hasGranularityDimension = [gender]\r\n- KPI \"Durchschnittsgehalt nach Standort\": referenceOntologyURI = HROntology, aggregationPropertyURI = grossSalary, hasAggregationOperator = Average, hasGranularityDimension = [location]\r\n- KPI \"Anzahl Mitarbeiter nach Standort\": referenceOntologyURI = HROntology, aggregationPropertyURI = location, hasAggregationOperator = Count, hasGranularityDimension = [location]\r\n\r\nInvarianten:\r\n- Muss genau eine referenceOntologyURI haben\r\n- Muss mindestens eine aggregationPropertyURI haben\r\n- Muss genau einen hasAggregationOperator haben\r\n- Muss mindestens ein hasAggregationResult haben"@de .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://semantic.adorsys.com/meta/kpi/AggregationOperatorShape
+<https://semantic.adorsys.com/meta/kpi/AggregationOperatorShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://semantic.adorsys.com/meta/kpi/AggregationOperatorShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://semantic.adorsys.com/meta/kpi/AggregationOperatorShape> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/AggregationOperatorShape> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregation Operator Shape"@en .
+<https://semantic.adorsys.com/meta/kpi/AggregationOperatorShape> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregationsoperator-Shape"@de .
+<https://semantic.adorsys.com/meta/kpi/AggregationOperatorShape> <http://www.w3.org/ns/shacl#property> _:genid13 .
+_:genid13 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#prefLabel> .
+_:genid13 <http://www.w3.org/ns/shacl#name> "preferred label"@en .
+_:genid13 <http://www.w3.org/ns/shacl#name> "bevorzugte Bezeichnung"@de .
+_:genid13 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://semantic.adorsys.com/meta/kpi/AggregationOperatorShape> <http://www.w3.org/ns/shacl#property> _:genid14 .
+_:genid14 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#inScheme> .
+_:genid14 <http://www.w3.org/ns/shacl#name> "in scheme"@en .
+_:genid14 <http://www.w3.org/ns/shacl#name> "im Vokabular"@de .
+_:genid14 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid14 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid14 <http://www.w3.org/ns/shacl#hasValue> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/AggregationOperatorShape> <http://www.w3.org/ns/shacl#property> _:genid15 .
+_:genid15 <http://www.w3.org/ns/shacl#path> <http://www.w3.org/2004/02/skos/core#notation> .
+_:genid15 <http://www.w3.org/ns/shacl#name> "notation"@en .
+_:genid15 <http://www.w3.org/ns/shacl#name> "Notation"@de .
+_:genid15 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid15 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+<https://semantic.adorsys.com/meta/kpi/AggregationOperatorShape> <http://www.w3.org/ns/shacl#targetClass> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
+# 
+# https://semantic.adorsys.com/meta/kpi/AggregationResultShape
+<https://semantic.adorsys.com/meta/kpi/AggregationResultShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://semantic.adorsys.com/meta/kpi/AggregationResultShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://semantic.adorsys.com/meta/kpi/AggregationResultShape> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/AggregationResultShape> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregation Result Shape"@en .
+<https://semantic.adorsys.com/meta/kpi/AggregationResultShape> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregationsergebnis-Shape"@de .
+<https://semantic.adorsys.com/meta/kpi/AggregationResultShape> <http://www.w3.org/ns/shacl#property> _:genid16 .
+_:genid16 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/aggregationValue> .
+_:genid16 <http://www.w3.org/ns/shacl#name> "aggregation value"@en .
+_:genid16 <http://www.w3.org/ns/shacl#name> "Aggregationswert"@de .
+_:genid16 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid16 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid16 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://semantic.adorsys.com/meta/kpi/AggregationResultShape> <http://www.w3.org/ns/shacl#property> _:genid17 .
+_:genid17 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/hasDimensionValue> .
+_:genid17 <http://www.w3.org/ns/shacl#name> "hat Dimensionswert"@de .
+_:genid17 <http://www.w3.org/ns/shacl#name> "has dimension value"@en .
+_:genid17 <http://www.w3.org/ns/shacl#class> <https://semantic.adorsys.com/meta/kpi/DimensionValue> .
+<https://semantic.adorsys.com/meta/kpi/AggregationResultShape> <http://www.w3.org/ns/shacl#targetClass> <https://semantic.adorsys.com/meta/kpi/AggregationResult> .
+# 
+# https://semantic.adorsys.com/meta/kpi/Average
+<https://semantic.adorsys.com/meta/kpi/Average> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://semantic.adorsys.com/meta/kpi/Average> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://semantic.adorsys.com/meta/kpi/Average> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
+<https://semantic.adorsys.com/meta/kpi/Average> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/Average> <http://www.w3.org/2000/01/rdf-schema#label> "Average"@en .
+<https://semantic.adorsys.com/meta/kpi/Average> <http://www.w3.org/2000/01/rdf-schema#label> "Durchschnitt"@de .
+<https://semantic.adorsys.com/meta/kpi/Average> <http://www.w3.org/2004/02/skos/core#definition> "Berechnet den arithmetischen Mittelwert aller Werte in der aggregierten Menge. Entspricht der SPARQL-Funktion AVG()."@de .
+<https://semantic.adorsys.com/meta/kpi/Average> <http://www.w3.org/2004/02/skos/core#definition> "Computes the arithmetic mean of all values in the aggregated set. Corresponds to the SPARQL function AVG()."@en .
+<https://semantic.adorsys.com/meta/kpi/Average> <http://www.w3.org/2004/02/skos/core#inScheme> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/Average> <http://www.w3.org/2004/02/skos/core#notation> "AVG" .
+<https://semantic.adorsys.com/meta/kpi/Average> <http://www.w3.org/2004/02/skos/core#prefLabel> "Average"@en .
+<https://semantic.adorsys.com/meta/kpi/Average> <http://www.w3.org/2004/02/skos/core#prefLabel> "Durchschnitt"@de .
+<https://semantic.adorsys.com/meta/kpi/Average> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+# 
+# https://semantic.adorsys.com/meta/kpi/Count
+<https://semantic.adorsys.com/meta/kpi/Count> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://semantic.adorsys.com/meta/kpi/Count> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://semantic.adorsys.com/meta/kpi/Count> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
+<https://semantic.adorsys.com/meta/kpi/Count> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/Count> <http://www.w3.org/2000/01/rdf-schema#label> "Anzahl"@de .
+<https://semantic.adorsys.com/meta/kpi/Count> <http://www.w3.org/2000/01/rdf-schema#label> "Count"@en .
+<https://semantic.adorsys.com/meta/kpi/Count> <http://www.w3.org/2004/02/skos/core#definition> "Counts the total number of values in the aggregated set, including duplicates. Corresponds to the SPARQL function COUNT()."@en .
+<https://semantic.adorsys.com/meta/kpi/Count> <http://www.w3.org/2004/02/skos/core#definition> "Zählt die Gesamtanzahl der Werte in der aggregierten Menge, einschließlich Duplikate. Entspricht der SPARQL-Funktion COUNT()."@de .
+<https://semantic.adorsys.com/meta/kpi/Count> <http://www.w3.org/2004/02/skos/core#inScheme> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/Count> <http://www.w3.org/2004/02/skos/core#notation> "COUNT" .
+<https://semantic.adorsys.com/meta/kpi/Count> <http://www.w3.org/2004/02/skos/core#prefLabel> "Anzahl"@de .
+<https://semantic.adorsys.com/meta/kpi/Count> <http://www.w3.org/2004/02/skos/core#prefLabel> "Count"@en .
+<https://semantic.adorsys.com/meta/kpi/Count> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+# 
+# https://semantic.adorsys.com/meta/kpi/CountDistinct
+<https://semantic.adorsys.com/meta/kpi/CountDistinct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://semantic.adorsys.com/meta/kpi/CountDistinct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://semantic.adorsys.com/meta/kpi/CountDistinct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
+<https://semantic.adorsys.com/meta/kpi/CountDistinct> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/CountDistinct> <http://www.w3.org/2000/01/rdf-schema#label> "Count Distinct"@en .
+<https://semantic.adorsys.com/meta/kpi/CountDistinct> <http://www.w3.org/2000/01/rdf-schema#label> "Eindeutige Anzahl"@de .
+<https://semantic.adorsys.com/meta/kpi/CountDistinct> <http://www.w3.org/2004/02/skos/core#definition> "Counts the number of unique (distinct) values in the aggregated set. Corresponds to the SPARQL function COUNT(DISTINCT ...)."@en .
+<https://semantic.adorsys.com/meta/kpi/CountDistinct> <http://www.w3.org/2004/02/skos/core#definition> "Zählt die Anzahl der eindeutigen (verschiedenen) Werte in der aggregierten Menge. Entspricht der SPARQL-Funktion COUNT(DISTINCT ...)."@de .
+<https://semantic.adorsys.com/meta/kpi/CountDistinct> <http://www.w3.org/2004/02/skos/core#inScheme> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/CountDistinct> <http://www.w3.org/2004/02/skos/core#notation> "COUNT_DISTINCT" .
+<https://semantic.adorsys.com/meta/kpi/CountDistinct> <http://www.w3.org/2004/02/skos/core#prefLabel> "Count Distinct"@en .
+<https://semantic.adorsys.com/meta/kpi/CountDistinct> <http://www.w3.org/2004/02/skos/core#prefLabel> "Eindeutige Anzahl"@de .
+<https://semantic.adorsys.com/meta/kpi/CountDistinct> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+# 
+# https://semantic.adorsys.com/meta/kpi/DimensionValueShape
+<https://semantic.adorsys.com/meta/kpi/DimensionValueShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://semantic.adorsys.com/meta/kpi/DimensionValueShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://semantic.adorsys.com/meta/kpi/DimensionValueShape> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/DimensionValueShape> <http://www.w3.org/2000/01/rdf-schema#label> "Dimension Value Shape"@en .
+<https://semantic.adorsys.com/meta/kpi/DimensionValueShape> <http://www.w3.org/2000/01/rdf-schema#label> "Dimensionswert-Shape"@de .
+<https://semantic.adorsys.com/meta/kpi/DimensionValueShape> <http://www.w3.org/ns/shacl#property> _:genid18 .
+_:genid18 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/forDimension> .
+_:genid18 <http://www.w3.org/ns/shacl#name> "für Dimension"@de .
+_:genid18 <http://www.w3.org/ns/shacl#name> "for dimension"@en .
+_:genid18 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid18 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid18 <http://www.w3.org/ns/shacl#class> <https://semantic.adorsys.com/meta/kpi/GranularityDimension> .
+<https://semantic.adorsys.com/meta/kpi/DimensionValueShape> <http://www.w3.org/ns/shacl#property> _:genid19 .
+_:genid19 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/dimensionValueLiteral> .
+_:genid19 <http://www.w3.org/ns/shacl#name> "dimension value literal"@en .
+_:genid19 <http://www.w3.org/ns/shacl#name> "Dimensionswertliteral"@de .
+_:genid19 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid19 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid19 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<https://semantic.adorsys.com/meta/kpi/DimensionValueShape> <http://www.w3.org/ns/shacl#targetClass> <https://semantic.adorsys.com/meta/kpi/DimensionValue> .
+# 
+# https://semantic.adorsys.com/meta/kpi/GranularityDimensionShape
+<https://semantic.adorsys.com/meta/kpi/GranularityDimensionShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://semantic.adorsys.com/meta/kpi/GranularityDimensionShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://semantic.adorsys.com/meta/kpi/GranularityDimensionShape> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/GranularityDimensionShape> <http://www.w3.org/2000/01/rdf-schema#label> "Granularity Dimension Shape"@en .
+<https://semantic.adorsys.com/meta/kpi/GranularityDimensionShape> <http://www.w3.org/2000/01/rdf-schema#label> "Granularitätsdimension-Shape"@de .
+<https://semantic.adorsys.com/meta/kpi/GranularityDimensionShape> <http://www.w3.org/ns/shacl#property> _:genid20 .
+_:genid20 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/granularityPropertyURI> .
+_:genid20 <http://www.w3.org/ns/shacl#name> "granularity property URI"@en .
+_:genid20 <http://www.w3.org/ns/shacl#name> "Granularitätseigenschaft-URI"@de .
+_:genid20 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid20 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid20 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://semantic.adorsys.com/meta/kpi/GranularityDimensionShape> <http://www.w3.org/ns/shacl#property> _:genid21 .
+_:genid21 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/dimensionLabel> .
+_:genid21 <http://www.w3.org/ns/shacl#name> "dimension label"@en .
+_:genid21 <http://www.w3.org/ns/shacl#name> "Dimensionsbezeichnung"@de .
+_:genid21 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<https://semantic.adorsys.com/meta/kpi/GranularityDimensionShape> <http://www.w3.org/ns/shacl#targetClass> <https://semantic.adorsys.com/meta/kpi/GranularityDimension> .
+# 
+# https://semantic.adorsys.com/meta/kpi/GroupConcat
+<https://semantic.adorsys.com/meta/kpi/GroupConcat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://semantic.adorsys.com/meta/kpi/GroupConcat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://semantic.adorsys.com/meta/kpi/GroupConcat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
+<https://semantic.adorsys.com/meta/kpi/GroupConcat> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/GroupConcat> <http://www.w3.org/2000/01/rdf-schema#label> "Group Concatenation"@en .
+<https://semantic.adorsys.com/meta/kpi/GroupConcat> <http://www.w3.org/2000/01/rdf-schema#label> "Gruppenverkettung"@de .
+<https://semantic.adorsys.com/meta/kpi/GroupConcat> <http://www.w3.org/2004/02/skos/core#definition> "Concatenates all string values in the aggregated set into a single string with a separator. Corresponds to the SPARQL function GROUP_CONCAT()."@en .
+<https://semantic.adorsys.com/meta/kpi/GroupConcat> <http://www.w3.org/2004/02/skos/core#definition> "Verkettet alle Zeichenkettenwerte in der aggregierten Menge zu einer einzigen Zeichenkette mit einem Trennzeichen. Entspricht der SPARQL-Funktion GROUP_CONCAT()."@de .
+<https://semantic.adorsys.com/meta/kpi/GroupConcat> <http://www.w3.org/2004/02/skos/core#inScheme> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/GroupConcat> <http://www.w3.org/2004/02/skos/core#notation> "GROUP_CONCAT" .
+<https://semantic.adorsys.com/meta/kpi/GroupConcat> <http://www.w3.org/2004/02/skos/core#prefLabel> "Group Concatenation"@en .
+<https://semantic.adorsys.com/meta/kpi/GroupConcat> <http://www.w3.org/2004/02/skos/core#prefLabel> "Gruppenverkettung"@de .
+<https://semantic.adorsys.com/meta/kpi/GroupConcat> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+# 
+# https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/shacl#NodeShape> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/2000/01/rdf-schema#label> "KPI Shape"@en .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/2000/01/rdf-schema#label> "KPI-Shape"@de .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/ns/shacl#property> _:genid22 .
+_:genid22 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/aggregationPropertyURI> .
+_:genid22 <http://www.w3.org/ns/shacl#name> "aggregation property URI"@en .
+_:genid22 <http://www.w3.org/ns/shacl#name> "Aggregationseigenschaft-URI"@de .
+_:genid22 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid22 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/ns/shacl#property> _:genid23 .
+_:genid23 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/referenceOntologyURI> .
+_:genid23 <http://www.w3.org/ns/shacl#name> "reference ontology URI"@en .
+_:genid23 <http://www.w3.org/ns/shacl#name> "Referenzontologie-URI"@de .
+_:genid23 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid23 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid23 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/ns/shacl#property> _:genid24 .
+_:genid24 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/hasGranularityDimension> .
+_:genid24 <http://www.w3.org/ns/shacl#name> "hat Granularitätsdimension"@de .
+_:genid24 <http://www.w3.org/ns/shacl#name> "has granularity dimension"@en .
+_:genid24 <http://www.w3.org/ns/shacl#class> <https://semantic.adorsys.com/meta/kpi/GranularityDimension> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/ns/shacl#property> _:genid25 .
+_:genid25 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/hasAggregationOperator> .
+_:genid25 <http://www.w3.org/ns/shacl#name> "hat Aggregationsoperator"@de .
+_:genid25 <http://www.w3.org/ns/shacl#name> "has aggregation operator"@en .
+_:genid25 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid25 <http://www.w3.org/ns/shacl#maxCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid25 <http://www.w3.org/ns/shacl#class> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/ns/shacl#property> _:genid26 .
+_:genid26 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/hasAggregationResult> .
+_:genid26 <http://www.w3.org/ns/shacl#name> "hat Aggregationsergebnis"@de .
+_:genid26 <http://www.w3.org/ns/shacl#name> "has aggregation result"@en .
+_:genid26 <http://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#integer> .
+_:genid26 <http://www.w3.org/ns/shacl#class> <https://semantic.adorsys.com/meta/kpi/AggregationResult> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/ns/shacl#property> _:genid27 .
+_:genid27 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/kpiLabel> .
+_:genid27 <http://www.w3.org/ns/shacl#name> "KPI-Bezeichnung"@de .
+_:genid27 <http://www.w3.org/ns/shacl#name> "KPI label"@en .
+_:genid27 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/ns/shacl#property> _:genid28 .
+_:genid28 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/dataSourceURI> .
+_:genid28 <http://www.w3.org/ns/shacl#name> "data source URI"@en .
+_:genid28 <http://www.w3.org/ns/shacl#name> "Datenquellen-URI"@de .
+_:genid28 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/ns/shacl#property> _:genid29 .
+_:genid29 <http://www.w3.org/ns/shacl#path> <https://semantic.adorsys.com/meta/kpi/filterExpression> .
+_:genid29 <http://www.w3.org/ns/shacl#name> "filter expression"@en .
+_:genid29 <http://www.w3.org/ns/shacl#name> "Filterausdruck"@de .
+_:genid29 <http://www.w3.org/ns/shacl#datatype> <http://www.w3.org/2001/XMLSchema#string> .
+<https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicatorShape> <http://www.w3.org/ns/shacl#targetClass> <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> .
+# 
+# https://semantic.adorsys.com/meta/kpi/Max
+<https://semantic.adorsys.com/meta/kpi/Max> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://semantic.adorsys.com/meta/kpi/Max> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://semantic.adorsys.com/meta/kpi/Max> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
+<https://semantic.adorsys.com/meta/kpi/Max> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/Max> <http://www.w3.org/2000/01/rdf-schema#label> "Maximum"@de .
+<https://semantic.adorsys.com/meta/kpi/Max> <http://www.w3.org/2000/01/rdf-schema#label> "Maximum"@en .
+<https://semantic.adorsys.com/meta/kpi/Max> <http://www.w3.org/2004/02/skos/core#definition> "Determines the largest value in the aggregated set. Corresponds to the SPARQL function MAX()."@en .
+<https://semantic.adorsys.com/meta/kpi/Max> <http://www.w3.org/2004/02/skos/core#definition> "Ermittelt den größten Wert in der aggregierten Menge. Entspricht der SPARQL-Funktion MAX()."@de .
+<https://semantic.adorsys.com/meta/kpi/Max> <http://www.w3.org/2004/02/skos/core#inScheme> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/Max> <http://www.w3.org/2004/02/skos/core#notation> "MAX" .
+<https://semantic.adorsys.com/meta/kpi/Max> <http://www.w3.org/2004/02/skos/core#prefLabel> "Maximum"@de .
+<https://semantic.adorsys.com/meta/kpi/Max> <http://www.w3.org/2004/02/skos/core#prefLabel> "Maximum"@en .
+<https://semantic.adorsys.com/meta/kpi/Max> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+# 
+# https://semantic.adorsys.com/meta/kpi/Median
+<https://semantic.adorsys.com/meta/kpi/Median> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://semantic.adorsys.com/meta/kpi/Median> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://semantic.adorsys.com/meta/kpi/Median> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
+<https://semantic.adorsys.com/meta/kpi/Median> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/Median> <http://www.w3.org/2000/01/rdf-schema#label> "Median"@de .
+<https://semantic.adorsys.com/meta/kpi/Median> <http://www.w3.org/2000/01/rdf-schema#label> "Median"@en .
+<https://semantic.adorsys.com/meta/kpi/Median> <http://www.w3.org/2004/02/skos/core#definition> "Determines the middle value of the sorted aggregated set, separating the upper half from the lower half. Not available as a native SPARQL function but can be computed through subqueries."@en .
+<https://semantic.adorsys.com/meta/kpi/Median> <http://www.w3.org/2004/02/skos/core#definition> "Ermittelt den Zentralwert der sortierten aggregierten Menge, der die obere von der unteren Hälfte trennt. Nicht als native SPARQL-Funktion verfügbar, kann aber durch Unterabfragen berechnet werden."@de .
+<https://semantic.adorsys.com/meta/kpi/Median> <http://www.w3.org/2004/02/skos/core#inScheme> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/Median> <http://www.w3.org/2004/02/skos/core#notation> "MEDIAN" .
+<https://semantic.adorsys.com/meta/kpi/Median> <http://www.w3.org/2004/02/skos/core#prefLabel> "Median"@de .
+<https://semantic.adorsys.com/meta/kpi/Median> <http://www.w3.org/2004/02/skos/core#prefLabel> "Median"@en .
+<https://semantic.adorsys.com/meta/kpi/Median> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+# 
+# https://semantic.adorsys.com/meta/kpi/Min
+<https://semantic.adorsys.com/meta/kpi/Min> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://semantic.adorsys.com/meta/kpi/Min> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://semantic.adorsys.com/meta/kpi/Min> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
+<https://semantic.adorsys.com/meta/kpi/Min> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/Min> <http://www.w3.org/2000/01/rdf-schema#label> "Minimum"@de .
+<https://semantic.adorsys.com/meta/kpi/Min> <http://www.w3.org/2000/01/rdf-schema#label> "Minimum"@en .
+<https://semantic.adorsys.com/meta/kpi/Min> <http://www.w3.org/2004/02/skos/core#definition> "Determines the smallest value in the aggregated set. Corresponds to the SPARQL function MIN()."@en .
+<https://semantic.adorsys.com/meta/kpi/Min> <http://www.w3.org/2004/02/skos/core#definition> "Ermittelt den kleinsten Wert in der aggregierten Menge. Entspricht der SPARQL-Funktion MIN()."@de .
+<https://semantic.adorsys.com/meta/kpi/Min> <http://www.w3.org/2004/02/skos/core#inScheme> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/Min> <http://www.w3.org/2004/02/skos/core#notation> "MIN" .
+<https://semantic.adorsys.com/meta/kpi/Min> <http://www.w3.org/2004/02/skos/core#prefLabel> "Minimum"@de .
+<https://semantic.adorsys.com/meta/kpi/Min> <http://www.w3.org/2004/02/skos/core#prefLabel> "Minimum"@en .
+<https://semantic.adorsys.com/meta/kpi/Min> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+# 
+# https://semantic.adorsys.com/meta/kpi/Sample
+<https://semantic.adorsys.com/meta/kpi/Sample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://semantic.adorsys.com/meta/kpi/Sample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://semantic.adorsys.com/meta/kpi/Sample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
+<https://semantic.adorsys.com/meta/kpi/Sample> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/Sample> <http://www.w3.org/2000/01/rdf-schema#label> "Sample"@en .
+<https://semantic.adorsys.com/meta/kpi/Sample> <http://www.w3.org/2000/01/rdf-schema#label> "Stichprobe"@de .
+<https://semantic.adorsys.com/meta/kpi/Sample> <http://www.w3.org/2004/02/skos/core#definition> "Selects an arbitrary representative value from the aggregated set. Corresponds to the SPARQL function SAMPLE()."@en .
+<https://semantic.adorsys.com/meta/kpi/Sample> <http://www.w3.org/2004/02/skos/core#definition> "Wählt einen beliebigen repräsentativen Wert aus der aggregierten Menge aus. Entspricht der SPARQL-Funktion SAMPLE()."@de .
+<https://semantic.adorsys.com/meta/kpi/Sample> <http://www.w3.org/2004/02/skos/core#inScheme> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/Sample> <http://www.w3.org/2004/02/skos/core#notation> "SAMPLE" .
+<https://semantic.adorsys.com/meta/kpi/Sample> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sample"@en .
+<https://semantic.adorsys.com/meta/kpi/Sample> <http://www.w3.org/2004/02/skos/core#prefLabel> "Stichprobe"@de .
+<https://semantic.adorsys.com/meta/kpi/Sample> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+# 
+# https://semantic.adorsys.com/meta/kpi/StandardDeviation
+<https://semantic.adorsys.com/meta/kpi/StandardDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://semantic.adorsys.com/meta/kpi/StandardDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://semantic.adorsys.com/meta/kpi/StandardDeviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
+<https://semantic.adorsys.com/meta/kpi/StandardDeviation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/StandardDeviation> <http://www.w3.org/2000/01/rdf-schema#label> "Standard Deviation"@en .
+<https://semantic.adorsys.com/meta/kpi/StandardDeviation> <http://www.w3.org/2000/01/rdf-schema#label> "Standardabweichung"@de .
+<https://semantic.adorsys.com/meta/kpi/StandardDeviation> <http://www.w3.org/2004/02/skos/core#definition> "Berechnet die Standardabweichung der Werte in der aggregierten Menge als Maß für die Streuung um den Mittelwert. Nicht als native SPARQL-Funktion verfügbar, aber in einigen Triplestore-Erweiterungen unterstützt."@de .
+<https://semantic.adorsys.com/meta/kpi/StandardDeviation> <http://www.w3.org/2004/02/skos/core#definition> "Computes the standard deviation of values in the aggregated set as a measure of dispersion around the mean. Not available as a native SPARQL function but supported in some triplestore extensions."@en .
+<https://semantic.adorsys.com/meta/kpi/StandardDeviation> <http://www.w3.org/2004/02/skos/core#inScheme> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/StandardDeviation> <http://www.w3.org/2004/02/skos/core#notation> "STDEV" .
+<https://semantic.adorsys.com/meta/kpi/StandardDeviation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Standard Deviation"@en .
+<https://semantic.adorsys.com/meta/kpi/StandardDeviation> <http://www.w3.org/2004/02/skos/core#prefLabel> "Standardabweichung"@de .
+<https://semantic.adorsys.com/meta/kpi/StandardDeviation> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+# 
+# https://semantic.adorsys.com/meta/kpi/Sum
+<https://semantic.adorsys.com/meta/kpi/Sum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://semantic.adorsys.com/meta/kpi/Sum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://semantic.adorsys.com/meta/kpi/Sum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
+<https://semantic.adorsys.com/meta/kpi/Sum> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/Sum> <http://www.w3.org/2000/01/rdf-schema#label> "Sum"@en .
+<https://semantic.adorsys.com/meta/kpi/Sum> <http://www.w3.org/2000/01/rdf-schema#label> "Summe"@de .
+<https://semantic.adorsys.com/meta/kpi/Sum> <http://www.w3.org/2004/02/skos/core#definition> "Berechnet die Gesamtsumme aller Werte in der aggregierten Menge. Entspricht der SPARQL-Funktion SUM()."@de .
+<https://semantic.adorsys.com/meta/kpi/Sum> <http://www.w3.org/2004/02/skos/core#definition> "Computes the total sum of all values in the aggregated set. Corresponds to the SPARQL function SUM()."@en .
+<https://semantic.adorsys.com/meta/kpi/Sum> <http://www.w3.org/2004/02/skos/core#inScheme> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/Sum> <http://www.w3.org/2004/02/skos/core#notation> "SUM" .
+<https://semantic.adorsys.com/meta/kpi/Sum> <http://www.w3.org/2004/02/skos/core#prefLabel> "Sum"@en .
+<https://semantic.adorsys.com/meta/kpi/Sum> <http://www.w3.org/2004/02/skos/core#prefLabel> "Summe"@de .
+<https://semantic.adorsys.com/meta/kpi/Sum> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+# 
+# https://semantic.adorsys.com/meta/kpi/Variance
+<https://semantic.adorsys.com/meta/kpi/Variance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://semantic.adorsys.com/meta/kpi/Variance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://semantic.adorsys.com/meta/kpi/Variance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://semantic.adorsys.com/meta/kpi/AggregationOperator> .
+<https://semantic.adorsys.com/meta/kpi/Variance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/Variance> <http://www.w3.org/2000/01/rdf-schema#label> "Variance"@en .
+<https://semantic.adorsys.com/meta/kpi/Variance> <http://www.w3.org/2000/01/rdf-schema#label> "Varianz"@de .
+<https://semantic.adorsys.com/meta/kpi/Variance> <http://www.w3.org/2004/02/skos/core#definition> "Berechnet die Varianz der Werte in der aggregierten Menge als Quadrat der Standardabweichung. Nicht als native SPARQL-Funktion verfügbar, aber in einigen Triplestore-Erweiterungen unterstützt."@de .
+<https://semantic.adorsys.com/meta/kpi/Variance> <http://www.w3.org/2004/02/skos/core#definition> "Computes the variance of values in the aggregated set as the square of the standard deviation. Not available as a native SPARQL function but supported in some triplestore extensions."@en .
+<https://semantic.adorsys.com/meta/kpi/Variance> <http://www.w3.org/2004/02/skos/core#inScheme> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+<https://semantic.adorsys.com/meta/kpi/Variance> <http://www.w3.org/2004/02/skos/core#notation> "VAR" .
+<https://semantic.adorsys.com/meta/kpi/Variance> <http://www.w3.org/2004/02/skos/core#prefLabel> "Variance"@en .
+<https://semantic.adorsys.com/meta/kpi/Variance> <http://www.w3.org/2004/02/skos/core#prefLabel> "Varianz"@de .
+<https://semantic.adorsys.com/meta/kpi/Variance> <http://www.w3.org/2004/02/skos/core#topConceptOf> <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> .
+# 
+# https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0
+<https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid30 <http://www.w3.org/2002/07/owl#members> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://semantic.adorsys.com/meta/kpi/KeyPerformanceIndicator> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://semantic.adorsys.com/meta/kpi/GranularityDimension> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://semantic.adorsys.com/meta/kpi/DimensionValue> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://semantic.adorsys.com/meta/kpi/AggregationResult> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

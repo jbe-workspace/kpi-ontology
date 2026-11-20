@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" href="resources/primer.css" media="screen"/>
+<link rel="stylesheet" href="resources/rec.css" media="screen"/>
+<link rel="stylesheet" href="resources/extra.css" media="screen"/>
+<link rel="stylesheet" href="resources/owl.css" media="screen"/>
+<link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)"/>
+<link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)"/>
+<link rel="stylesheet" href="resources/slider.css" media="screen"/>
+<meta name="color-scheme" content="dark light">
+<script type="module" src="resources/dark-mode-toggle.mjs"></script><div class="darkmode">
+	<dark-mode-toggle class="slider"></dark-mode-toggle>
+</div>
+<link rel="icon" type="image/png" href="resources/rdf.icon"/> <title>Key Performance Indicator Ontology</title>
+
+
+<!-- SCHEMA.ORG METADATA -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://semantic.adorsys.com/meta/kpi/","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://semantic.adorsys.com/meta/kpi/","name":"Key Performance Indicator Ontology", "headline":"RDF/OWL ontology for describing Key Performance Indicators computed through aggregation operations over instance data from a reference ontology.", "datePublished":"2026-04-08", "dateModified":"2026-11-20", "version":"1.0", "license":"https://spdx.org/licenses/MIT.html", "author":[{"@type":"Person","name":"Johann Bergh <Johann.Bergh@adorsys.com>"}], "contributor":[{"@type":"Person","name":"Johann Bergh <Johann.Bergh@adorsys.com>"}]}</script>
+
+<script src="resources/jquery.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/marked@18.0.1/lib/marked.umd.min.js"></script> 
+<script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11.14.0/+esm';mermaid.initialize({startOnLoad:false});window.mermaid=mermaid;</script> 
+    <script> 
+function scrollToHash() {
+  var h = location.hash;
+  if (!h || h.length < 2) return;
+  var id;
+  try { id = decodeURIComponent(h.slice(1)); } catch (e) { id = h.slice(1); }
+  var el = document.getElementById(id);
+  if (el) el.scrollIntoView();
+}
+function loadHash() {
+  jQuery(".markdown").each(function(el){jQuery(this).after(marked.parse(jQuery(this).text())).remove()});
+  if (typeof window.mermaid !== 'undefined') { window.mermaid.run({ querySelector: 'pre code.language-mermaid' }); }
+  loadTOC();
+  scrollToHash();
+  if (document.readyState === 'complete') { setTimeout(scrollToHash, 300); }
+  else { window.addEventListener('load', function(){ setTimeout(scrollToHash, 300); }); }
+}
+function loadTOC(){
+	//process toc dynamically
+	  var t='<h2>Table of contents</h2><ul>';i = 1;j=0;
+	  jQuery(".list").each(function(){
+		if(jQuery(this).is('h2')){
+			if(j>0){
+				t+='</ul>';
+				j=0;
+			}
+			t+= '<li>'+i+'. <a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+			i++;
+		}
+		if(jQuery(this).is('h3')){
+			if(j==0){
+				t+='<ul>';
+			}
+			j++;
+			t+= '<li>'+(i-1)+'.'+j+'. '+'<a href=#'+ jQuery(this).attr('id')+'>'+ jQuery(this).ignore("span").text()+'</a></li>';
+		}
+	  });
+	  t+='</ul>';
+	  $("#toc").html(t); 
+}
+ $.fn.ignore = function(sel){
+        return this.clone().find(sel||">*").remove().end();
+ };    $(function(){
+      var loads = [];
+      function _ls(sel,url){var d=$.Deferred();$(sel).load(url,function(){d.resolve();});return d.promise();}
+      loads.push(_ls("#abstract","sections/abstract-en.html")); 
+      loads.push(_ls("#introduction","sections/introduction-en.html")); 
+      loads.push(_ls("#nstable","sections/ns-en.html")); 
+      loads.push(_ls("#overview","sections/overview-en.html")); 
+      loads.push(_ls("#description","sections/description-en.html")); 
+      loads.push(_ls("#references","sections/references-en.html")); 
+      loads.push(_ls("#crossref","sections/crossref-en.html")); 
+      $.when.apply($, loads).then(loadHash);
+    });
+    </script> 
+  </head> 
+
+<body>
+<div class="container">
+<div class="head">
+<div style="float:right">language <a href="index-de.html"><b>de</b></a> <a href="index-en.html"><b>en</b></a> </div>
+<h1>Key Performance Indicator Ontology</h1>
+<h2>Release: 2026-11-20</h2>
+
+
+<dl>
+<dt>Modified on: 2026-11-20</dt>
+<dt>This version:</dt>
+<dd><a href="https://semantic.adorsys.com/meta/kpi/1.0">https://semantic.adorsys.com/meta/kpi/1.0</a></dd>
+<dt>Latest version:</dt>
+<dd><a href="https://semantic.adorsys.com/meta/kpi/">https://semantic.adorsys.com/meta/kpi/</a></dd>
+<dt>Revision:</dt>
+<dd>1.0</dd>
+<dt>Authors:</dt>
+<dd>Johann Bergh <Johann.Bergh@adorsys.com></dd>
+
+<dt>Contributors:</dt>
+<dd>Johann Bergh <Johann.Bergh@adorsys.com></dd>
+
+<dt>Publisher:</dt>
+<dd>adorsys</dd>
+<dt>Source:</dt>
+<dd><a href="https://github.com/jbe-workspace/kpi-ontology">https://github.com/jbe-workspace/kpi-ontology</a></dd>
+
+<dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License:</dt><dd><a href="https://spdx.org/licenses/MIT.html" target="_blank"><img src="https://img.shields.io/badge/License-https://spdx.org/licenses/MIT.html-blue.svg" alt="https://spdx.org/licenses/MIT.html" /></a>
+<a href="https://spdx.org/licenses/MIT.html" rel="license" target="_blank">
+<img src="null" style="border-width:0" alt="License" />
+</a>
+<br/></dd><dt>Visualization:</dt><dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+<!-- <dt>Evaluation:</dt><dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
+<dd>Bergh, Johann. KPI Ontology. Version 1.0.0.</dd>
+</dl>
+
+<a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+</div>
+<div class="status">
+<div>
+<span>Ontology Specification Draft</span>
+</div>
+</div>     <div id="abstract"></div>
+<div id="toc"></div>     <div id="introduction"></div>
+	  <div id="nstable"></div>
+     <div id="overview"></div>
+     <div id="description"></div>
+     <div id="crossref"></div>
+     <div id="references"></div>
+<div id="acknowledgments">
+<h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+<p>
+The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.</p>
+</div>
+
+
+</div>
+</body>
+</html>
