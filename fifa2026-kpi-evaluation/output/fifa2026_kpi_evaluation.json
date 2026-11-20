@@ -1,0 +1,1210 @@
+{
+  "inputs": {
+    "ontology": "fifa2026-kpi-evaluation/input/fifa_world_cup_2026.ttl",
+    "instances": "fifa2026-kpi-evaluation/input/fifa-world-cup-2026_instances.ttl",
+    "kpi_shapes": "kpi_ontology_merged.ttl"
+  },
+  "ontology_triples": 816,
+  "instance_triples": 137347,
+  "ontology_load_s": 0.016,
+  "instances_load_s": 2.214,
+  "alignment": {
+    "ontology_classes": 32,
+    "ontology_properties": 126,
+    "ontology_object_properties": 31,
+    "ontology_datatype_properties": 95,
+    "used_classes": 30,
+    "used_properties": 122,
+    "exact_class_matches": 17,
+    "exact_property_matches": 95,
+    "local_class_matches": 17,
+    "local_property_matches": 95,
+    "classes_missing_from_ontology_by_local_name": [
+      "AssistantRefereeRole",
+      "CoachRole",
+      "HeadCoachRole",
+      "MainRefereeRole",
+      "MatchCoachRole",
+      "MatchHeadCoachRole",
+      "MatchPlayerRole",
+      "PlayerRole",
+      "RefereeRole",
+      "Role",
+      "SquadMembershipRole",
+      "TeamCoachRole",
+      "TeamHeadCoachRole"
+    ],
+    "properties_missing_from_ontology_by_local_name": [
+      "coachRoleForTeam",
+      "coachRoleHeldBy",
+      "coachRoleInMatch",
+      "crestUrl",
+      "hasCoachRole",
+      "hasCompetitionRole",
+      "hasMatchCoachRole",
+      "hasMatchPlayerRole",
+      "hasMatchRefereeRole",
+      "hasMatchRole",
+      "hasPlayerRole",
+      "hasRefereeRole",
+      "hasRole",
+      "hasSeasonRole",
+      "hasTeamCoachRole",
+      "hasTeamPlayerRole",
+      "hasTeamRole",
+      "playerRoleForTeam",
+      "playerRoleHeldBy",
+      "playerRoleInMatch",
+      "refereeRoleHeldBy",
+      "refereeRoleInMatch",
+      "roleForTeam",
+      "roleHeldBy",
+      "roleInCompetition",
+      "roleInMatch",
+      "roleInSeason"
+    ],
+    "classes_unused_in_data_by_local_name": [
+      "AssistantCoach",
+      "AssistantReferee",
+      "Coach",
+      "FourthOfficial",
+      "HeadCoach",
+      "MainReferee",
+      "OwnGoal",
+      "PenaltyGoal",
+      "Player",
+      "RedCard",
+      "Referee",
+      "RegularGoal",
+      "SecondYellowCard",
+      "VAR",
+      "YellowCard"
+    ],
+    "properties_unused_in_data_by_local_name": [
+      "capacity",
+      "capitals",
+      "continent",
+      "coordinates",
+      "countryOfBirth",
+      "extraTimeMinute",
+      "fifaRanking",
+      "flagImage",
+      "hasCoach",
+      "hasPlayer",
+      "hasReferee",
+      "hdi",
+      "height",
+      "image",
+      "inception",
+      "isIndoor",
+      "lifeExpectancy",
+      "locatorMapImage",
+      "logo",
+      "matchNumber",
+      "officialLanguages",
+      "officialWebsite",
+      "placeOfBirth",
+      "population",
+      "redCardsCount",
+      "signature",
+      "timezone",
+      "weight",
+      "wikipediaArticle",
+      "yellowCardsCount",
+      "yellowRedCardsCount"
+    ]
+  },
+  "schema_conformance": {
+    "checked_domain_triples": 35274,
+    "checked_range_triples": 36856,
+    "domain_violation_count": 13128,
+    "range_violation_count": 4683,
+    "domain_violation_samples": [
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/168949-team-761-match-537375",
+        "property": "shirtNumber",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/32570-team-760-match-537384",
+        "property": "shirtNumber",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/80775-team-770-match-537385",
+        "property": "position",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/120246-team-798-match-537331",
+        "property": "shirtNumber",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/290139-team-8873-match-537340",
+        "property": "shirtNumber",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/133242-team-773-match-537387",
+        "property": "shirtNumber",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/SquadMembershipRole/instances/8053-team-779-competition-fifa-world-cup-2026-season-2026",
+        "property": "position",
+        "expected": "Player",
+        "actual_types": "PlayerRole, Role, SquadMembershipRole"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/169139-team-791-match-537352",
+        "property": "shirtNumber",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/245336-team-815-match-537418",
+        "property": "shirtNumber",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/SquadMembershipRole/instances/137693-team-815-competition-fifa-world-cup-2026-season-2026",
+        "property": "position",
+        "expected": "Player",
+        "actual_types": "PlayerRole, Role, SquadMembershipRole"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/SquadMembershipRole/instances/269161-team-1935-competition-fifa-world-cup-2026-season-2026",
+        "property": "position",
+        "expected": "Player",
+        "actual_types": "PlayerRole, Role, SquadMembershipRole"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/SquadMembershipRole/instances/34646-team-8873-competition-fifa-world-cup-2026-season-2026",
+        "property": "position",
+        "expected": "Player",
+        "actual_types": "PlayerRole, Role, SquadMembershipRole"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/82140-team-770-match-537389",
+        "property": "shirtNumber",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/245550-team-825-match-537368",
+        "property": "position",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/178658-team-778-match-537402",
+        "property": "shirtNumber",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/37479-team-828-match-537337",
+        "property": "shirtNumber",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/167409-team-792-match-537358",
+        "property": "position",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/38548-team-8872-match-537385",
+        "property": "position",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/95125-team-802-match-537360",
+        "property": "position",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/295339-team-840-match-537365",
+        "property": "shirtNumber",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/7427-team-8872-match-537424",
+        "property": "position",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/141752-team-761-match-537415",
+        "property": "shirtNumber",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/SquadMembershipRole/instances/215510-team-791-competition-fifa-world-cup-2026-season-2026",
+        "property": "shirtNumber",
+        "expected": "Player",
+        "actual_types": "PlayerRole, Role, SquadMembershipRole"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/SquadMembershipRole/instances/7723-team-783-competition-fifa-world-cup-2026-season-2026",
+        "property": "shirtNumber",
+        "expected": "Player",
+        "actual_types": "PlayerRole, Role, SquadMembershipRole"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/MatchPlayerRole/instances/249804-team-8030-match-537336",
+        "property": "shirtNumber",
+        "expected": "Player",
+        "actual_types": "MatchPlayerRole, PlayerRole, Role"
+      }
+    ],
+    "range_violation_samples": [
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Substitution/instances/537338-6",
+        "property": "playerIn",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/15357"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Substitution/instances/537387-2",
+        "property": "playerOut",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/3368"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Substitution/instances/537399-6",
+        "property": "playerOut",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/349"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Substitution/instances/537398-6",
+        "property": "playerIn",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/116928"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Goal/instances/537363-2",
+        "property": "scoredBy",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/83057"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Goal/instances/537381-2",
+        "property": "involvedPlayer",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/295848"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Goal/instances/537376-1",
+        "property": "assistedBy",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/53"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Substitution/instances/537420-7",
+        "property": "involvedPlayer",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/202283"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Goal/instances/537419-1",
+        "property": "scoredBy",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/2004"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Goal/instances/537346-2",
+        "property": "scoredBy",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/4635"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Substitution/instances/537349-10",
+        "property": "involvedPlayer",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/172081"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Booking/instances/537401-1",
+        "property": "involvedPlayer",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/244346"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Goal/instances/537388-2",
+        "property": "assistedBy",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/3218"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Substitution/instances/537404-5",
+        "property": "involvedPlayer",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/132172"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Substitution/instances/537397-6",
+        "property": "playerOut",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/123508"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Goal/instances/537430-1",
+        "property": "involvedPlayer",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/22306"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Substitution/instances/537411-3",
+        "property": "involvedPlayer",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/32629"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Substitution/instances/537381-2",
+        "property": "playerIn",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/45680"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Goal/instances/537343-3",
+        "property": "assistedBy",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/1684"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Substitution/instances/537388-3",
+        "property": "playerIn",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/2127"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Goal/instances/537398-2",
+        "property": "goalType",
+        "expected": "http://www.w3.org/2001/XMLSchema#string",
+        "actual": "(none)",
+        "object": "https://data.adorsys.com/ontology/sport/football/RegularGoal"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Substitution/instances/537398-8",
+        "property": "playerOut",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/16346"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Substitution/instances/537327-7",
+        "property": "involvedPlayer",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/33994"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Substitution/instances/537338-3",
+        "property": "playerIn",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/115827"
+      },
+      {
+        "subject": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Substitution/instances/537426-1",
+        "property": "involvedPlayer",
+        "expected": "https://data.adorsys.com/ontology/sport/football/Player",
+        "actual": "Person",
+        "object": "https://data.adorsys.com/id/sport/football/fifa-world-cup-2026/Person/instances/3331"
+      }
+    ],
+    "functional_property_violations": 0,
+    "functional_property_violation_samples": []
+  },
+  "dataset_summary": {
+    "triples": 137347,
+    "classes_with_instances": 30,
+    "top_class_counts": [
+      {
+        "class": "Role",
+        "count": 7112
+      },
+      {
+        "class": "PlayerRole",
+        "count": 6574
+      },
+      {
+        "class": "MatchPlayerRole",
+        "count": 5325
+      },
+      {
+        "class": "MatchEvent",
+        "count": 1583
+      },
+      {
+        "class": "Person",
+        "count": 1429
+      },
+      {
+        "class": "SquadMembershipRole",
+        "count": 1249
+      },
+      {
+        "class": "Substitution",
+        "count": 989
+      },
+      {
+        "class": "Goal",
+        "count": 308
+      },
+      {
+        "class": "RefereeRole",
+        "count": 304
+      },
+      {
+        "class": "Booking",
+        "count": 286
+      },
+      {
+        "class": "CoachRole",
+        "count": 234
+      },
+      {
+        "class": "HeadCoachRole",
+        "count": 234
+      },
+      {
+        "class": "MatchTeamStatistics",
+        "count": 208
+      },
+      {
+        "class": "AssistantRefereeRole",
+        "count": 202
+      },
+      {
+        "class": "MatchCoachRole",
+        "count": 186
+      }
+    ],
+    "matches": 104,
+    "teams": 48,
+    "venues": 18
+  },
+  "kpi_queries": [
+    {
+      "key": "goals_by_group",
+      "label": "Total goals scored by group",
+      "operator": "Sum",
+      "aggregation_property": "goalsFor",
+      "dimensions": [
+        "groupName"
+      ],
+      "row_count": 12,
+      "elapsed_ms": 6.27,
+      "sample_rows": [
+        {
+          "groupName": "Group A",
+          "value": 12
+        },
+        {
+          "groupName": "Group B",
+          "value": 22
+        },
+        {
+          "groupName": "Group C",
+          "value": 16
+        },
+        {
+          "groupName": "Group D",
+          "value": 15
+        },
+        {
+          "groupName": "Group E",
+          "value": 17
+        },
+        {
+          "groupName": "Group F",
+          "value": 26
+        },
+        {
+          "groupName": "Group G",
+          "value": 18
+        },
+        {
+          "groupName": "Group H",
+          "value": 11
+        },
+        {
+          "groupName": "Group I",
+          "value": 27
+        },
+        {
+          "groupName": "Group J",
+          "value": 22
+        }
+      ],
+      "all_rows": [
+        {
+          "groupName": "Group A",
+          "value": 12
+        },
+        {
+          "groupName": "Group B",
+          "value": 22
+        },
+        {
+          "groupName": "Group C",
+          "value": 16
+        },
+        {
+          "groupName": "Group D",
+          "value": 15
+        },
+        {
+          "groupName": "Group E",
+          "value": 17
+        },
+        {
+          "groupName": "Group F",
+          "value": 26
+        },
+        {
+          "groupName": "Group G",
+          "value": 18
+        },
+        {
+          "groupName": "Group H",
+          "value": 11
+        },
+        {
+          "groupName": "Group I",
+          "value": 27
+        },
+        {
+          "groupName": "Group J",
+          "value": 22
+        },
+        {
+          "groupName": "Group K",
+          "value": 16
+        },
+        {
+          "groupName": "Group L",
+          "value": 13
+        }
+      ]
+    },
+    {
+      "key": "matches_by_stage",
+      "label": "Number of matches by tournament stage",
+      "operator": "Count",
+      "aggregation_property": "stage",
+      "dimensions": [
+        "stage"
+      ],
+      "row_count": 7,
+      "elapsed_ms": 4.96,
+      "sample_rows": [
+        {
+          "stage": "FINAL",
+          "value": 1
+        },
+        {
+          "stage": "GROUP_STAGE",
+          "value": 72
+        },
+        {
+          "stage": "QUARTER_FINALS",
+          "value": 4
+        },
+        {
+          "stage": "ROUND_OF_16",
+          "value": 8
+        },
+        {
+          "stage": "ROUND_OF_32",
+          "value": 16
+        },
+        {
+          "stage": "SEMI_FINALS",
+          "value": 2
+        },
+        {
+          "stage": "THIRD_PLACE",
+          "value": 1
+        }
+      ],
+      "all_rows": [
+        {
+          "stage": "FINAL",
+          "value": 1
+        },
+        {
+          "stage": "GROUP_STAGE",
+          "value": 72
+        },
+        {
+          "stage": "QUARTER_FINALS",
+          "value": 4
+        },
+        {
+          "stage": "ROUND_OF_16",
+          "value": 8
+        },
+        {
+          "stage": "ROUND_OF_32",
+          "value": 16
+        },
+        {
+          "stage": "SEMI_FINALS",
+          "value": 2
+        },
+        {
+          "stage": "THIRD_PLACE",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "key": "attendance_by_stage",
+      "label": "Average attendance by tournament stage",
+      "operator": "Average",
+      "aggregation_property": "attendance",
+      "dimensions": [
+        "stage"
+      ],
+      "row_count": 6,
+      "elapsed_ms": 4.82,
+      "sample_rows": [
+        {
+          "stage": "FINAL",
+          "value": 80663.0
+        },
+        {
+          "stage": "GROUP_STAGE",
+          "value": 63542.625
+        },
+        {
+          "stage": "QUARTER_FINALS",
+          "value": 67151.5
+        },
+        {
+          "stage": "ROUND_OF_16",
+          "value": 70555.75
+        },
+        {
+          "stage": "ROUND_OF_32",
+          "value": 60919.0
+        },
+        {
+          "stage": "SEMI_FINALS",
+          "value": 70176.0
+        }
+      ],
+      "all_rows": [
+        {
+          "stage": "FINAL",
+          "value": 80663.0
+        },
+        {
+          "stage": "GROUP_STAGE",
+          "value": 63542.625
+        },
+        {
+          "stage": "QUARTER_FINALS",
+          "value": 67151.5
+        },
+        {
+          "stage": "ROUND_OF_16",
+          "value": 70555.75
+        },
+        {
+          "stage": "ROUND_OF_32",
+          "value": 60919.0
+        },
+        {
+          "stage": "SEMI_FINALS",
+          "value": 70176.0
+        }
+      ]
+    },
+    {
+      "key": "matches_by_venue",
+      "label": "Number of matches by venue",
+      "operator": "Count",
+      "aggregation_property": "playedAtVenue",
+      "dimensions": [
+        "venueName"
+      ],
+      "row_count": 16,
+      "elapsed_ms": 6.78,
+      "sample_rows": [
+        {
+          "venueName": "AT&T Stadium",
+          "value": 9
+        },
+        {
+          "venueName": "Mercedes-Benz Stadium",
+          "value": 8
+        },
+        {
+          "venueName": "MetLife Stadium",
+          "value": 8
+        },
+        {
+          "venueName": "SoFi Stadium",
+          "value": 8
+        },
+        {
+          "venueName": "BC Place",
+          "value": 7
+        },
+        {
+          "venueName": "Gillette Stadium",
+          "value": 7
+        },
+        {
+          "venueName": "Hard Rock Stadium",
+          "value": 7
+        },
+        {
+          "venueName": "NRG Stadium",
+          "value": 7
+        },
+        {
+          "venueName": "Arrowhead Stadium",
+          "value": 6
+        },
+        {
+          "venueName": "BMO Field",
+          "value": 6
+        }
+      ],
+      "all_rows": [
+        {
+          "venueName": "AT&T Stadium",
+          "value": 9
+        },
+        {
+          "venueName": "Mercedes-Benz Stadium",
+          "value": 8
+        },
+        {
+          "venueName": "MetLife Stadium",
+          "value": 8
+        },
+        {
+          "venueName": "SoFi Stadium",
+          "value": 8
+        },
+        {
+          "venueName": "BC Place",
+          "value": 7
+        },
+        {
+          "venueName": "Gillette Stadium",
+          "value": 7
+        },
+        {
+          "venueName": "Hard Rock Stadium",
+          "value": 7
+        },
+        {
+          "venueName": "NRG Stadium",
+          "value": 7
+        },
+        {
+          "venueName": "Arrowhead Stadium",
+          "value": 6
+        },
+        {
+          "venueName": "BMO Field",
+          "value": 6
+        },
+        {
+          "venueName": "Levi's Stadium",
+          "value": 6
+        },
+        {
+          "venueName": "Lincoln Financial Field",
+          "value": 6
+        },
+        {
+          "venueName": "Lumen Field",
+          "value": 6
+        },
+        {
+          "venueName": "Azteca",
+          "value": 5
+        },
+        {
+          "venueName": "AKRON",
+          "value": 4
+        },
+        {
+          "venueName": "Estadio BBVA",
+          "value": 4
+        }
+      ]
+    },
+    {
+      "key": "shots_by_team",
+      "label": "Average shots per match-team record by team",
+      "operator": "Average",
+      "aggregation_property": "shotsTotal",
+      "dimensions": [
+        "teamName"
+      ],
+      "row_count": 48,
+      "elapsed_ms": 15.24,
+      "sample_rows": [
+        {
+          "teamName": "Turkey",
+          "value": 23.666666666666668
+        },
+        {
+          "teamName": "Colombia",
+          "value": 19.2
+        },
+        {
+          "teamName": "Belgium",
+          "value": 18.5
+        },
+        {
+          "teamName": "Germany",
+          "value": 18.5
+        },
+        {
+          "teamName": "Senegal",
+          "value": 18.0
+        },
+        {
+          "teamName": "France",
+          "value": 16.5
+        },
+        {
+          "teamName": "Spain",
+          "value": 16.5
+        },
+        {
+          "teamName": "Canada",
+          "value": 16.2
+        },
+        {
+          "teamName": "Uruguay",
+          "value": 15.333333333333334
+        },
+        {
+          "teamName": "England",
+          "value": 14.5
+        }
+      ],
+      "all_rows": [
+        {
+          "teamName": "Turkey",
+          "value": 23.666666666666668
+        },
+        {
+          "teamName": "Colombia",
+          "value": 19.2
+        },
+        {
+          "teamName": "Belgium",
+          "value": 18.5
+        },
+        {
+          "teamName": "Germany",
+          "value": 18.5
+        },
+        {
+          "teamName": "Senegal",
+          "value": 18.0
+        },
+        {
+          "teamName": "France",
+          "value": 16.5
+        },
+        {
+          "teamName": "Spain",
+          "value": 16.5
+        },
+        {
+          "teamName": "Canada",
+          "value": 16.2
+        },
+        {
+          "teamName": "Uruguay",
+          "value": 15.333333333333334
+        },
+        {
+          "teamName": "England",
+          "value": 14.5
+        },
+        {
+          "teamName": "Mexico",
+          "value": 14.4
+        },
+        {
+          "teamName": "Brazil",
+          "value": 14.0
+        },
+        {
+          "teamName": "Argentina",
+          "value": 13.5
+        },
+        {
+          "teamName": "Ecuador",
+          "value": 13.0
+        },
+        {
+          "teamName": "Egypt",
+          "value": 13.0
+        },
+        {
+          "teamName": "Switzerland",
+          "value": 12.833333333333334
+        },
+        {
+          "teamName": "Sweden",
+          "value": 12.75
+        },
+        {
+          "teamName": "Netherlands",
+          "value": 12.25
+        },
+        {
+          "teamName": "Iran",
+          "value": 12.0
+        },
+        {
+          "teamName": "Portugal",
+          "value": 12.0
+        },
+        {
+          "teamName": "Ivory Coast",
+          "value": 11.75
+        },
+        {
+          "teamName": "United States",
+          "value": 11.6
+        },
+        {
+          "teamName": "Cape Verde Islands",
+          "value": 11.5
+        },
+        {
+          "teamName": "Norway",
+          "value": 10.833333333333334
+        },
+        {
+          "teamName": "Czechia",
+          "value": 10.666666666666666
+        },
+        {
+          "teamName": "Morocco",
+          "value": 10.666666666666666
+        },
+        {
+          "teamName": "Algeria",
+          "value": 10.5
+        },
+        {
+          "teamName": "Congo DR",
+          "value": 10.25
+        },
+        {
+          "teamName": "Australia",
+          "value": 10.0
+        },
+        {
+          "teamName": "Croatia",
+          "value": 10.0
+        },
+        {
+          "teamName": "South Korea",
+          "value": 10.0
+        },
+        {
+          "teamName": "South Africa",
+          "value": 9.75
+        },
+        {
+          "teamName": "New Zealand",
+          "value": 9.666666666666666
+        },
+        {
+          "teamName": "Bosnia-Herzegovina",
+          "value": 9.5
+        },
+        {
+          "teamName": "Haiti",
+          "value": 9.333333333333334
+        },
+        {
+          "teamName": "Panama",
+          "value": 9.333333333333334
+        },
+        {
+          "teamName": "Curaçao",
+          "value": 8.666666666666666
+        },
+        {
+          "teamName": "Scotland",
+          "value": 8.333333333333334
+        },
+        {
+          "teamName": "Jordan",
+          "value": 8.0
+        },
+        {
+          "teamName": "Austria",
+          "value": 7.75
+        },
+        {
+          "teamName": "Japan",
+          "value": 7.75
+        },
+        {
+          "teamName": "Paraguay",
+          "value": 6.8
+        },
+        {
+          "teamName": "Iraq",
+          "value": 6.333333333333333
+        },
+        {
+          "teamName": "Ghana",
+          "value": 6.0
+        },
+        {
+          "teamName": "Tunisia",
+          "value": 6.0
+        },
+        {
+          "teamName": "Qatar",
+          "value": 5.666666666666667
+        },
+        {
+          "teamName": "Uzbekistan",
+          "value": 5.666666666666667
+        },
+        {
+          "teamName": "Saudi Arabia",
+          "value": 5.333333333333333
+        }
+      ]
+    },
+    {
+      "key": "home_win_odds_by_stage",
+      "label": "Average home-win odds by tournament stage",
+      "operator": "Average",
+      "aggregation_property": "oddsHomeWin",
+      "dimensions": [
+        "stage"
+      ],
+      "row_count": 7,
+      "elapsed_ms": 6.77,
+      "sample_rows": [
+        {
+          "stage": "FINAL",
+          "value": 2.31
+        },
+        {
+          "stage": "GROUP_STAGE",
+          "value": 3.667638888888889
+        },
+        {
+          "stage": "QUARTER_FINALS",
+          "value": 2.1925
+        },
+        {
+          "stage": "ROUND_OF_16",
+          "value": 4.68375
+        },
+        {
+          "stage": "ROUND_OF_32",
+          "value": 2.115
+        },
+        {
+          "stage": "SEMI_FINALS",
+          "value": 2.485
+        },
+        {
+          "stage": "THIRD_PLACE",
+          "value": 1.89
+        }
+      ],
+      "all_rows": [
+        {
+          "stage": "FINAL",
+          "value": 2.31
+        },
+        {
+          "stage": "GROUP_STAGE",
+          "value": 3.667638888888889
+        },
+        {
+          "stage": "QUARTER_FINALS",
+          "value": 2.1925
+        },
+        {
+          "stage": "ROUND_OF_16",
+          "value": 4.68375
+        },
+        {
+          "stage": "ROUND_OF_32",
+          "value": 2.115
+        },
+        {
+          "stage": "SEMI_FINALS",
+          "value": 2.485
+        },
+        {
+          "stage": "THIRD_PLACE",
+          "value": 1.89
+        }
+      ]
+    }
+  ],
+  "generated_kpi_triples": 732,
+  "generated_kpi_ttl": "fifa2026-kpi-evaluation/output/fifa2026_kpi_instances.ttl",
+  "shacl_validation": {
+    "available": true,
+    "conforms": true,
+    "report_triples": 2,
+    "message": [
+      "Validation Report",
+      "Conforms: True"
+    ]
+  }
+}

@@ -1,0 +1,933 @@
+@prefix : <https://data.adorsys.com/ontology/sport/football/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+# =============================================================================
+# Ontology Declaration
+# =============================================================================
+
+<https://data.adorsys.com/ontology/sport/football> rdf:type owl:Ontology ;
+    owl:versionIRI <https://data.adorsys.com/ontology/sport/football/1.0.0> ;
+    dcterms:title "FIFA World Cup 2026 Ontology"@en ;
+    dcterms:description "An OWL2 ontology modeling the 2026 FIFA World Cup tournament structure, teams, players, matches, events, venues, and statistics. Designed for direct instance population from the football-data.org API."@en ;
+    dcterms:created "2026-05-05"^^xsd:date ;
+    owl:versionInfo "1.0.0" ;
+    rdfs:comment "This ontology covers the first 48-team FIFA World Cup with 12 groups (A-L), a Round of 32 knockout stage, 104 total matches across 16 venues in the USA, Mexico, and Canada."@en .
+
+# =============================================================================
+# Classes
+# =============================================================================
+
+# --- Tournament ---
+
+:Tournament rdf:type owl:Class ;
+    rdfs:label "Tournament"@en ;
+    rdfs:comment "The FIFA World Cup 2026 competition. First edition with 48 teams, 12 groups, and a Round of 32 knockout stage."@en .
+
+# --- Geographic / Organisational ---
+
+:Confederation rdf:type owl:Class ;
+    rdfs:label "Confederation"@en ;
+    rdfs:comment "A FIFA confederation (AFC, CAF, CONCACAF, CONMEBOL, OFC, UEFA)."@en .
+
+:Country rdf:type owl:Class ;
+    rdfs:label "Country"@en ;
+    rdfs:comment "A nation, either participating in the tournament or hosting matches."@en .
+
+:HostCity rdf:type owl:Class ;
+    rdfs:label "Host City"@en ;
+    rdfs:comment "One of the 16 cities hosting World Cup matches across USA, Mexico, and Canada."@en .
+
+:Venue rdf:type owl:Class ;
+    rdfs:label "Venue"@en ;
+    rdfs:comment "A stadium where World Cup matches are played. Each of the 16 host cities has one venue."@en .
+
+# --- Team ---
+
+:Team rdf:type owl:Class ;
+    rdfs:label "Team"@en ;
+    rdfs:comment "A national football team participating in the 2026 World Cup. 48 teams compete."@en .
+
+# --- Persons ---
+
+:Person rdf:type owl:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:comment "Abstract superclass for all individuals involved in the tournament (players, coaches, referees)."@en .
+
+:Player rdf:type owl:Class ;
+    rdfs:subClassOf :Person ;
+    rdfs:label "Player"@en ;
+    rdfs:comment "A football player registered in a team's squad for the tournament."@en .
+
+:Coach rdf:type owl:Class ;
+    rdfs:subClassOf :Person ;
+    rdfs:label "Coach"@en ;
+    rdfs:comment "A coaching staff member of a participating team."@en .
+
+:HeadCoach rdf:type owl:Class ;
+    rdfs:subClassOf :Coach ;
+    rdfs:label "Head Coach"@en ;
+    rdfs:comment "The head coach (manager) of a national team."@en .
+
+:AssistantCoach rdf:type owl:Class ;
+    rdfs:subClassOf :Coach ;
+    rdfs:label "Assistant Coach"@en ;
+    rdfs:comment "An assistant coach on a national team's staff."@en .
+
+:Referee rdf:type owl:Class ;
+    rdfs:subClassOf :Person ;
+    rdfs:label "Referee"@en ;
+    rdfs:comment "A match official appointed to officiate a World Cup match."@en .
+
+:MainReferee rdf:type owl:Class ;
+    rdfs:subClassOf :Referee ;
+    rdfs:label "Main Referee"@en ;
+    rdfs:comment "The central referee of a match."@en .
+
+:AssistantReferee rdf:type owl:Class ;
+    rdfs:subClassOf :Referee ;
+    rdfs:label "Assistant Referee"@en ;
+    rdfs:comment "A linesman assisting the main referee."@en .
+
+:FourthOfficial rdf:type owl:Class ;
+    rdfs:subClassOf :Referee ;
+    rdfs:label "Fourth Official"@en ;
+    rdfs:comment "The fourth official managing substitutions and added time."@en .
+
+:VAR rdf:type owl:Class ;
+    rdfs:subClassOf :Referee ;
+    rdfs:label "Video Assistant Referee"@en ;
+    rdfs:comment "The video assistant referee reviewing decisions."@en .
+
+# --- Tournament Structure ---
+
+:Group rdf:type owl:Class ;
+    rdfs:label "Group"@en ;
+    rdfs:comment "One of 12 groups (A through L) in the group stage. Each group contains 4 teams."@en .
+
+:Season rdf:type owl:Class ;
+    rdfs:label "Season"@en ;
+    rdfs:comment "The 2026 tournament season with start and end dates."@en .
+
+# --- Match ---
+
+:Match rdf:type owl:Class ;
+    rdfs:label "Match"@en ;
+    rdfs:comment "A scheduled or completed fixture. 104 matches total: 72 group stage + 32 knockout (Round of 32, Round of 16, Quarterfinals, Semifinals, Third-place, Final)."@en .
+
+:Score rdf:type owl:Class ;
+    rdfs:label "Score"@en ;
+    rdfs:comment "The score breakdown for a match including full-time, half-time, extra-time, and penalty shootout results."@en .
+
+# --- Match Statistics ---
+
+:MatchTeamStatistics rdf:type owl:Class ;
+    rdfs:label "Match Team Statistics"@en ;
+    rdfs:comment "Per-team match statistics (possession, shots, set pieces, cards) for one side (home or away) of a single match. Sourced from the football-data.org match detail endpoint."@en .
+
+# --- Match Events ---
+
+:MatchEvent rdf:type owl:Class ;
+    rdfs:label "Match Event"@en ;
+    rdfs:comment "Abstract superclass for events occurring during a match (goals, bookings, substitutions)."@en .
+
+:Goal rdf:type owl:Class ;
+    rdfs:subClassOf :MatchEvent ;
+    rdfs:label "Goal"@en ;
+    rdfs:comment "A goal scored during a match. Types: REGULAR, OWN, PENALTY."@en .
+
+:RegularGoal rdf:type owl:Class ;
+    rdfs:subClassOf :Goal ;
+    rdfs:label "Regular Goal"@en ;
+    rdfs:comment "A goal scored from open play or a free kick."@en .
+
+:OwnGoal rdf:type owl:Class ;
+    rdfs:subClassOf :Goal ;
+    rdfs:label "Own Goal"@en ;
+    rdfs:comment "A goal accidentally scored by a player into their own team's net."@en .
+
+:PenaltyGoal rdf:type owl:Class ;
+    rdfs:subClassOf :Goal ;
+    rdfs:label "Penalty Goal"@en ;
+    rdfs:comment "A goal scored from a penalty kick during regular or extra time (not a shootout)."@en .
+
+:Booking rdf:type owl:Class ;
+    rdfs:subClassOf :MatchEvent ;
+    rdfs:label "Booking"@en ;
+    rdfs:comment "A disciplinary card shown to a player. Types: YELLOW_CARD, RED_CARD, SECOND_YELLOW."@en .
+
+:YellowCard rdf:type owl:Class ;
+    rdfs:subClassOf :Booking ;
+    rdfs:label "Yellow Card"@en ;
+    rdfs:comment "A caution shown to a player."@en .
+
+:RedCard rdf:type owl:Class ;
+    rdfs:subClassOf :Booking ;
+    rdfs:label "Red Card"@en ;
+    rdfs:comment "A direct red card resulting in dismissal."@en .
+
+:SecondYellowCard rdf:type owl:Class ;
+    rdfs:subClassOf :Booking ;
+    rdfs:label "Second Yellow Card"@en ;
+    rdfs:comment "A second yellow card resulting in an indirect red card and dismissal."@en .
+
+:Substitution rdf:type owl:Class ;
+    rdfs:subClassOf :MatchEvent ;
+    rdfs:label "Substitution"@en ;
+    rdfs:comment "A player substitution during a match."@en .
+
+# --- Standings ---
+
+:Standings rdf:type owl:Class ;
+    rdfs:label "Standings"@en ;
+    rdfs:comment "A group standings table entry for a team. Only applicable to the group stage. Types: TOTAL, HOME, AWAY."@en .
+
+# =============================================================================
+# Object Properties
+# =============================================================================
+
+# --- Tournament-level ---
+
+:hasGroup rdf:type owl:ObjectProperty ;
+    rdfs:label "has group"@en ;
+    rdfs:domain :Tournament ;
+    rdfs:range :Group .
+
+:hasMatch rdf:type owl:ObjectProperty ;
+    rdfs:label "has match"@en ;
+    rdfs:domain :Tournament ;
+    rdfs:range :Match .
+
+:hasTeam rdf:type owl:ObjectProperty ;
+    rdfs:label "has team"@en ;
+    rdfs:domain :Tournament ;
+    rdfs:range :Team .
+
+:hasVenue rdf:type owl:ObjectProperty ;
+    rdfs:label "has venue"@en ;
+    rdfs:domain :Tournament ;
+    rdfs:range :Venue .
+
+:hostedIn rdf:type owl:ObjectProperty ;
+    rdfs:label "hosted in"@en ;
+    rdfs:comment "Links the tournament to its host countries (USA, Mexico, Canada)."@en ;
+    rdfs:domain :Tournament ;
+    rdfs:range :Country .
+
+:hasSeason rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "has season"@en ;
+    rdfs:domain :Tournament ;
+    rdfs:range :Season .
+
+# --- Team relationships ---
+
+:representsCountry rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "represents country"@en ;
+    rdfs:domain :Team ;
+    rdfs:range :Country .
+
+:belongsToConfederation rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "belongs to confederation"@en ;
+    rdfs:domain :Team ;
+    rdfs:range :Confederation .
+
+:hasPlayer rdf:type owl:ObjectProperty ;
+    rdfs:label "has player"@en ;
+    rdfs:domain :Team ;
+    rdfs:range :Player .
+
+:hasCoach rdf:type owl:ObjectProperty ;
+    rdfs:label "has coach"@en ;
+    rdfs:domain :Team ;
+    rdfs:range :Coach .
+
+:inGroup rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "in group"@en ;
+    rdfs:comment "The group a team is assigned to in the group stage."@en ;
+    rdfs:domain :Team ;
+    rdfs:range :Group .
+
+# --- Match relationships ---
+
+:homeTeam rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "home team"@en ;
+    rdfs:domain :Match ;
+    rdfs:range :Team .
+
+:awayTeam rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "away team"@en ;
+    rdfs:domain :Match ;
+    rdfs:range :Team .
+
+:playedAtVenue rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "played at venue"@en ;
+    rdfs:domain :Match ;
+    rdfs:range :Venue .
+
+:hasScore rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "has score"@en ;
+    rdfs:domain :Match ;
+    rdfs:range :Score .
+
+:hasMatchEvent rdf:type owl:ObjectProperty ;
+    rdfs:label "has match event"@en ;
+    rdfs:domain :Match ;
+    rdfs:range :MatchEvent .
+
+:hasReferee rdf:type owl:ObjectProperty ;
+    rdfs:label "has referee"@en ;
+    rdfs:domain :Match ;
+    rdfs:range :Referee .
+
+:hasTeamStatistics rdf:type owl:ObjectProperty ;
+    rdfs:label "has team statistics"@en ;
+    rdfs:comment "Links a match to its per-side (home/away) team statistics."@en ;
+    rdfs:domain :Match ;
+    rdfs:range :MatchTeamStatistics .
+
+:statisticsForTeam rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "statistics for team"@en ;
+    rdfs:domain :MatchTeamStatistics ;
+    rdfs:range :Team .
+
+:partOfGroup rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "part of group"@en ;
+    rdfs:comment "The group this match belongs to. Only populated for GROUP_STAGE matches; null for knockout matches."@en ;
+    rdfs:domain :Match ;
+    rdfs:range :Group .
+
+# --- MatchEvent relationships ---
+
+:involvedPlayer rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "involved player"@en ;
+    rdfs:comment "The primary player involved in a match event (scorer for goals, booked player for bookings)."@en ;
+    rdfs:domain :MatchEvent ;
+    rdfs:range :Player .
+
+:eventForTeam rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "event for team"@en ;
+    rdfs:domain :MatchEvent ;
+    rdfs:range :Team .
+
+:scoredBy rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "scored by"@en ;
+    rdfs:domain :Goal ;
+    rdfs:range :Player .
+
+:assistedBy rdf:type owl:ObjectProperty ;
+    rdfs:label "assisted by"@en ;
+    rdfs:comment "The player who provided the assist for a goal. May be absent."@en ;
+    rdfs:domain :Goal ;
+    rdfs:range :Player .
+
+:playerOut rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "player out"@en ;
+    rdfs:comment "The player being substituted off."@en ;
+    rdfs:domain :Substitution ;
+    rdfs:range :Player .
+
+:playerIn rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "player in"@en ;
+    rdfs:comment "The player being substituted on."@en ;
+    rdfs:domain :Substitution ;
+    rdfs:range :Player .
+
+# --- Venue/Location ---
+
+:locatedInCity rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "located in city"@en ;
+    rdfs:domain :Venue ;
+    rdfs:range :HostCity .
+
+:locatedInCountry rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "located in country"@en ;
+    rdfs:domain :HostCity ;
+    rdfs:range :Country .
+
+# --- Standings ---
+
+:standingsForTeam rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "standings for team"@en ;
+    rdfs:domain :Standings ;
+    rdfs:range :Team .
+
+:standingsInGroup rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "standings in group"@en ;
+    rdfs:domain :Standings ;
+    rdfs:range :Group .
+
+# --- Country/Confederation ---
+
+:partOfConfederation rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+    rdfs:label "part of confederation"@en ;
+    rdfs:comment "Links a country to its FIFA confederation."@en ;
+    rdfs:domain :Country ;
+    rdfs:range :Confederation .
+
+# =============================================================================
+# Datatype Properties
+# =============================================================================
+
+# --- Shared ID property (for API cross-referencing) ---
+
+:apiId rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "API identifier"@en ;
+    rdfs:comment "The numeric ID from football-data.org API, used for cross-referencing."@en ;
+    rdfs:range xsd:integer .
+
+# --- Person properties ---
+
+:firstName rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "first name"@en ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string .
+
+:lastName rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "last name"@en ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string .
+
+:displayName rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "display name"@en ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string .
+
+:dateOfBirth rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "date of birth"@en ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:date .
+
+:nationality rdf:type owl:DatatypeProperty ;
+    rdfs:label "nationality"@en ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string .
+
+:countryOfBirth rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "country of birth"@en ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string .
+
+:placeOfBirth rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "place of birth"@en ;
+    rdfs:comment "Place/city of birth for a person as provided by enrichment sources."@en ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:string .
+
+:signature rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "signature image"@en ;
+    rdfs:comment "URL of a person's signature image file."@en ;
+    rdfs:domain :Person ;
+    rdfs:range xsd:anyURI .
+
+# --- Player-specific properties ---
+
+:height rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "height"@en ;
+    rdfs:comment "Player height in centimeters."@en ;
+    rdfs:domain :Player ;
+    rdfs:range xsd:integer .
+
+:weight rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "weight"@en ;
+    rdfs:comment "Player weight in kilograms."@en ;
+    rdfs:domain :Player ;
+    rdfs:range xsd:integer .
+
+:shirtNumber rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "shirt number"@en ;
+    rdfs:domain :Player ;
+    rdfs:range xsd:integer .
+
+:position rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "position"@en ;
+    rdfs:comment "Player position: Goalkeeper, Defender, Midfielder, or Attacker."@en ;
+    rdfs:domain :Player ;
+    rdfs:range xsd:string .
+
+# --- Team properties ---
+
+:teamName rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "team name"@en ;
+    rdfs:domain :Team ;
+    rdfs:range xsd:string .
+
+:shortName rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "short name"@en ;
+    rdfs:domain :Team ;
+    rdfs:range xsd:string .
+
+:tla rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "three-letter abbreviation"@en ;
+    rdfs:comment "The three-letter abbreviation for the team (e.g., GER, BRA, USA)."@en ;
+    rdfs:domain :Team ;
+    rdfs:range xsd:string .
+
+:fifaRanking rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "FIFA ranking"@en ;
+    rdfs:comment "The team's FIFA world ranking at tournament start."@en ;
+    rdfs:domain :Team ;
+    rdfs:range xsd:integer .
+
+# --- Match properties ---
+
+:matchNumber rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "match number"@en ;
+    rdfs:comment "The sequential match number (1 to 104)."@en ;
+    rdfs:domain :Match ;
+    rdfs:range xsd:integer .
+
+:utcDate rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "UTC date"@en ;
+    rdfs:comment "The scheduled kick-off date and time in UTC."@en ;
+    rdfs:domain :Match ;
+    rdfs:range xsd:dateTime .
+
+:matchday rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "matchday"@en ;
+    rdfs:comment "The matchday number within the group stage (1, 2, or 3). Null for knockout matches."@en ;
+    rdfs:domain :Match ;
+    rdfs:range xsd:integer .
+
+:stage rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "stage"@en ;
+    rdfs:comment "Tournament stage: GROUP_STAGE, ROUND_OF_32, ROUND_OF_16, QUARTER_FINALS, SEMI_FINALS, THIRD_PLACE, FINAL. Note: ROUND_OF_32 is new for 2026."@en ;
+    rdfs:domain :Match ;
+    rdfs:range xsd:string .
+
+:status rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "status"@en ;
+    rdfs:comment "Match status: SCHEDULED, LIVE, IN_PLAY, PAUSED, FINISHED, POSTPONED, SUSPENDED, CANCELLED."@en ;
+    rdfs:domain :Match ;
+    rdfs:range xsd:string .
+
+:attendance rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "attendance"@en ;
+    rdfs:comment "Number of spectators at the match."@en ;
+    rdfs:domain :Match ;
+    rdfs:range xsd:integer .
+
+:homeFormation rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "home formation"@en ;
+    rdfs:comment "The home team's starting formation for this match, e.g. \"4-4-2\"."@en ;
+    rdfs:domain :Match ;
+    rdfs:range xsd:string .
+
+:awayFormation rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "away formation"@en ;
+    rdfs:comment "The away team's starting formation for this match, e.g. \"4-2-3-1\"."@en ;
+    rdfs:domain :Match ;
+    rdfs:range xsd:string .
+
+:oddsHomeWin rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "odds home win"@en ;
+    rdfs:comment "Pre-match decimal betting odds for a home win, as reported by football-data.org."@en ;
+    rdfs:domain :Match ;
+    rdfs:range xsd:decimal .
+
+:oddsDraw rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "odds draw"@en ;
+    rdfs:comment "Pre-match decimal betting odds for a draw, as reported by football-data.org."@en ;
+    rdfs:domain :Match ;
+    rdfs:range xsd:decimal .
+
+:oddsAwayWin rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "odds away win"@en ;
+    rdfs:comment "Pre-match decimal betting odds for an away win, as reported by football-data.org."@en ;
+    rdfs:domain :Match ;
+    rdfs:range xsd:decimal .
+
+# --- Score properties ---
+
+:homeScoreFullTime rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "home score full time"@en ;
+    rdfs:domain :Score ;
+    rdfs:range xsd:integer .
+
+:awayScoreFullTime rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "away score full time"@en ;
+    rdfs:domain :Score ;
+    rdfs:range xsd:integer .
+
+:homeScoreHalfTime rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "home score half time"@en ;
+    rdfs:domain :Score ;
+    rdfs:range xsd:integer .
+
+:awayScoreHalfTime rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "away score half time"@en ;
+    rdfs:domain :Score ;
+    rdfs:range xsd:integer .
+
+:homeScoreExtraTime rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "home score extra time"@en ;
+    rdfs:comment "Goals scored by the home team in extra time. Null if match decided in regular time."@en ;
+    rdfs:domain :Score ;
+    rdfs:range xsd:integer .
+
+:awayScoreExtraTime rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "away score extra time"@en ;
+    rdfs:comment "Goals scored by the away team in extra time. Null if match decided in regular time."@en ;
+    rdfs:domain :Score ;
+    rdfs:range xsd:integer .
+
+:homeScorePenalties rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "home score penalties"@en ;
+    rdfs:comment "Penalties scored by the home team in a shootout. Null if no shootout occurred."@en ;
+    rdfs:domain :Score ;
+    rdfs:range xsd:integer .
+
+:awayScorePenalties rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "away score penalties"@en ;
+    rdfs:comment "Penalties scored by the away team in a shootout. Null if no shootout occurred."@en ;
+    rdfs:domain :Score ;
+    rdfs:range xsd:integer .
+
+:winner rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "winner"@en ;
+    rdfs:comment "The match outcome: HOME_TEAM, AWAY_TEAM, or DRAW (group stage only)."@en ;
+    rdfs:domain :Score ;
+    rdfs:range xsd:string .
+
+:duration rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "duration"@en ;
+    rdfs:comment "How the match was decided: REGULAR, EXTRA_TIME, or PENALTY_SHOOTOUT."@en ;
+    rdfs:domain :Score ;
+    rdfs:range xsd:string .
+
+# --- MatchTeamStatistics properties ---
+
+:statisticsSide rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "statistics side"@en ;
+    rdfs:comment "Which side of the match this statistics record covers: HOME or AWAY."@en ;
+    rdfs:domain :MatchTeamStatistics ;
+    rdfs:range xsd:string .
+
+:cornerKicks rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "corner kicks"@en ;
+    rdfs:domain :MatchTeamStatistics ;
+    rdfs:range xsd:integer .
+
+:freeKicks rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "free kicks"@en ;
+    rdfs:domain :MatchTeamStatistics ;
+    rdfs:range xsd:integer .
+
+:goalKicks rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "goal kicks"@en ;
+    rdfs:domain :MatchTeamStatistics ;
+    rdfs:range xsd:integer .
+
+:offsides rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "offsides"@en ;
+    rdfs:domain :MatchTeamStatistics ;
+    rdfs:range xsd:integer .
+
+:fouls rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "fouls"@en ;
+    rdfs:domain :MatchTeamStatistics ;
+    rdfs:range xsd:integer .
+
+:ballPossession rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "ball possession"@en ;
+    rdfs:comment "Ball possession percentage (0-100) for this side."@en ;
+    rdfs:domain :MatchTeamStatistics ;
+    rdfs:range xsd:integer .
+
+:saves rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "saves"@en ;
+    rdfs:domain :MatchTeamStatistics ;
+    rdfs:range xsd:integer .
+
+:throwIns rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "throw ins"@en ;
+    rdfs:domain :MatchTeamStatistics ;
+    rdfs:range xsd:integer .
+
+:shotsTotal rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "shots total"@en ;
+    rdfs:domain :MatchTeamStatistics ;
+    rdfs:range xsd:integer .
+
+:shotsOnGoal rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "shots on goal"@en ;
+    rdfs:domain :MatchTeamStatistics ;
+    rdfs:range xsd:integer .
+
+:shotsOffGoal rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "shots off goal"@en ;
+    rdfs:domain :MatchTeamStatistics ;
+    rdfs:range xsd:integer .
+
+:yellowCardsCount rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "yellow cards count"@en ;
+    rdfs:comment "Number of yellow cards for this side in this match (aggregate count, distinct from individual :Booking events)."@en ;
+    rdfs:domain :MatchTeamStatistics ;
+    rdfs:range xsd:integer .
+
+:yellowRedCardsCount rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "yellow-red cards count"@en ;
+    rdfs:domain :MatchTeamStatistics ;
+    rdfs:range xsd:integer .
+
+:redCardsCount rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "red cards count"@en ;
+    rdfs:domain :MatchTeamStatistics ;
+    rdfs:range xsd:integer .
+
+# --- MatchEvent properties ---
+
+:minute rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "minute"@en ;
+    rdfs:comment "The minute of the match when the event occurred."@en ;
+    rdfs:domain :MatchEvent ;
+    rdfs:range xsd:integer .
+
+:extraTimeMinute rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "extra time minute"@en ;
+    rdfs:comment "Added/stoppage time minutes beyond the indicated minute."@en ;
+    rdfs:domain :MatchEvent ;
+    rdfs:range xsd:integer .
+
+:goalType rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "goal type"@en ;
+    rdfs:comment "Type of goal: REGULAR, OWN, or PENALTY."@en ;
+    rdfs:domain :Goal ;
+    rdfs:range xsd:string .
+
+:cardType rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "card type"@en ;
+    rdfs:comment "Type of booking: YELLOW_CARD, RED_CARD, or SECOND_YELLOW."@en ;
+    rdfs:domain :Booking ;
+    rdfs:range xsd:string .
+
+# --- Venue properties ---
+
+:venueName rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "venue name"@en ;
+    rdfs:comment "The common name of the stadium."@en ;
+    rdfs:domain :Venue ;
+    rdfs:range xsd:string .
+
+:fifaName rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "FIFA name"@en ;
+    rdfs:comment "The official FIFA tournament name for the venue (without commercial sponsors)."@en ;
+    rdfs:domain :Venue ;
+    rdfs:range xsd:string .
+
+:capacity rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "capacity"@en ;
+    rdfs:comment "The seating capacity of the venue."@en ;
+    rdfs:domain :Venue ;
+    rdfs:range xsd:integer .
+
+:isIndoor rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "is indoor"@en ;
+    rdfs:comment "Whether the venue has a retractable roof or is fully enclosed."@en ;
+    rdfs:domain :Venue ;
+    rdfs:range xsd:boolean .
+
+:inception rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "inception date"@en ;
+    rdfs:comment "Date the venue was opened/inaugurated."@en ;
+    rdfs:domain :Venue ;
+    rdfs:range xsd:date .
+
+:coordinates rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "coordinates"@en ;
+    rdfs:comment "Geographic coordinates from enrichment sources (often WKT point string)."@en ;
+    rdfs:domain :Country , :Venue , :HostCity ;
+    rdfs:range xsd:string .
+
+:officialWebsite rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "official website"@en ;
+    rdfs:comment "Official website URL for a country, team, venue, or host city."@en ;
+    rdfs:domain :Country , :Team , :Venue , :HostCity ;
+    rdfs:range xsd:anyURI .
+
+# --- HostCity properties ---
+
+:cityName rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "city name"@en ;
+    rdfs:domain :HostCity ;
+    rdfs:range xsd:string .
+
+:timezone rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "timezone"@en ;
+    rdfs:domain :HostCity ;
+    rdfs:range xsd:string .
+
+# --- Country properties ---
+
+:countryName rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "country name"@en ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:string .
+
+:countryCode rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "country code"@en ;
+    rdfs:comment "ISO 3166-1 alpha-2 or alpha-3 country code."@en ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:string .
+
+:capitals rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "capitals"@en ;
+    rdfs:comment "Comma-separated list of capital cities for a country."@en ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:string .
+
+:continent rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "continent"@en ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:string .
+
+:population rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "population"@en ;
+    rdfs:domain :Country , :HostCity ;
+    rdfs:range xsd:integer .
+
+:lifeExpectancy rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "life expectancy"@en ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:decimal .
+
+:hdi rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "human development index"@en ;
+    rdfs:comment "Human Development Index (HDI) score."@en ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:decimal .
+
+:officialLanguages rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "official languages"@en ;
+    rdfs:comment "Comma-separated list of official languages for a country."@en ;
+    rdfs:domain :Country ;
+    rdfs:range xsd:string .
+
+:flagImage rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "flag image"@en ;
+    rdfs:comment "URL of flag image for a country, team, or host city context."@en ;
+    rdfs:domain :Country , :Team ;
+    rdfs:range xsd:anyURI .
+
+:locatorMapImage rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "locator map image"@en ;
+    rdfs:comment "URL of locator map image for a country or host city."@en ;
+    rdfs:domain :Country , :HostCity ;
+    rdfs:range xsd:anyURI .
+
+:wikipediaArticle rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "Wikipedia article"@en ;
+    rdfs:comment "URL to the English Wikipedia article describing the entity."@en ;
+    rdfs:domain :Country , :Person , :Venue , :HostCity , :Team ;
+    rdfs:range xsd:anyURI .
+
+:image rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "image"@en ;
+    rdfs:comment "URL of a representative image for a country, person, team, venue, or host city."@en ;
+    rdfs:domain :Country , :Person , :Team , :Venue , :HostCity ;
+    rdfs:range xsd:anyURI .
+
+:logo rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "logo"@en ;
+    rdfs:comment "Logo image URL for entities such as teams or venues."@en ;
+    rdfs:domain :Team , :Venue ;
+    rdfs:range xsd:anyURI .
+
+# --- Confederation properties ---
+
+:confederationName rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "confederation name"@en ;
+    rdfs:domain :Confederation ;
+    rdfs:range xsd:string .
+
+:confederationCode rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "confederation code"@en ;
+    rdfs:comment "Short code: AFC, CAF, CONCACAF, CONMEBOL, OFC, UEFA."@en ;
+    rdfs:domain :Confederation ;
+    rdfs:range xsd:string .
+
+# --- Standings properties ---
+
+:standingsPosition rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "standings position"@en ;
+    rdfs:comment "The team's position in the group table (1-4)."@en ;
+    rdfs:domain :Standings ;
+    rdfs:range xsd:integer .
+
+:playedGames rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "played games"@en ;
+    rdfs:domain :Standings ;
+    rdfs:range xsd:integer .
+
+:won rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "won"@en ;
+    rdfs:domain :Standings ;
+    rdfs:range xsd:integer .
+
+:drawn rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "drawn"@en ;
+    rdfs:domain :Standings ;
+    rdfs:range xsd:integer .
+
+:lost rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "lost"@en ;
+    rdfs:domain :Standings ;
+    rdfs:range xsd:integer .
+
+:points rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "points"@en ;
+    rdfs:domain :Standings ;
+    rdfs:range xsd:integer .
+
+:goalsFor rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "goals for"@en ;
+    rdfs:domain :Standings ;
+    rdfs:range xsd:integer .
+
+:goalsAgainst rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "goals against"@en ;
+    rdfs:domain :Standings ;
+    rdfs:range xsd:integer .
+
+:goalDifference rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "goal difference"@en ;
+    rdfs:domain :Standings ;
+    rdfs:range xsd:integer .
+
+:standingsType rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "standings type"@en ;
+    rdfs:comment "The type of standings table: TOTAL, HOME, or AWAY."@en ;
+    rdfs:domain :Standings ;
+    rdfs:range xsd:string .
+
+# --- Group properties ---
+
+:groupName rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "group name"@en ;
+    rdfs:comment "The group label: Group A through Group L."@en ;
+    rdfs:domain :Group ;
+    rdfs:range xsd:string .
+
+# --- Season properties ---
+
+:startDate rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "start date"@en ;
+    rdfs:domain :Season ;
+    rdfs:range xsd:date .
+
+:endDate rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "end date"@en ;
+    rdfs:domain :Season ;
+    rdfs:range xsd:date .
+
+:currentMatchday rdf:type owl:DatatypeProperty , owl:FunctionalProperty ;
+    rdfs:label "current matchday"@en ;
+    rdfs:domain :Season ;
+    rdfs:range xsd:integer .
+
+# =============================================================================
+# End of Ontology
+# =============================================================================

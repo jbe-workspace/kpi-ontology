@@ -1,0 +1,940 @@
+@prefix inst: <https://semantic.adorsys.com/resource/kpi/instance/fifa2026/> .
+@prefix kpi: <https://semantic.adorsys.com/meta/kpi/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+inst:kpi-attendance_by_stage a kpi:KeyPerformanceIndicator ;
+    kpi:aggregationPropertyURI "https://data.adorsys.com/ontology/sport/football/attendance"^^xsd:anyURI ;
+    kpi:dataSourceURI "file:fifa2026-kpi-evaluation/input/fifa-world-cup-2026_instances.ttl"^^xsd:anyURI ;
+    kpi:hasAggregationOperator kpi:Average ;
+    kpi:hasAggregationResult inst:result-attendance_by_stage-001,
+        inst:result-attendance_by_stage-002,
+        inst:result-attendance_by_stage-003,
+        inst:result-attendance_by_stage-004,
+        inst:result-attendance_by_stage-005,
+        inst:result-attendance_by_stage-006 ;
+    kpi:hasGranularityDimension inst:dim-attendance_by_stage-stage ;
+    kpi:kpiLabel "Average attendance by tournament stage" ;
+    kpi:referenceOntologyURI "https://data.adorsys.com/ontology/sport/football/"^^xsd:anyURI .
+
+inst:kpi-goals_by_group a kpi:KeyPerformanceIndicator ;
+    kpi:aggregationPropertyURI "https://data.adorsys.com/ontology/sport/football/goalsFor"^^xsd:anyURI ;
+    kpi:dataSourceURI "file:fifa2026-kpi-evaluation/input/fifa-world-cup-2026_instances.ttl"^^xsd:anyURI ;
+    kpi:hasAggregationOperator kpi:Sum ;
+    kpi:hasAggregationResult inst:result-goals_by_group-001,
+        inst:result-goals_by_group-002,
+        inst:result-goals_by_group-003,
+        inst:result-goals_by_group-004,
+        inst:result-goals_by_group-005,
+        inst:result-goals_by_group-006,
+        inst:result-goals_by_group-007,
+        inst:result-goals_by_group-008,
+        inst:result-goals_by_group-009,
+        inst:result-goals_by_group-010,
+        inst:result-goals_by_group-011,
+        inst:result-goals_by_group-012 ;
+    kpi:hasGranularityDimension inst:dim-goals_by_group-groupname ;
+    kpi:kpiLabel "Total goals scored by group" ;
+    kpi:referenceOntologyURI "https://data.adorsys.com/ontology/sport/football/"^^xsd:anyURI .
+
+inst:kpi-home_win_odds_by_stage a kpi:KeyPerformanceIndicator ;
+    kpi:aggregationPropertyURI "https://data.adorsys.com/ontology/sport/football/oddsHomeWin"^^xsd:anyURI ;
+    kpi:dataSourceURI "file:fifa2026-kpi-evaluation/input/fifa-world-cup-2026_instances.ttl"^^xsd:anyURI ;
+    kpi:hasAggregationOperator kpi:Average ;
+    kpi:hasAggregationResult inst:result-home_win_odds_by_stage-001,
+        inst:result-home_win_odds_by_stage-002,
+        inst:result-home_win_odds_by_stage-003,
+        inst:result-home_win_odds_by_stage-004,
+        inst:result-home_win_odds_by_stage-005,
+        inst:result-home_win_odds_by_stage-006,
+        inst:result-home_win_odds_by_stage-007 ;
+    kpi:hasGranularityDimension inst:dim-home_win_odds_by_stage-stage ;
+    kpi:kpiLabel "Average home-win odds by tournament stage" ;
+    kpi:referenceOntologyURI "https://data.adorsys.com/ontology/sport/football/"^^xsd:anyURI .
+
+inst:kpi-matches_by_stage a kpi:KeyPerformanceIndicator ;
+    kpi:aggregationPropertyURI "https://data.adorsys.com/ontology/sport/football/stage"^^xsd:anyURI ;
+    kpi:dataSourceURI "file:fifa2026-kpi-evaluation/input/fifa-world-cup-2026_instances.ttl"^^xsd:anyURI ;
+    kpi:hasAggregationOperator kpi:Count ;
+    kpi:hasAggregationResult inst:result-matches_by_stage-001,
+        inst:result-matches_by_stage-002,
+        inst:result-matches_by_stage-003,
+        inst:result-matches_by_stage-004,
+        inst:result-matches_by_stage-005,
+        inst:result-matches_by_stage-006,
+        inst:result-matches_by_stage-007 ;
+    kpi:hasGranularityDimension inst:dim-matches_by_stage-stage ;
+    kpi:kpiLabel "Number of matches by tournament stage" ;
+    kpi:referenceOntologyURI "https://data.adorsys.com/ontology/sport/football/"^^xsd:anyURI .
+
+inst:kpi-matches_by_venue a kpi:KeyPerformanceIndicator ;
+    kpi:aggregationPropertyURI "https://data.adorsys.com/ontology/sport/football/playedAtVenue"^^xsd:anyURI ;
+    kpi:dataSourceURI "file:fifa2026-kpi-evaluation/input/fifa-world-cup-2026_instances.ttl"^^xsd:anyURI ;
+    kpi:hasAggregationOperator kpi:Count ;
+    kpi:hasAggregationResult inst:result-matches_by_venue-001,
+        inst:result-matches_by_venue-002,
+        inst:result-matches_by_venue-003,
+        inst:result-matches_by_venue-004,
+        inst:result-matches_by_venue-005,
+        inst:result-matches_by_venue-006,
+        inst:result-matches_by_venue-007,
+        inst:result-matches_by_venue-008,
+        inst:result-matches_by_venue-009,
+        inst:result-matches_by_venue-010,
+        inst:result-matches_by_venue-011,
+        inst:result-matches_by_venue-012,
+        inst:result-matches_by_venue-013,
+        inst:result-matches_by_venue-014,
+        inst:result-matches_by_venue-015,
+        inst:result-matches_by_venue-016 ;
+    kpi:hasGranularityDimension inst:dim-matches_by_venue-venuename ;
+    kpi:kpiLabel "Number of matches by venue" ;
+    kpi:referenceOntologyURI "https://data.adorsys.com/ontology/sport/football/"^^xsd:anyURI .
+
+inst:kpi-shots_by_team a kpi:KeyPerformanceIndicator ;
+    kpi:aggregationPropertyURI "https://data.adorsys.com/ontology/sport/football/shotsTotal"^^xsd:anyURI ;
+    kpi:dataSourceURI "file:fifa2026-kpi-evaluation/input/fifa-world-cup-2026_instances.ttl"^^xsd:anyURI ;
+    kpi:hasAggregationOperator kpi:Average ;
+    kpi:hasAggregationResult inst:result-shots_by_team-001,
+        inst:result-shots_by_team-002,
+        inst:result-shots_by_team-003,
+        inst:result-shots_by_team-004,
+        inst:result-shots_by_team-005,
+        inst:result-shots_by_team-006,
+        inst:result-shots_by_team-007,
+        inst:result-shots_by_team-008,
+        inst:result-shots_by_team-009,
+        inst:result-shots_by_team-010,
+        inst:result-shots_by_team-011,
+        inst:result-shots_by_team-012,
+        inst:result-shots_by_team-013,
+        inst:result-shots_by_team-014,
+        inst:result-shots_by_team-015,
+        inst:result-shots_by_team-016,
+        inst:result-shots_by_team-017,
+        inst:result-shots_by_team-018,
+        inst:result-shots_by_team-019,
+        inst:result-shots_by_team-020,
+        inst:result-shots_by_team-021,
+        inst:result-shots_by_team-022,
+        inst:result-shots_by_team-023,
+        inst:result-shots_by_team-024,
+        inst:result-shots_by_team-025,
+        inst:result-shots_by_team-026,
+        inst:result-shots_by_team-027,
+        inst:result-shots_by_team-028,
+        inst:result-shots_by_team-029,
+        inst:result-shots_by_team-030,
+        inst:result-shots_by_team-031,
+        inst:result-shots_by_team-032,
+        inst:result-shots_by_team-033,
+        inst:result-shots_by_team-034,
+        inst:result-shots_by_team-035,
+        inst:result-shots_by_team-036,
+        inst:result-shots_by_team-037,
+        inst:result-shots_by_team-038,
+        inst:result-shots_by_team-039,
+        inst:result-shots_by_team-040,
+        inst:result-shots_by_team-041,
+        inst:result-shots_by_team-042,
+        inst:result-shots_by_team-043,
+        inst:result-shots_by_team-044,
+        inst:result-shots_by_team-045,
+        inst:result-shots_by_team-046,
+        inst:result-shots_by_team-047,
+        inst:result-shots_by_team-048 ;
+    kpi:hasGranularityDimension inst:dim-shots_by_team-teamname ;
+    kpi:kpiLabel "Average shots per match-team record by team" ;
+    kpi:referenceOntologyURI "https://data.adorsys.com/ontology/sport/football/"^^xsd:anyURI .
+
+inst:dv-attendance_by_stage-001-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "FINAL" ;
+    kpi:forDimension inst:dim-attendance_by_stage-stage .
+
+inst:dv-attendance_by_stage-002-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "GROUP_STAGE" ;
+    kpi:forDimension inst:dim-attendance_by_stage-stage .
+
+inst:dv-attendance_by_stage-003-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "QUARTER_FINALS" ;
+    kpi:forDimension inst:dim-attendance_by_stage-stage .
+
+inst:dv-attendance_by_stage-004-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "ROUND_OF_16" ;
+    kpi:forDimension inst:dim-attendance_by_stage-stage .
+
+inst:dv-attendance_by_stage-005-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "ROUND_OF_32" ;
+    kpi:forDimension inst:dim-attendance_by_stage-stage .
+
+inst:dv-attendance_by_stage-006-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "SEMI_FINALS" ;
+    kpi:forDimension inst:dim-attendance_by_stage-stage .
+
+inst:dv-goals_by_group-001-groupname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Group A" ;
+    kpi:forDimension inst:dim-goals_by_group-groupname .
+
+inst:dv-goals_by_group-002-groupname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Group B" ;
+    kpi:forDimension inst:dim-goals_by_group-groupname .
+
+inst:dv-goals_by_group-003-groupname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Group C" ;
+    kpi:forDimension inst:dim-goals_by_group-groupname .
+
+inst:dv-goals_by_group-004-groupname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Group D" ;
+    kpi:forDimension inst:dim-goals_by_group-groupname .
+
+inst:dv-goals_by_group-005-groupname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Group E" ;
+    kpi:forDimension inst:dim-goals_by_group-groupname .
+
+inst:dv-goals_by_group-006-groupname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Group F" ;
+    kpi:forDimension inst:dim-goals_by_group-groupname .
+
+inst:dv-goals_by_group-007-groupname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Group G" ;
+    kpi:forDimension inst:dim-goals_by_group-groupname .
+
+inst:dv-goals_by_group-008-groupname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Group H" ;
+    kpi:forDimension inst:dim-goals_by_group-groupname .
+
+inst:dv-goals_by_group-009-groupname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Group I" ;
+    kpi:forDimension inst:dim-goals_by_group-groupname .
+
+inst:dv-goals_by_group-010-groupname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Group J" ;
+    kpi:forDimension inst:dim-goals_by_group-groupname .
+
+inst:dv-goals_by_group-011-groupname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Group K" ;
+    kpi:forDimension inst:dim-goals_by_group-groupname .
+
+inst:dv-goals_by_group-012-groupname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Group L" ;
+    kpi:forDimension inst:dim-goals_by_group-groupname .
+
+inst:dv-home_win_odds_by_stage-001-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "FINAL" ;
+    kpi:forDimension inst:dim-home_win_odds_by_stage-stage .
+
+inst:dv-home_win_odds_by_stage-002-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "GROUP_STAGE" ;
+    kpi:forDimension inst:dim-home_win_odds_by_stage-stage .
+
+inst:dv-home_win_odds_by_stage-003-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "QUARTER_FINALS" ;
+    kpi:forDimension inst:dim-home_win_odds_by_stage-stage .
+
+inst:dv-home_win_odds_by_stage-004-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "ROUND_OF_16" ;
+    kpi:forDimension inst:dim-home_win_odds_by_stage-stage .
+
+inst:dv-home_win_odds_by_stage-005-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "ROUND_OF_32" ;
+    kpi:forDimension inst:dim-home_win_odds_by_stage-stage .
+
+inst:dv-home_win_odds_by_stage-006-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "SEMI_FINALS" ;
+    kpi:forDimension inst:dim-home_win_odds_by_stage-stage .
+
+inst:dv-home_win_odds_by_stage-007-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "THIRD_PLACE" ;
+    kpi:forDimension inst:dim-home_win_odds_by_stage-stage .
+
+inst:dv-matches_by_stage-001-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "FINAL" ;
+    kpi:forDimension inst:dim-matches_by_stage-stage .
+
+inst:dv-matches_by_stage-002-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "GROUP_STAGE" ;
+    kpi:forDimension inst:dim-matches_by_stage-stage .
+
+inst:dv-matches_by_stage-003-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "QUARTER_FINALS" ;
+    kpi:forDimension inst:dim-matches_by_stage-stage .
+
+inst:dv-matches_by_stage-004-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "ROUND_OF_16" ;
+    kpi:forDimension inst:dim-matches_by_stage-stage .
+
+inst:dv-matches_by_stage-005-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "ROUND_OF_32" ;
+    kpi:forDimension inst:dim-matches_by_stage-stage .
+
+inst:dv-matches_by_stage-006-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "SEMI_FINALS" ;
+    kpi:forDimension inst:dim-matches_by_stage-stage .
+
+inst:dv-matches_by_stage-007-stage a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "THIRD_PLACE" ;
+    kpi:forDimension inst:dim-matches_by_stage-stage .
+
+inst:dv-matches_by_venue-001-venuename a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "AT&T Stadium" ;
+    kpi:forDimension inst:dim-matches_by_venue-venuename .
+
+inst:dv-matches_by_venue-002-venuename a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Mercedes-Benz Stadium" ;
+    kpi:forDimension inst:dim-matches_by_venue-venuename .
+
+inst:dv-matches_by_venue-003-venuename a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "MetLife Stadium" ;
+    kpi:forDimension inst:dim-matches_by_venue-venuename .
+
+inst:dv-matches_by_venue-004-venuename a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "SoFi Stadium" ;
+    kpi:forDimension inst:dim-matches_by_venue-venuename .
+
+inst:dv-matches_by_venue-005-venuename a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "BC Place" ;
+    kpi:forDimension inst:dim-matches_by_venue-venuename .
+
+inst:dv-matches_by_venue-006-venuename a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Gillette Stadium" ;
+    kpi:forDimension inst:dim-matches_by_venue-venuename .
+
+inst:dv-matches_by_venue-007-venuename a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Hard Rock Stadium" ;
+    kpi:forDimension inst:dim-matches_by_venue-venuename .
+
+inst:dv-matches_by_venue-008-venuename a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "NRG Stadium" ;
+    kpi:forDimension inst:dim-matches_by_venue-venuename .
+
+inst:dv-matches_by_venue-009-venuename a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Arrowhead Stadium" ;
+    kpi:forDimension inst:dim-matches_by_venue-venuename .
+
+inst:dv-matches_by_venue-010-venuename a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "BMO Field" ;
+    kpi:forDimension inst:dim-matches_by_venue-venuename .
+
+inst:dv-matches_by_venue-011-venuename a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Levi's Stadium" ;
+    kpi:forDimension inst:dim-matches_by_venue-venuename .
+
+inst:dv-matches_by_venue-012-venuename a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Lincoln Financial Field" ;
+    kpi:forDimension inst:dim-matches_by_venue-venuename .
+
+inst:dv-matches_by_venue-013-venuename a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Lumen Field" ;
+    kpi:forDimension inst:dim-matches_by_venue-venuename .
+
+inst:dv-matches_by_venue-014-venuename a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Azteca" ;
+    kpi:forDimension inst:dim-matches_by_venue-venuename .
+
+inst:dv-matches_by_venue-015-venuename a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "AKRON" ;
+    kpi:forDimension inst:dim-matches_by_venue-venuename .
+
+inst:dv-matches_by_venue-016-venuename a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Estadio BBVA" ;
+    kpi:forDimension inst:dim-matches_by_venue-venuename .
+
+inst:dv-shots_by_team-001-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Turkey" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-002-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Colombia" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-003-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Belgium" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-004-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Germany" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-005-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Senegal" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-006-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "France" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-007-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Spain" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-008-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Canada" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-009-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Uruguay" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-010-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "England" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-011-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Mexico" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-012-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Brazil" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-013-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Argentina" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-014-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Ecuador" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-015-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Egypt" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-016-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Switzerland" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-017-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Sweden" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-018-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Netherlands" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-019-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Iran" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-020-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Portugal" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-021-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Ivory Coast" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-022-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "United States" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-023-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Cape Verde Islands" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-024-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Norway" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-025-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Czechia" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-026-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Morocco" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-027-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Algeria" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-028-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Congo DR" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-029-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Australia" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-030-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Croatia" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-031-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "South Korea" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-032-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "South Africa" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-033-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "New Zealand" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-034-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Bosnia-Herzegovina" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-035-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Haiti" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-036-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Panama" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-037-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Curaçao" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-038-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Scotland" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-039-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Jordan" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-040-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Austria" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-041-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Japan" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-042-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Paraguay" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-043-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Iraq" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-044-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Ghana" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-045-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Tunisia" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-046-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Qatar" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-047-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Uzbekistan" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:dv-shots_by_team-048-teamname a kpi:DimensionValue ;
+    kpi:dimensionValueLiteral "Saudi Arabia" ;
+    kpi:forDimension inst:dim-shots_by_team-teamname .
+
+inst:result-attendance_by_stage-001 a kpi:AggregationResult ;
+    kpi:aggregationValue 80663.0 ;
+    kpi:hasDimensionValue inst:dv-attendance_by_stage-001-stage .
+
+inst:result-attendance_by_stage-002 a kpi:AggregationResult ;
+    kpi:aggregationValue 63542.625 ;
+    kpi:hasDimensionValue inst:dv-attendance_by_stage-002-stage .
+
+inst:result-attendance_by_stage-003 a kpi:AggregationResult ;
+    kpi:aggregationValue 67151.5 ;
+    kpi:hasDimensionValue inst:dv-attendance_by_stage-003-stage .
+
+inst:result-attendance_by_stage-004 a kpi:AggregationResult ;
+    kpi:aggregationValue 70555.75 ;
+    kpi:hasDimensionValue inst:dv-attendance_by_stage-004-stage .
+
+inst:result-attendance_by_stage-005 a kpi:AggregationResult ;
+    kpi:aggregationValue 60919.0 ;
+    kpi:hasDimensionValue inst:dv-attendance_by_stage-005-stage .
+
+inst:result-attendance_by_stage-006 a kpi:AggregationResult ;
+    kpi:aggregationValue 70176.0 ;
+    kpi:hasDimensionValue inst:dv-attendance_by_stage-006-stage .
+
+inst:result-goals_by_group-001 a kpi:AggregationResult ;
+    kpi:aggregationValue 12.0 ;
+    kpi:hasDimensionValue inst:dv-goals_by_group-001-groupname .
+
+inst:result-goals_by_group-002 a kpi:AggregationResult ;
+    kpi:aggregationValue 22.0 ;
+    kpi:hasDimensionValue inst:dv-goals_by_group-002-groupname .
+
+inst:result-goals_by_group-003 a kpi:AggregationResult ;
+    kpi:aggregationValue 16.0 ;
+    kpi:hasDimensionValue inst:dv-goals_by_group-003-groupname .
+
+inst:result-goals_by_group-004 a kpi:AggregationResult ;
+    kpi:aggregationValue 15.0 ;
+    kpi:hasDimensionValue inst:dv-goals_by_group-004-groupname .
+
+inst:result-goals_by_group-005 a kpi:AggregationResult ;
+    kpi:aggregationValue 17.0 ;
+    kpi:hasDimensionValue inst:dv-goals_by_group-005-groupname .
+
+inst:result-goals_by_group-006 a kpi:AggregationResult ;
+    kpi:aggregationValue 26.0 ;
+    kpi:hasDimensionValue inst:dv-goals_by_group-006-groupname .
+
+inst:result-goals_by_group-007 a kpi:AggregationResult ;
+    kpi:aggregationValue 18.0 ;
+    kpi:hasDimensionValue inst:dv-goals_by_group-007-groupname .
+
+inst:result-goals_by_group-008 a kpi:AggregationResult ;
+    kpi:aggregationValue 11.0 ;
+    kpi:hasDimensionValue inst:dv-goals_by_group-008-groupname .
+
+inst:result-goals_by_group-009 a kpi:AggregationResult ;
+    kpi:aggregationValue 27.0 ;
+    kpi:hasDimensionValue inst:dv-goals_by_group-009-groupname .
+
+inst:result-goals_by_group-010 a kpi:AggregationResult ;
+    kpi:aggregationValue 22.0 ;
+    kpi:hasDimensionValue inst:dv-goals_by_group-010-groupname .
+
+inst:result-goals_by_group-011 a kpi:AggregationResult ;
+    kpi:aggregationValue 16.0 ;
+    kpi:hasDimensionValue inst:dv-goals_by_group-011-groupname .
+
+inst:result-goals_by_group-012 a kpi:AggregationResult ;
+    kpi:aggregationValue 13.0 ;
+    kpi:hasDimensionValue inst:dv-goals_by_group-012-groupname .
+
+inst:result-home_win_odds_by_stage-001 a kpi:AggregationResult ;
+    kpi:aggregationValue 2.31 ;
+    kpi:hasDimensionValue inst:dv-home_win_odds_by_stage-001-stage .
+
+inst:result-home_win_odds_by_stage-002 a kpi:AggregationResult ;
+    kpi:aggregationValue 3.667639 ;
+    kpi:hasDimensionValue inst:dv-home_win_odds_by_stage-002-stage .
+
+inst:result-home_win_odds_by_stage-003 a kpi:AggregationResult ;
+    kpi:aggregationValue 2.1925 ;
+    kpi:hasDimensionValue inst:dv-home_win_odds_by_stage-003-stage .
+
+inst:result-home_win_odds_by_stage-004 a kpi:AggregationResult ;
+    kpi:aggregationValue 4.68375 ;
+    kpi:hasDimensionValue inst:dv-home_win_odds_by_stage-004-stage .
+
+inst:result-home_win_odds_by_stage-005 a kpi:AggregationResult ;
+    kpi:aggregationValue 2.115 ;
+    kpi:hasDimensionValue inst:dv-home_win_odds_by_stage-005-stage .
+
+inst:result-home_win_odds_by_stage-006 a kpi:AggregationResult ;
+    kpi:aggregationValue 2.485 ;
+    kpi:hasDimensionValue inst:dv-home_win_odds_by_stage-006-stage .
+
+inst:result-home_win_odds_by_stage-007 a kpi:AggregationResult ;
+    kpi:aggregationValue 1.89 ;
+    kpi:hasDimensionValue inst:dv-home_win_odds_by_stage-007-stage .
+
+inst:result-matches_by_stage-001 a kpi:AggregationResult ;
+    kpi:aggregationValue 1.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_stage-001-stage .
+
+inst:result-matches_by_stage-002 a kpi:AggregationResult ;
+    kpi:aggregationValue 72.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_stage-002-stage .
+
+inst:result-matches_by_stage-003 a kpi:AggregationResult ;
+    kpi:aggregationValue 4.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_stage-003-stage .
+
+inst:result-matches_by_stage-004 a kpi:AggregationResult ;
+    kpi:aggregationValue 8.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_stage-004-stage .
+
+inst:result-matches_by_stage-005 a kpi:AggregationResult ;
+    kpi:aggregationValue 16.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_stage-005-stage .
+
+inst:result-matches_by_stage-006 a kpi:AggregationResult ;
+    kpi:aggregationValue 2.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_stage-006-stage .
+
+inst:result-matches_by_stage-007 a kpi:AggregationResult ;
+    kpi:aggregationValue 1.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_stage-007-stage .
+
+inst:result-matches_by_venue-001 a kpi:AggregationResult ;
+    kpi:aggregationValue 9.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_venue-001-venuename .
+
+inst:result-matches_by_venue-002 a kpi:AggregationResult ;
+    kpi:aggregationValue 8.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_venue-002-venuename .
+
+inst:result-matches_by_venue-003 a kpi:AggregationResult ;
+    kpi:aggregationValue 8.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_venue-003-venuename .
+
+inst:result-matches_by_venue-004 a kpi:AggregationResult ;
+    kpi:aggregationValue 8.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_venue-004-venuename .
+
+inst:result-matches_by_venue-005 a kpi:AggregationResult ;
+    kpi:aggregationValue 7.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_venue-005-venuename .
+
+inst:result-matches_by_venue-006 a kpi:AggregationResult ;
+    kpi:aggregationValue 7.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_venue-006-venuename .
+
+inst:result-matches_by_venue-007 a kpi:AggregationResult ;
+    kpi:aggregationValue 7.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_venue-007-venuename .
+
+inst:result-matches_by_venue-008 a kpi:AggregationResult ;
+    kpi:aggregationValue 7.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_venue-008-venuename .
+
+inst:result-matches_by_venue-009 a kpi:AggregationResult ;
+    kpi:aggregationValue 6.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_venue-009-venuename .
+
+inst:result-matches_by_venue-010 a kpi:AggregationResult ;
+    kpi:aggregationValue 6.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_venue-010-venuename .
+
+inst:result-matches_by_venue-011 a kpi:AggregationResult ;
+    kpi:aggregationValue 6.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_venue-011-venuename .
+
+inst:result-matches_by_venue-012 a kpi:AggregationResult ;
+    kpi:aggregationValue 6.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_venue-012-venuename .
+
+inst:result-matches_by_venue-013 a kpi:AggregationResult ;
+    kpi:aggregationValue 6.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_venue-013-venuename .
+
+inst:result-matches_by_venue-014 a kpi:AggregationResult ;
+    kpi:aggregationValue 5.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_venue-014-venuename .
+
+inst:result-matches_by_venue-015 a kpi:AggregationResult ;
+    kpi:aggregationValue 4.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_venue-015-venuename .
+
+inst:result-matches_by_venue-016 a kpi:AggregationResult ;
+    kpi:aggregationValue 4.0 ;
+    kpi:hasDimensionValue inst:dv-matches_by_venue-016-venuename .
+
+inst:result-shots_by_team-001 a kpi:AggregationResult ;
+    kpi:aggregationValue 23.666667 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-001-teamname .
+
+inst:result-shots_by_team-002 a kpi:AggregationResult ;
+    kpi:aggregationValue 19.2 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-002-teamname .
+
+inst:result-shots_by_team-003 a kpi:AggregationResult ;
+    kpi:aggregationValue 18.5 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-003-teamname .
+
+inst:result-shots_by_team-004 a kpi:AggregationResult ;
+    kpi:aggregationValue 18.5 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-004-teamname .
+
+inst:result-shots_by_team-005 a kpi:AggregationResult ;
+    kpi:aggregationValue 18.0 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-005-teamname .
+
+inst:result-shots_by_team-006 a kpi:AggregationResult ;
+    kpi:aggregationValue 16.5 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-006-teamname .
+
+inst:result-shots_by_team-007 a kpi:AggregationResult ;
+    kpi:aggregationValue 16.5 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-007-teamname .
+
+inst:result-shots_by_team-008 a kpi:AggregationResult ;
+    kpi:aggregationValue 16.2 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-008-teamname .
+
+inst:result-shots_by_team-009 a kpi:AggregationResult ;
+    kpi:aggregationValue 15.333333 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-009-teamname .
+
+inst:result-shots_by_team-010 a kpi:AggregationResult ;
+    kpi:aggregationValue 14.5 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-010-teamname .
+
+inst:result-shots_by_team-011 a kpi:AggregationResult ;
+    kpi:aggregationValue 14.4 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-011-teamname .
+
+inst:result-shots_by_team-012 a kpi:AggregationResult ;
+    kpi:aggregationValue 14.0 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-012-teamname .
+
+inst:result-shots_by_team-013 a kpi:AggregationResult ;
+    kpi:aggregationValue 13.5 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-013-teamname .
+
+inst:result-shots_by_team-014 a kpi:AggregationResult ;
+    kpi:aggregationValue 13.0 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-014-teamname .
+
+inst:result-shots_by_team-015 a kpi:AggregationResult ;
+    kpi:aggregationValue 13.0 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-015-teamname .
+
+inst:result-shots_by_team-016 a kpi:AggregationResult ;
+    kpi:aggregationValue 12.833333 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-016-teamname .
+
+inst:result-shots_by_team-017 a kpi:AggregationResult ;
+    kpi:aggregationValue 12.75 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-017-teamname .
+
+inst:result-shots_by_team-018 a kpi:AggregationResult ;
+    kpi:aggregationValue 12.25 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-018-teamname .
+
+inst:result-shots_by_team-019 a kpi:AggregationResult ;
+    kpi:aggregationValue 12.0 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-019-teamname .
+
+inst:result-shots_by_team-020 a kpi:AggregationResult ;
+    kpi:aggregationValue 12.0 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-020-teamname .
+
+inst:result-shots_by_team-021 a kpi:AggregationResult ;
+    kpi:aggregationValue 11.75 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-021-teamname .
+
+inst:result-shots_by_team-022 a kpi:AggregationResult ;
+    kpi:aggregationValue 11.6 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-022-teamname .
+
+inst:result-shots_by_team-023 a kpi:AggregationResult ;
+    kpi:aggregationValue 11.5 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-023-teamname .
+
+inst:result-shots_by_team-024 a kpi:AggregationResult ;
+    kpi:aggregationValue 10.833333 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-024-teamname .
+
+inst:result-shots_by_team-025 a kpi:AggregationResult ;
+    kpi:aggregationValue 10.666667 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-025-teamname .
+
+inst:result-shots_by_team-026 a kpi:AggregationResult ;
+    kpi:aggregationValue 10.666667 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-026-teamname .
+
+inst:result-shots_by_team-027 a kpi:AggregationResult ;
+    kpi:aggregationValue 10.5 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-027-teamname .
+
+inst:result-shots_by_team-028 a kpi:AggregationResult ;
+    kpi:aggregationValue 10.25 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-028-teamname .
+
+inst:result-shots_by_team-029 a kpi:AggregationResult ;
+    kpi:aggregationValue 10.0 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-029-teamname .
+
+inst:result-shots_by_team-030 a kpi:AggregationResult ;
+    kpi:aggregationValue 10.0 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-030-teamname .
+
+inst:result-shots_by_team-031 a kpi:AggregationResult ;
+    kpi:aggregationValue 10.0 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-031-teamname .
+
+inst:result-shots_by_team-032 a kpi:AggregationResult ;
+    kpi:aggregationValue 9.75 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-032-teamname .
+
+inst:result-shots_by_team-033 a kpi:AggregationResult ;
+    kpi:aggregationValue 9.666667 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-033-teamname .
+
+inst:result-shots_by_team-034 a kpi:AggregationResult ;
+    kpi:aggregationValue 9.5 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-034-teamname .
+
+inst:result-shots_by_team-035 a kpi:AggregationResult ;
+    kpi:aggregationValue 9.333333 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-035-teamname .
+
+inst:result-shots_by_team-036 a kpi:AggregationResult ;
+    kpi:aggregationValue 9.333333 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-036-teamname .
+
+inst:result-shots_by_team-037 a kpi:AggregationResult ;
+    kpi:aggregationValue 8.666667 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-037-teamname .
+
+inst:result-shots_by_team-038 a kpi:AggregationResult ;
+    kpi:aggregationValue 8.333333 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-038-teamname .
+
+inst:result-shots_by_team-039 a kpi:AggregationResult ;
+    kpi:aggregationValue 8.0 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-039-teamname .
+
+inst:result-shots_by_team-040 a kpi:AggregationResult ;
+    kpi:aggregationValue 7.75 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-040-teamname .
+
+inst:result-shots_by_team-041 a kpi:AggregationResult ;
+    kpi:aggregationValue 7.75 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-041-teamname .
+
+inst:result-shots_by_team-042 a kpi:AggregationResult ;
+    kpi:aggregationValue 6.8 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-042-teamname .
+
+inst:result-shots_by_team-043 a kpi:AggregationResult ;
+    kpi:aggregationValue 6.333333 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-043-teamname .
+
+inst:result-shots_by_team-044 a kpi:AggregationResult ;
+    kpi:aggregationValue 6.0 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-044-teamname .
+
+inst:result-shots_by_team-045 a kpi:AggregationResult ;
+    kpi:aggregationValue 6.0 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-045-teamname .
+
+inst:result-shots_by_team-046 a kpi:AggregationResult ;
+    kpi:aggregationValue 5.666667 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-046-teamname .
+
+inst:result-shots_by_team-047 a kpi:AggregationResult ;
+    kpi:aggregationValue 5.666667 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-047-teamname .
+
+inst:result-shots_by_team-048 a kpi:AggregationResult ;
+    kpi:aggregationValue 5.333333 ;
+    kpi:hasDimensionValue inst:dv-shots_by_team-048-teamname .
+
+inst:dim-attendance_by_stage-stage a kpi:GranularityDimension ;
+    kpi:dimensionLabel "stage" ;
+    kpi:granularityPropertyURI "https://data.adorsys.com/ontology/sport/football/stage"^^xsd:anyURI .
+
+inst:dim-home_win_odds_by_stage-stage a kpi:GranularityDimension ;
+    kpi:dimensionLabel "stage" ;
+    kpi:granularityPropertyURI "https://data.adorsys.com/ontology/sport/football/stage"^^xsd:anyURI .
+
+inst:dim-matches_by_stage-stage a kpi:GranularityDimension ;
+    kpi:dimensionLabel "stage" ;
+    kpi:granularityPropertyURI "https://data.adorsys.com/ontology/sport/football/stage"^^xsd:anyURI .
+
+inst:dim-goals_by_group-groupname a kpi:GranularityDimension ;
+    kpi:dimensionLabel "groupName" ;
+    kpi:granularityPropertyURI "https://data.adorsys.com/ontology/sport/football/groupName"^^xsd:anyURI .
+
+inst:dim-matches_by_venue-venuename a kpi:GranularityDimension ;
+    kpi:dimensionLabel "venueName" ;
+    kpi:granularityPropertyURI "https://data.adorsys.com/ontology/sport/football/venueName"^^xsd:anyURI .
+
+inst:dim-shots_by_team-teamname a kpi:GranularityDimension ;
+    kpi:dimensionLabel "teamName" ;
+    kpi:granularityPropertyURI "https://data.adorsys.com/ontology/sport/football/teamName"^^xsd:anyURI .
+
