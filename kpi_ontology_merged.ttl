@@ -4,6 +4,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix vann: <http://purl.org/vocab/vann/> .
 @prefix kpi: <https://semantic.adorsys.com/meta/kpi/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 
@@ -40,8 +41,13 @@
   rdfs:isDefinedBy <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0>;
   dcterms:contributor "Johann Bergh <Johann.Bergh@adorsys.com>";
   dcterms:creator "Johann Bergh <Johann.Bergh@adorsys.com>" ;
+  dcterms:publisher "adorsys";
+  dcterms:license <https://spdx.org/licenses/MIT.html>;
+  dcterms:source <https://github.com/jbe-workspace/kpi-ontology>;
   dcterms:created "2026-04-08"^^xsd:date ;
-  dcterms:modified "2026-04-09"^^xsd:date ;
+  dcterms:modified "2026-11-20"^^xsd:date ;
+  vann:preferredNamespacePrefix "kpi";
+  vann:preferredNamespaceUri "https://semantic.adorsys.com/meta/kpi/";
   owl:versionInfo "1.0" ;
   <http://purl.org/spar/pso/hasStatus> <http://purl.org/spar/pso/draft> ;
   skos:hasTopConcept kpi:Sum, kpi:Count, kpi:Average, kpi:Min, kpi:Max,
@@ -291,8 +297,13 @@ Die Ontologie folgt den Prinzipien der Aristotelischen Logik mit klarer Genus-Di
 The ontology follows the principles of Aristotelian logic with clear genus-differentia definitions for all entities."""@en;
   dcterms:contributor "Johann Bergh <Johann.Bergh@adorsys.com>";
   dcterms:creator "Johann Bergh <Johann.Bergh@adorsys.com>" ;
+  dcterms:publisher "adorsys";
+  dcterms:license <https://spdx.org/licenses/MIT.html>;
+  dcterms:source <https://github.com/jbe-workspace/kpi-ontology>;
   dcterms:created "2026-04-08"^^xsd:date ;
-  dcterms:modified "2026-04-09"^^xsd:date ;
+  dcterms:modified "2026-11-20"^^xsd:date ;
+  vann:preferredNamespacePrefix "kpi";
+  vann:preferredNamespaceUri "https://semantic.adorsys.com/meta/kpi/";
   owl:versionInfo "1.0" ;
   owl:imports <https://semantic.adorsys.com/meta/kpi/AggregationOperatorScheme/1.0> ;
   <http://purl.org/spar/pso/hasStatus> <http://purl.org/spar/pso/draft> .

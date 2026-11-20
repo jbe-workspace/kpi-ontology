@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this ontology, please cite it using the metadata from this file."
+title: "KPI Ontology"
+abstract: "RDF/OWL ontology for describing Key Performance Indicators computed through aggregation operations over instance data from a reference ontology."
+authors:
+  - family-names: "Bergh"
+    given-names: "Johann"
+    email: "Johann.Bergh@adorsys.com"
+version: "1.0.0"
+date-released: "2026-11-20"
+license: "MIT"
+repository-code: "https://github.com/jbe-workspace/kpi-ontology"
+keywords:
+  - "ontology"
+  - "RDF"
+  - "OWL"
+  - "KPI"
+  - "semantic web"
+  - "aggregation"
